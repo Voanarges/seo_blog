@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KZDZK9X');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8" />
+  <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="yandex-verification" content="bc944c0aababbeb8" />
+  <meta name="google-site-verification" content="me3yW_fJTPtWp1TZGQOOIdxHyyi69m4SoQYkw4k3P0A" />
+  <meta name="description" content="Вы узнаете, что собою представляет SEO и что входит в ежемесячную стоимость обслуживания">
+  
+  <title>
+    SEO продвижение
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  
+ 
+  <style>
+    a{text-decoration: none;}
+    body{font-family: 'Montserrat', sans-serif; hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto;}
+    @media (min-width:768px) {
+    .nav-menu {width: 45%; position: absolute; left: 50%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+    .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 7em; align-items: center; padding: 2px; }
+    #logo {margin-left: 10%; position: absolute;}
+    #logo img{width: 120px; height: 16px;}
+    .nav-menu a {font-size: 12px; font-weight: 500; color: black;}
+    #header-image {width: 100%; height: 500px; display: block; box-sizing: border-box; background: url("{% static 'images/zakaz/seo-fon.jpg' %}"); background-size: cover; background-repeat: no-repeat; background-position: center; }
+    
+    #content-block {margin-left: 1%; margin-right: 1%; margin-top: 20px;}
+    h1 {font-weight: 500; font-size: 40px; width: 80%; margin-left: auto; margin-right: auto; margin-bottom: 25px; margin-top: 30px; text-align: center; color: #333333; }
+   
+    .description-row{width: 100%; height: auto; display: flex; flex-direction: column;   align-items: center; padding-top: 20px;}
+    .text-in-row{width:80%; height: auto; border-radius: 12px; box-shadow: 4px 2px 8px 3px rgba(34, 60, 80, 0.2); padding-right: 3%; padding-left: 3%;}
+    .text-in-row p{font-size: 18.9px; text-align: justify; text-indent: 1.5em; font-weight: 400; color: black; line-height: 30px; }
+    cite {padding-top: 30px; padding-bottom: 30px}
+    .text-in-row cite{font-size: 18.9px;font-weight: 400; }
+    
+    #tarif-block {display: flex; flex-direction: column; justify-content: center; margin-top: 100px; }
+    /* .fon:after {display: block; content: url("{% static 'images/zakaz/allfon4.jpg' %}"); position: absolute; z-index: -1; top: 0px; left: 0px; opacity: 0.8; box-sizing: border-box; width: 1423px;} */
+    #fon{display: block; background-image: url("{% static 'images/zakaz/allfon6.jpg' %}"); position: absolute; z-index: -1; top: 1993px; left: 0px; opacity: 0.6; background-size: cover; box-sizing: border-box; min-width: 100%; min-height: 2000px; max-height: 2000px;}
+    #fon-photo{display: block; background-image: url("{% static 'images/author.jpg' %}"); position: absolute; z-index: -2; top: 1993px; left: 0px; background-size: contain; background-repeat: no-repeat; box-sizing: border-box; min-width: 100%; min-height: 2000px; max-height: 2000px;}
+    .line-block {display: flex; flex-direction: row; justify-content: center; }
+    .block {min-width: 350px; max-width: 350px; min-height: 300px; max-height: 300px; }
+    .block.one{border-right: 0.5px solid white; border-bottom: 0.5px solid white; padding: 20px 20px 10px 20px;}
+    .block.two{border-bottom: 0.5px solid white; padding: 20px 20px 10px 50px;}
+    .title-price {font-size: 18px; text-align: center;  font-weight: 500; color: whitesmoke; line-height: 25px; margin-bottom: 15px; margin-top: 15px; width: 280px; margin-left: auto; margin-right: auto;}
+    .text-price {font-size: 16px; text-align: center; font-weight: 400; line-height: 25px; margin: 10px 5px 0px 5px; color: whitesmoke;}
+    
+    #price-title-before {width: 600px; height: 80px; background-color: white; border-radius: 385px 385px 384px 384px / 128px 128px 119px 119px;  margin-left: auto; margin-right: auto; box-shadow: 0px -3px 5px 5px rgba(161, 199, 229, 0.2);}
+    #price-title-before p{text-align: center; font-size: 16px; color: black; font-weight: 600; padding: 0px; margin: 0px; }
+    #price-title-before p:nth-child(1) {margin-top: 22px;}
+    #price-title-before hr{border: 0.3px solid  red; width: 80%; margin-left: 10%; margin-right: 10%; margin-top: 0px; margin-bottom: 0px;}
+    .title-imagine {width:47.6px; height: 47.6px; display: block; margin-left: auto; margin-right: auto;}
+    
+    
+    .footer-nav { position: absolute; top: 35%; left: 7%; display: flex; flex-direction: row; justify-content: space-between; width: 40%;}
+    .copyright {position: absolute; top: 35%; margin-left: 75%;}
+  }
+  @media (min-width:768px)  and (max-width: 1023px){
+    .call-me-fon {display:flex; align-content: center; flex-direction: column; justify-self: center; width: 100%; height: 320px; margin-top: 50px; margin-bottom: 150px; margin-left: auto; margin-right: auto; background: #effdff; border-top: 1px solid burlywood; border-bottom: 1px solid burlywood}
+    .call-me-block {display: flex; flex-direction: column; justify-content: space-between; min-width: 266px; max-width: 266px; height: 50px; margin-left: auto; margin-right: auto; position: relative;}
+    .form {height: 33px; text-align: center; font-size: 18px; font-family: 'Montserrat', sans-serif; font-weight: 500; color:black; padding: 5px 10px 5px 10px; box-shadow: 0px 3px 5px 3px rgba(34, 60, 80, 0.2);}
+    .form.name{min-width: 266px; max-width: 266px; margin-top: 40px;} .form.phone{min-width: 266px; max-width: 266px;}
+    .form.submit{height: 44px; min-width: 266px; max-width: 266px;  background: red; text-align: center; padding: 9px 10px 9px 10px; font-weight: 500; color: white; background:linear-gradient(to right, #000000, #434343); position: absolute; top: 160px; left: 11px}
+    .form.submit:hover{opacity: 0.7; cursor: pointer;}
+    .title-zakaz{text-align: center; font-size: 19px; font-weight: 500; color:black; margin-left: auto; margin-right: auto;}
+    #articles-line-block {display: flex; flex-direction: column; justify-content: space-between; width: 90%; position: relative; margin-top: 50px; margin-left: auto; margin-right: auto;}
+    #article-presentation-card {min-width: 400px; max-width: 400px; height: 520px;  border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px;transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease; margin-top: 40px;margin-left: auto; margin-right: auto;}
+    #article-presentation-card:hover {transform: translateY(-10px); box-shadow: -1px 5px 8px 6px rgba(34, 60, 80, 0.15);}
+    #article-presentation-card hr{border: 0.3px solid  rgb(241, 234, 224); width: 80%; margin-left: 10%; margin-right: 10%;}
+    #card-image-size {box-sizing: border-box; min-width: 400px; max-width: 400px; min-height: 250px; max-height: 250px; border-top-left-radius: 12px; border-top-right-radius: 12px;}
+    .before-title-green {font-size: 11px; font-weight: 600; color: rgb(107, 208, 152); text-align: right ; padding-right: 10px;}
+    .card-title {text-align: center; font-size: 18px; font-weight: 500; color: rgb(102, 97, 91); padding: 0px 10px 0px 10px; }
+    .card-title a{color: rgb(102, 97, 91);}
+    .before-title-orange {font-size: 11px; font-weight: 600; color: rgb(255, 165, 0); text-align: right ; padding-right: 10px;}
+    .article-description-part {color: rgb(154, 154, 154); font-weight: 400; font-size: 15px; text-align: justify; text-indent: 10px; padding: 0px 10px 0px 10px;}
+    .article-time-read {color: rgb(154, 154, 154); font-weight: 500; font-family: 'Montserrat', sans-serif; font-size: 12px; text-align: left; }
+    .article-time-read.one, .two, .three {padding: 10px 10px 0px 260px;}
+  }
+  @media (min-width:834px) {
+    .nav-menu {width: 42%; position: absolute; left: 57%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+    .nav-menu a {font-size: 13px; font-weight: 500; color: black;}
+    .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 7em; align-items: center; padding: 2px; }
+    /* cards */
+    #content-block {margin-left: 1%; margin-right: 1%; margin-top: 20px;}
+    
+  }
+  @media (min-width:1024px) {
+    .nav-menu {width: 37%; position: absolute; left: 62%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+    .nav-menu a {font-size: 14px; font-weight: 500; color: black;}
+    .call-me-fon {display:flex; align-content: center; flex-direction: column; width: 100%; height: auto; margin-top: 150px; margin-bottom: 150px; background: #effdff; border: 1px solid burlywood;}
+    .call-me-block {display: flex; flex-direction: row; justify-content: space-between; width: 85%; height: 50px; margin:auto;}
+    .form {height: 33px; text-align: center; font-size: 18px; font-family: 'Montserrat', sans-serif; font-weight: 500; color:black; padding: 5px 10px 5px 10px; box-shadow: 0px 3px 5px 3px rgba(34, 60, 80, 0.2);}
+    .form.name{width: 266px;} .form.phone{width: 266px;}
+    .form.submit{height: 44px;width: 266px;  background: red; text-align: center; padding: 9px 10px 9px 10px; font-weight: 500; color: white; background:linear-gradient(to right, #000000, #434343);}
+    .form.submit:hover{opacity: 0.7; cursor: pointer;}
+    .title-zakaz{text-align: center; font-size: 20px; font-family: 'Montserrat', sans-serif; font-weight: 500; color:black; margin-left: auto; margin-right: auto;}
+  }
+  @media (min-width:1112px) {
+    .nav-menu {width: 40%; position: absolute; left: 58%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+    #logo {margin-left: 10%; position: absolute;}
+    #logo img{width: 140px; height: 18px;}
+    .nav-menu a {font-size: 14px; font-weight: 500; color: black;}
+    #articles-line-block {display: flex; flex-direction: row; justify-content: space-between; width: 100%; position: relative; margin-top: 50px; margin-left: auto; margin-right: auto;}
+    #article-presentation-card {min-width: 300px; max-width: 300px; height: 520px;  border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px;transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease; margin-top: 40px; margin-left: auto; margin-right: auto;}
+    #article-presentation-card:hover {transform: translateY(-10px); box-shadow: -1px 5px 8px 6px rgba(34, 60, 80, 0.15);}
+    #article-presentation-card hr{border: 0.3px solid  rgb(241, 234, 224); width: 80%; margin-left: 10%; margin-right: 10%;}
+    #card-image-size {box-sizing: border-box; min-width: 300px; max-width: 300px; max-height: 230px; border-top-left-radius: 12px; border-top-right-radius: 12px;}
+    .before-title-green {font-size: 11px; font-weight: 600; color: rgb(107, 208, 152); text-align: right ; padding-right: 10px;}
+    .card-title {text-align: center; font-size: 18px; font-weight: 500; color: rgb(102, 97, 91); padding: 0px 10px 0px 10px; }
+    .card-title a{color: rgb(102, 97, 91);}
+    .before-title-orange {font-size: 11px; font-weight: 600; color: rgb(255, 165, 0); text-align: right ; padding-right: 10px;}
+    .article-description-part {color: rgb(154, 154, 154); font-weight: 400; font-size: 15px; text-align: justify; text-indent: 10px; padding: 0px 10px 0px 10px;}
+    .article-time-read {color: rgb(154, 154, 154); font-weight: 500; font-family: 'Montserrat', sans-serif; font-size: 12px; text-align: left; }
+    .article-time-read.one, .two, .three {padding: 10px 0px 0px 180px;}
+  }
+  @media (min-width:1366px) {
+    .nav-menu {width: 33%; position: absolute; left: 65%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+    .nav-menu a {font-size: 16px; font-weight: 500; color: black;}
+    #logo img{width: 160px; height: 20px;}
+    .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 8em; align-items: center; padding: 2px 1px 2px 5px; }
+    #content-block {margin-left: 7%; margin-right: 7%; margin-top: 20px;}
+    
+  }
+
+    @media (min-width:1504px) {
+    #header-image {width: 100%; height: 1000px; display: block; box-sizing: border-box; background: url("{% static 'images/zakaz/seo-fon.jpg' %}"); background-size: cover; background-repeat: no-repeat; }
+    #content-block {margin-left: 12%; margin-right: 12%; margin-top: 20px;}
+    
+    #fon{display: block; background-image: url("{% static 'images/zakaz/allfon6.jpg' %}"); position: absolute; z-index: -1; top: 2477px; left: 0px; opacity: 0.6; background-size: cover; box-sizing: border-box; min-width: 100%; min-height: 2000px; max-height: 2000px;}
+    #fon-photo{display: block; background-image: url("{% static 'images/author.jpg' %}"); position: absolute; z-index: -2; top: 2477px; left: 0px; background-size: contain; background-repeat: no-repeat; box-sizing: border-box; min-width: 100%; min-height: 2000px; max-height: 2000px;}
+    .call-me-block {display: flex; flex-direction: row; justify-content: space-between; width: 65%; height: 50px; margin:auto; margin-left: auto; margin-right: auto;}
+    
+    .footer-nav {width: 30%;}
+    
+  }
+
+    @media (min-width:1920px) {
+      .nav-menu {width: 20%; position: absolute; left: 73%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 16px; font-weight: 500; color: black;}
+      .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 9em; align-items: center; padding: 2px 1px 2px 15px; }
+      #logo {margin-left: 8%; position: absolute;}
+      #logo img{width: 180px; height: 25px;}
+      #content-block {margin-left: 15%; margin-right: 15%; margin-top: 20px;}
+      .call-me-block {display: flex; flex-direction: row; justify-content: space-between; width: 55%; height: 50px; margin:auto; margin-left: auto; margin-right: auto;}
+
+     
+    }
+    @media (min-width:2070px) {
+      #content-block {margin-left: 20%; margin-right: 20%; margin-top: 20px;}
+    .footer-nav {width: 25%;}
+
+    }
+    @media (min-width:2400px) {
+      #content-block {margin-left: 25%; margin-right: 25%; margin-top: 20px;}
+      h1 {font-weight: 500; font-size: 36px;}
+      .footer-nav {width: 20%;}
+    }
+
+    @media (min-width:320px) and (max-width: 767px) {
+    #logo img{width: 120px; height: 16px;}
+    #chief-nav {background-color: white; display: flex; flex-direction: row; justify-content: space-between; width: 100%; height: 60px; position: fixed; -webkit-box-shadow: -1px 7px 6px 6px rgba(34, 60, 80, 0.2);-moz-box-shadow: -1px 7px 6px 6px rgba(34, 60, 80, 0.2);box-shadow: -1px 3px 6px 6px rgba(34, 60, 80, 0.2); margin: 0px; padding: 0px; z-index: 8;}
+    .nav-menu {height: 0px; width: 0px; z-index: 5; top: 40px; margin-left: 60%; overflow: hidden; position: absolute; display: flex; flex-direction: column; justify-content: center; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in;}
+    .nav-menu-close {height: 240px; width: 40%; z-index: 5; top: 60px; margin-left: 60%; position: absolute; display: flex; flex-direction: column; justify-content: space-around; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in;}
+    .menu-icone {display: inline; content: url("{% static 'images/icons/menu.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;}
+    .close-button{display: inline; content: url("{% static 'images/icons/leave.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;} 
+    #header-image {width: 100%; height: 235px; display: block; box-sizing: border-box; background: url("{% static 'images/zakaz/seo-fon.jpg' %}"); background-size: cover; background-repeat: no-repeat; background-position: center; }
+    #content-block {margin-left: 1%; margin-right: 1%; margin-top: 20px; box-sizing: border-box; }
+    
+    h1 {font-weight: 500; font-size: 26px; width: 80%; margin-left: auto; margin-right: auto; margin-bottom: 25px; margin-top: 30px; text-align: center; color: #333333; }
+   
+    .description-row{width: 100%; height: auto; display: flex; flex-direction: column;   align-items: center; padding-top: 20px;}
+    .text-in-row{width:80%; height: auto; border-radius: 12px; box-shadow: 4px 2px 8px 3px rgba(34, 60, 80, 0.2); padding-right: 3%; padding-left: 3%;}
+    .text-in-row p{font-size: 18.9px; text-align: justify; text-indent: 1em; font-weight: 400; color: rgb(102, 97, 91); line-height: 30px; hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto;}
+    cite {padding-top: 30px; padding-bottom: 30px}
+    .text-in-row cite{font-size: 18.9px;font-weight: 400; }
+    #articles-line-block {display: flex; flex-direction: column; justify-content: space-between; width: 100%; position: relative; margin-top: 50px; margin-left: auto; margin-right: auto;}
+    /* #article-presentation-card:nth-child(2), :nth-child(5){margin-left: 60px; margin-right: 60px; } */
+    #article-presentation-card {min-width: 300px; max-width: 300px; height: 520px;  border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px;transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease; margin-top: 40px; margin-left: auto; margin-right: auto;}
+    #article-presentation-card:hover {transform: translateY(-10px); box-shadow: -1px 5px 8px 6px rgba(34, 60, 80, 0.15);}
+    #article-presentation-card hr{border: 0.3px solid  rgb(241, 234, 224); width: 80%; margin-left: 10%; margin-right: 10%;}
+    #card-image-size {box-sizing: border-box; min-width: 300px; max-width: 300px; max-height: 230px; border-top-left-radius: 12px; border-top-right-radius: 12px;}
+    .before-title-green {font-size: 11px; font-weight: 600; color: rgb(107, 208, 152); text-align: right ; padding-right: 10px;}
+    .card-title {text-align: center; font-size: 18px; font-weight: 500; color: rgb(102, 97, 91); padding: 0px 10px 0px 10px; }
+    .card-title a{color: rgb(102, 97, 91);}
+    .before-title-orange {font-size: 11px; font-weight: 600; color: rgb(255, 165, 0); text-align: right ; padding-right: 10px;}
+    .article-description-part {color: rgb(154, 154, 154); font-weight: 400; font-size: 15px; text-align: justify; text-indent: 10px; padding: 0px 10px 0px 10px;}
+    .article-time-read {color: rgb(154, 154, 154); font-weight: 500; font-family: 'Montserrat', sans-serif; font-size: 12px; text-align: left; }
+    .article-time-read.one, .two, .three {padding: 10px 0px 0px 180px;}
+    #tarif-block {display: flex; flex-direction: column; justify-content: center; margin-top: 100px; max-width: 300px; margin-left: auto; margin-right: auto; box-sizing: border-box;}
+    /* .fon:after {display: block; content: url("{% static 'images/zakaz/allfon4.jpg' %}"); position: absolute; z-index: -1; top: 0px; left: 0px; opacity: 0.8; box-sizing: border-box; width: 1423px;} */
+    #fon{display: block; background: linear-gradient(to bottom left, #808080, #000000); position: absolute; z-index: -1; top: 3465px; left: 0px; opacity: 5; background-size: cover; box-sizing: border-box; min-width: 100%; min-height: 4000px; max-height: 4000px;}
+    /* #fon-photo{display: block; background-image: url("{% static 'images/author.jpg' %}"); position: absolute; z-index: -2; top: 1480px; left: 0px; background-size: contain; background-repeat: no-repeat; box-sizing: border-box; min-width: 100%; min-height: 2000px; max-height: 2000px;} */
+    .line-block {display: flex; flex-direction: column; justify-content: center; margin-left: auto; margin-right: auto; }
+    .block {min-width: 300px; max-width: 300px; min-height: 300px; max-height: 300px; }
+    .block.one{border-bottom: 0.5px solid white; padding: 20px 50px 10px 0px;}
+    .block.two{border-bottom: 0.5px solid white; padding: 20px 50px 10px 0px;}
+    .title-price {font-size: 20px; text-align: center;  font-weight: 500; color: whitesmoke; line-height: 25px; margin-bottom: 15px; margin-top: 15px; width: 280px; margin-left: auto; margin-right: auto;}
+    .text-price {font-size: 15px; text-align: center; font-weight: 400; line-height: 25px; margin: 5px auto; color: whitesmoke;}
+    
+    #price-title-before {min-width: 300px; max-width: 300px; height: 90px; background-color: white; border-radius: 385px 385px 384px 384px / 128px 128px 119px 119px;  margin-left: auto; margin-right: auto;  box-shadow: 0px -3px 5px 5px rgba(161, 199, 229, 0.2);}
+    #price-title-before p{text-align: center; font-size: 14px; color: black; font-weight: 500; padding: 0px; margin: 0px; white-space: pre-line;}
+    #price-title-before p:nth-child(1) {margin-top: 10px;}
+    #price-title-before hr{border: 0.3px solid  red; width: 80%; margin-left: 10%; margin-right: 10%; margin-top: 0px; margin-bottom: 0px;}
+    .only-on-mobile {white-space: pre;}
+    .title-imagine {width:47.6px; height: 47.6px; display: block; margin-left: auto; margin-right: auto;}
+    
+    .call-me-fon {display:flex; align-content: center; flex-direction: column; justify-self: center; width: 100%; height: 320px; margin-top: 50px; margin-bottom: 150px; margin-left: auto; margin-right: auto; background: #effdff; border-top: 1px solid burlywood; border-bottom: 1px solid burlywood}
+    .call-me-block {display: flex; flex-direction: column; justify-content: space-between; min-width: 266px; max-width: 266px; height: 50px; margin-left: auto; margin-right: auto; position: relative;}
+    .form {height: 33px; text-align: center; font-size: 18px; font-family: 'Montserrat', sans-serif; font-weight: 500; color:black; padding: 5px 10px 5px 10px; box-shadow: 0px 3px 5px 3px rgba(34, 60, 80, 0.2);}
+    .form.name{min-width: 246px; max-width: 246px;} .form.phone{min-width: 246px; max-width: 246px;}
+    .form.submit{height: 44px; min-width: 246px; max-width: 246px;  background: red; text-align: center; padding: 9px 10px 9px 10px; font-weight: 500; color: white; background:linear-gradient(to right, #000000, #434343); position: absolute; top: 120px; left: 11px}
+    .form.submit:hover{opacity: 0.7; cursor: pointer;}
+    .title-zakaz{text-align: center; font-size: 19px; font-weight: 500; color:black; margin-left: auto; margin-right: auto;}
+    }
+    @media (min-width:384px) and (max-width: 767px){
+      .title-zakaz{font-size: 18px;}
+    } 
+    @media (min-width:412px) and (max-width: 767px){
+      h1 {font-weight: 500; font-size: 24px;}
+      #article-presentation-card {min-width: 360px; max-width: 360px;}
+      #card-image-size {min-width: 360px; max-width: 360px;} 
+      .article-time-read.one, .two, .three {padding: 10px 0px 0px 220px;}
+      .block.one{border-bottom: 0.5px solid white; padding: 20px 0px 10px 0px;}
+      .block.two{border-bottom: 0.5px solid white; padding: 20px 0px 10px 0px;}
+    
+    }
+    
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZDZK9X"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <nav id="chief-nav">
+      <li id="logo"><a  href="{% url 'index_list_url' %}"><img src="{% static 'images/logomini.png' %}"  alt="logo"></a></li>
+      <!-- id="mobile-nav" - для javascripta для взаимодействия с иконкой открыть - закрыть -->
+      <div class="nav-menu" id="visible-menu">
+        <!-- <li><i id="close-button" ></i></li> -->
+        <li><a href="{% url 'author_url' %}" data-target="">Об авторе</a></li>
+        <li><a href="{% url 'seo_list_url' %}" data-target="">Seo&Маркетинг</a></li>
+        <li><a href="{% url 'zakazat_url' %}"><img class="spaceship" src="{% static 'images/icons/spaceship.svg' %}" alt="order">Услуги</a></li>
+      </div>
+      <i class="menu-icone" id="mobile-icone"></i>
+    </nav>
+    
+  </header>
+  <div id="header-image"></div>
+  
+  <div id="fon"></div>
+  <div id="fon-photo"></div>
+  <div id="content-block">
+    <h1>Планируете заказать seo продвижение сайта?!</h1>
+    <div class="description-row one">
+
+        <div class="text-in-row"><cite>SEO - это комплексные действия, включающие: техническую настройку сайта, проведение глубоко анализа рынка, 
+            Вашей ниши, конкурентов, Ваших товаров и услуг, предпочтений и интересов Вашей потенциальной аудитории, 
+            а так же формирование стратегии и применение легальных техник для предания поисковыми система выского индекса вашему сайту. Все действия направлены на вывод Вашего сайте в топ в результате поисковых запросов и получение 
+            органического <u>(бесплатного)</u> трафика на Ваш сайт и соответствующее увеличение Вашей прибыли.</cite></div>
+        <div class="text-in-row"><p>В случае контекстная реклама Яндекс&Google - ваш трафик клиентов закончится ровно тогда, когда закончится бюджет на рекламу. Иначе говоря, она работает только тогда, когда Вы инвестируете в нее. <br>
+            <span style="white-space: pre;">     Поэтому</span>  при долгосрочном бизнесе - крайне важно развивать SEO параллельно c контекстной рекламой, в результате Вы получите больше прибыли и значительно сократите расходы на продвижение.</p></div>
+        <div class="text-in-row"><p>Мы не сможем здесь подробно раскрыть содержание и принципы работы SEO, поэтому рекомендую ознакомиться со статьями ниже, описывающими данный процесс.</p></div>
+    </div>
+
+    <div id="articles-line-block">
+        <div id="article-presentation-card">
+            <img id="card-image-size" src="{% static 'images/seo-chief-page/bystroe-prodvizhenie-sajta-small.jpg' %}" alt="Быстрое продвижение сайта">
+            <p class="before-title-green">ПРОДВИЖЕНИЕ</p>
+            <p class='card-title'><a href="{% url 'seo_one_one_url' %}">Быстрое продвижение сайта. Как не быть<span style="color:red;"> обманутым?!</a></p>
+            <p class="article-description-part">
+                Вы узнаете, как не быть обманутым при обращении за продвижением сайта в топ, "подводные камни" данной сферы... <br/>
+            </p>
+            <br>
+            <hr>
+            <p class="article-time-read one">10 мин чтения</p>
+        </div>
+          <div id="article-presentation-card">
+            <img id="card-image-size" src="{% static 'images/seo-chief-page/sekret-uspeshnogo-seo-prodvizheniya-sajtov-small.jpg' %}" alt="Быстрое продвижение сайта">
+            <p class="before-title-orange">Ключевые знания</p>
+            <p class='card-title'><a href="{% url 'seo_one_two_url' %}">Секрет успешного seo продвижения сайтов</a></p>
+            <p class="article-description-part">
+              Рассматриваем ключевые моменты для успешного сео продвижения сайта. С чего нужно начинать и как двигаться.. <br/><br><br>
+            </p>
+            <hr>
+            <p class="article-time-read two">20 мин чтения</p>
+        </div>
+    
+        <div id="article-presentation-card">
+            <img id="card-image-size" src="{% static 'images/seo-chief-page/kak-uvelichit-trafik-na-175%.png' %}" alt="How increase your trafic">
+            <p class="before-title-orange">Увеличение трафика</p>
+            <p class='card-title'><a href="{% url 'seo_one.nine_url' %}">Как увеличить трафик на <b><span style="color:red;">175%</span></b> с помощью обратных ссылок</a></p>
+            <p class="article-description-part">
+              Пошагово разбирается метод для постоянного притока целевого трафика и его значительного увеличения<br/><br>
+            </p>
+            <hr>
+            <p class="article-time-read three">10 мин чтения</p>
+        </div>
+    </div>
+
+    <div id="tarif-block">
+        <!-- <div class="fon"></div> -->
+        <div id="price-title-before">
+            <p>Стоимость SEO <span class="only-on-mobile">  продвижения составляет: от 70000 р.</span>  </p>
+            <hr>
+            <p>Что входит в стоимоть:</p></div>
+        <div class="line-block">
+            
+            <div class="block one">
+                <img class="title-imagine" src="{% static 'images/icons/content-360deg.svg' %}" alt="Подбор ключевых слов">
+                <p class="title-price">Подбор ключевых слов в соответстсии с целевой аудиторией</p>
+                <p class="text-price">Определяем вашу целевую аудиторию и основных конкурентов в этой области, на основании проведенного анализа собираю семантическое ядро ключевиков для вашего сайта</p>
+            </div>
+            <div class="block two">
+                <img class="title-imagine" src="{% static 'images/icons/g-chart.svg' %}" alt="Формирование стратегии продвижения">
+                <p class="title-price">Формирование стратегии продвижения</p>
+                <br>
+                <p class="text-price">Построение стратегии продвижения вашего сайта по низкочастостным - среднечастотным и высокочастотным ключевикам</p>
+            </div>
+        </div>
+        <div class="line-block">
+            <div class="block one">
+                <img class="title-imagine" src="{% static 'images/icons/spaceship.svg' %}" alt="Подбор ключевых слов">
+                <p class="title-price">Оптимизация 150 ключевых слов вашего контента</p>
+                <p class="text-price">На основании семантического ядра внедряю в ваш контент 150 ключевых слов</p>
+            </div>
+            <div class="block two">
+                <img class="title-imagine" src="{% static 'images/icons/search2.svg' %}" alt="Формирование стратегии продвижения">
+                <p class="title-price">Анализ востребованных ключевых слов 5-ти конкурентов</p>
+                <p class="text-price">Анализ семантического ядра пятерых ваших конкурентов, выявление наиболее успешно применяемых ключевиков и внедрение их в ваше семантическое ядро</p>
+            </div>
+        </div>
+        <div class="line-block">
+            <div class="block one">
+                <img class="title-imagine" src="{% static 'images/icons/book-bookmark.svg' %}" alt="Подбор ключевых слов">
+                <p class="title-price">Обучение отдела маркетинга основам seo</p>
+                <p class="text-price">Проведение одного очного или онлайн обучения для маркетологов для обучения формирования контента в соответствии с принципами seo</p>
+            </div>
+            <div class="block two">
+                <img class="title-imagine" src="{% static 'images/icons/team.svg' %}" alt="Формирование стратегии продвижения">
+                <p class="title-price">Взаимодействие с отделом маркетинга</p>
+                <p class="text-price">Ежемесячное предоставление вашему отделу маркетинга данных для написания востребованного контента для 30 страниц</p>
+            </div>
+        </div>
+        <div class="line-block">
+            <div class="block one">
+                <img class="title-imagine" src="{% static 'images/icons/cogwheel.svg' %}" alt="Подбор ключевых слов">
+                <p class="title-price">Проведение аудита вашего сайта</p>
+                <p class="text-price">Проверяю ваш сайт на основе чек-листа по 300 пунктам на наличие скрытых и явных ошибок, препятствующих продвижению</p>
+            </div>
+            <div class="block two">
+                <img class="title-imagine" src="{% static 'images/icons/html5.svg' %}" alt="Формирование стратегии продвижения">
+                <p class="title-price">Устранение ошибок HTML</p>
+                <p class="text-price">Самостоятельно устраняю ошибки и привожу в соответствие разметку гипертекста в соответствии с критериями поисковых алгоритмов Yandex и Google</p>
+            </div>
+        </div>
+        <div class="line-block">
+            <div class="block one">
+                <img class="title-imagine" src="{% static 'images/icons/p-chart.svg' %}" alt="Подбор ключевых слов">
+                <p class="title-price">Ежеквартальный анализ успешности контента, рекомендации по улучшению 10 статей</p>
+                <p class="text-price">Ежеквартально анализирую ваш контент и в разрезе данных конкурентов и рынка даю рекомендацию по улучшению</p>
+            </div>
+            <div class="block two">
+                <img class="title-imagine" src="{% static 'images/icons/ruler-pencil.svg' %}" alt="Формирование стратегии продвижения">
+                <p class="title-price">Внедрение разметки</p>
+                <br><br>
+                <p class="text-price">Внедрение на ваш сайт разметки Microdata и Open Graph, применямых поисковыми система, Facebook и Twitter для улучшение понимания и отображения содержимого вашего сайта</p>
+            </div>
+        </div>
+        <div class="line-block">
+            <div class="block one">
+                <img class="title-imagine" src="{% static 'images/icons/l-settings.svg' %}" alt="Подбор ключевых слов">
+                <p class="title-price">Подключение Yandex и Google аналитики</p>
+                <p class="text-price">Подключение и найстройка аналитики, данных о вашем сайте в Yandex и Google</p>
+            </div>
+            <div class="block two">
+                <img class="title-imagine" src="{% static 'images/icons/window-paragraph.svg' %}" alt="Формирование стратегии продвижения">
+                <p class="title-price">Размещение контента</p>
+                <p class="text-price">При отсутствии технического специалиста в вашем штате, самостоятельно осуществляю "заливку" публикуемого контента на сайт</p>
+            </div>
+        </div>
+
+    </div>
+  </div>
+  <div class="call-me-fon">
+    <p class="title-zakaz">Закажите обратный звонок<br> и уточните все интересующие вопросы</p>
+    <form class="call-me-block" method="post" id="seo-prodvijenie">
+      {% csrf_token %}
+      <div>
+        {{ name }}
+        <label for="id_name"></label>
+        <input type="text" maxlength="30" name="name" class="form name" required placeholder="Ваше имя">
+      </div>
+      <div>
+        {{ phone }}
+        <label for="id_phone"></label>
+        <input type="tel" name="phone" class="form phone" required placeholder="Ваш номер телефона">
+      </div>
+
+      <div>
+        <!-- <div type="submit" class="form submit">Перезвонить</div> -->
+        <button type="submit" class="form submit">Перезвонить</button>
+      </div>
+    </form>
+</div>
+
+
+<footer style="margin-bottom: -70px;">
+    <div class="footer-nav">
+        <li><a href="{% url 'author_url' %}">Об авторе</a></li>
+        <li><a href="{% url 'contact_me_url' %}">Контакты</a></li>
+        <li><a href="{% url 'zakazat_url' %}"><i></i>Заказать продвижение</a></li>
+    </div>
+    <span class="copyright"> © Django, made with <b><i ></i></b> by me </span>
+</footer>
+
+<!-- Plugins -->
+
+<script src="{% static 'zakaz-seo.js' %}"></script>
+<!-- <script src="{% static 'simple-adaptive-slider.js' %}"></script> -->
+<!-- Yandex.Metrika counter Основной счетчик Метрики просмотра страниц-->
+<!-- <script type="text/javascript" >
+	(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  
+	ym(80177671, "init", {
+		 clickmap:true,
+		 trackLinks:true,
+		 accurateTrackBounce:true,
+		 webvisor:true
+	});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/80177671" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
+<!-- /Yandex.Metrika counter -->
+<!-- Global site tag (gtag.js) - Google Ads: 344751684 -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-344751684"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-344751684');
+  gtag('config', 'G-3DVTTS7EMJ');
+</script> -->
+
+</body>
+</html>

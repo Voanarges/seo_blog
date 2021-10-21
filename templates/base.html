@@ -1,0 +1,314 @@
+<!--
+=========================================================
+* Paper Kit Pro - v2.3.1
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/paper-kit-2-pro
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+
+
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="url('{% static 'images/logo.png' %}')">
+  <link rel="icon" type="image/png" href="url('{% static 'images/logo.png' %}')">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    {% block title %}{% endblock title %}
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <!-- CSS Files -->
+  <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'paper-kit.css' %}" rel="stylesheet" />
+  <link href="{% static 'assets/scss/paper-kit.css' %}" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="{% static 'style.css' %}"> -->
+</head>
+
+<body class="landing-page sidebar-collapse">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute">
+    <div class="container">
+        <a class="navbar-brand mb-0" href="{% url 'index_list_url' %}" style="padding: 0px; margin: 0px;"><img src="{% static 'images/logomini.png' %}"  alt="logo" id="logo" style=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar"></span>
+            <span class="navbar-toggler-bar"></span>
+            <span class="navbar-toggler-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <ul class="navbar-nav ml-auto">
+                <a href="javascript:;" class="btn btn-link btn-neutral" href="#">Seo</a>
+                <a href="javascript:;" class="btn btn-link btn-neutral" href="#">Маркетинг</a>
+                <a href="javascript:;" class="btn btn-link btn-neutral" href="#">Об авторе</a>
+                <a class="btn btn-round btn-danger" href="#" target="_blank">
+                <i class="nc-icon nc-spaceship"></i> Заказать услугу </a>
+
+
+                <a href="https://www.instagram.com/dimpadre/" target="_blank" class="btn btn-link btn-neutral"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+  <!-- end Navbar -->
+
+  <div class="page-header" data-parallax="true" style="background-image: url('{% static 'images/seo_optimization.svg' %}');">
+    <div class="filter"></div>
+    <div class="content-center">
+      <div class="container">
+        
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="section text-center landing-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto">
+            <h1>Хотите увеличить продажи?</h1>
+            <p class="size"> Данный сайт предназначен для предпринимателей, владельцев бизнеса и специалистов по маркетингу. Здесь вы получите ответы:
+                <div style="text-align: left; font-size: 1.15em;" class='row align-items-left'>
+
+                    <div class='col mr-auto'><a class="nc-icon nc-bulb-63"> <a>что собою представляет сео</a></div>
+                    <div class = 'col mr-auto'><a class="nc-icon nc-bulb-63"></a><a>как продвигать сайт в топ</a></div>
+                    <div class="w-100"></div>
+                    <div class = 'col ml-auto'><a class="nc-icon nc-bulb-63"></a><a>как анализировать и обходить конкурентов</div></a>
+                    <div class = 'col ml-auto'><a class="nc-icon nc-bulb-63"></a><a>преимущество сео перед платной рекламой</a></div>
+                    <div class="w-100"></div>
+                    <div class = 'col ml-auto'><a class="nc-icon nc-bulb-63"></a><a>как выстраивать стратегию контент-маркетинга</a></div>
+                    <div class = 'col ml-auto'><a class="nc-icon nc-bulb-63"></a><a>как получать органический трафик на сайт</a></div>
+                </div>
+                <a></a>
+
+            </p>
+           
+            <p class="size">Вы, как предприниматель или специалист компании, конечно же, ориентированы на увеличение продаж и получении большей прибыли. Осмелю предположить, что у вас ограниченный, заложенный в смету бюджет на продвижение ваших товаров или услуг, будь то $1000 или $50000 в месяц, он все равно лимитирован. Ваша задача инвестировать данный бюжет на продвижение как можно эффективнее, чтобы получить максимальную отдачу. Так ведь? Надеюсь, вы просчитываете эффективность от вложенных средств ROI и оцениваете, насколько это продуктивно вкладывать деньги в рекламные баннеры, рекламу на радио или телевидении, контекстную рекламу, брошюры, "бонусные откаты" и, конечно, естественное получение поискового трафика на ваш сайт.
+            <p class="size"> В этом ключе, на сайте представлены принципы работы, ведующие тенденции в сфере seo продвижения сайтов и интернет-маркетинга, чтобы вы имели достаточно ясное представление о возможности развития бизнеса в сети интернет, закреплению в топовых позициях поисковой выдачи и получению максимально эффективной отдачи от вложенных средств на продвижение.</p>
+                
+          </div>
+        </div>
+       <!--  <br /><br />
+        <div class="row">
+          <div class="col-md-3">
+            <div class="info">
+              <div class="icon icon-danger">
+                <i class="nc-icon nc-palette"></i>
+              </div>
+              <div class="description">
+                <h4 class="info-title">Beautiful Gallery</h4>
+                <p class="description">Spend your time generating new ideas. You don't have to think of implementing.</p>
+                <a href="#pkp" class="btn btn-link btn-danger">See more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="info">
+              <div class="icon icon-danger">
+                <i class="nc-icon nc-bulb-63"></i>
+              </div>
+              <div class="description">
+                <h4 class="info-title">New Ideas</h4>
+                <p>Larger, yet dramatically thinner. More powerful, but remarkably power efficient.</p>
+                <a href="#pkp" class="btn btn-link btn-danger">See more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="info">
+              <div class="icon icon-danger">
+                <i class="nc-icon nc-chart-bar-32"></i>
+              </div>
+              <div class="description">
+                <h4 class="info-title">Statistics</h4>
+                <p>Choose from a veriety of many colors resembling sugar paper pastels.</p>
+                <a href="#pkp" class="btn btn-link btn-danger">See more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="info">
+              <div class="icon icon-danger">
+                <i class="nc-icon nc-sun-fog-29"></i>
+              </div>
+              <div class="description">
+                <h4 class="info-title">Delightful design</h4>
+                <p>Find unique and handmade delightful designs related items directly from our sellers.</p>
+                <a href="#pkp" class="btn btn-link btn-danger">See more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!--     *********     FEATURES 2      *********      -->
+    <div class="features-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto text-center">
+                    <h2 class="title">Выберите интересующий раздел</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                   <!--  <div class="card" data-background="image" style="background-image: url('./assets/img/sections/jan-sendereks.jpg')"> -->
+                    <div class="card" data-background="image">
+                        <div class="card-body">
+                            <h3 class="card-category">Seo</h3>
+                            <div class="card-icon">
+                                <i class="nc-icon nc-atom"></i>
+                            </div>
+                            <p class="card-description">Материал о сути сео, принципах, тенденциях</p>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-link btn-neutral">
+                                    <i class="fa fa-book" aria-hidden="true"></i> Узнать
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" data-background="image">
+                        <div class="card-body">
+                            <h4 class="card-category">SEM</h4>
+                            <div class="card-icon">
+                                <i class="nc-icon nc-money-coins"></i>
+                            </div>
+                            <p class="card-description">Тенденции и изменения в интернет-маркетинге</p>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-link btn-neutral">
+                                    <i class="fa fa-book" aria-hidden="true"></i> Узнать
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" data-background="image">
+                        <div class="card-body">
+                            <h5 class="card-category">Кейсы</h5>
+                            <div class="card-icon">
+                                <i class="nc-icon nc-trophy"></i>
+                            </div>
+                            <p class="card-description"> Примеры эффективного применения продвижения</p>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-link btn-neutral">
+                                    <i class="fa fa-book" aria-hidden="true"></i> Узнать
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--     *********    END FEATURES 2      *********      -->
+    <div class="section landing-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto">
+            <h2 class="text-center">Keep in touch?</h2>
+            <form class="contact-form">
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Name</label>
+                  <input class="form-control" placeholder="Name">
+                </div>
+                <div class="col-md-6">
+                  <label>Email</label>
+                  <input class="form-control" placeholder="Email">
+                </div>
+              </div>
+              <label>Message</label>
+              <textarea class="form-control" rows="4" placeholder="Tell us your thoughts and feelings..."></textarea>
+              <div class="row">
+                <div class="col-md-4 offset-md-4">
+                  <button class="btn btn-danger btn-lg btn-fill">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer   footer-white ">
+    <div class="container">
+      <div class="row">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="https://www.creative-tim.com" target="_blank">Creative Tim</a></li>
+            <li><a href="http://blog.creative-tim.com/" target="_blank">Blog</a></li>
+            <li><a href="https://www.creative-tim.com/license" target="_blank">Licenses</a></li>
+          </ul>
+        </nav>
+        <div class="credits ml-auto">
+          <span class="copyright">
+            © <script>
+              document.write(new Date().getFullYear())
+            </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+<!--   Core JS Files   -->
+<!-- это те же скрипты, что в бутстрапе, их можно подгузить через cdn
+https://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+<script src="{% static 'assets/js/core/jquery.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/js/core/popper.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+
+
+<!-- Plugins -->
+
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="{% static 'assets/js/plugins/bootstrap-switch.js' %}"></script>
+
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="{% static 'assets/js/plugins/nouislider.min.js' %}"></script>
+
+<!--    Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+<script src="{% static 'assets/js/plugins/bootstrap-selectpicker.js' %}"></script>
+
+<!--    Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+<script src="{% static 'assets/js/plugins/bootstrap-tagsinput.js' %}"></script>
+
+<!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+<script src="{% static 'assets/js/plugins/bootstrap-datetimepicker.js' %}"></script>
+<!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker =it's FROM NOW KIT-->
+<script src="{% static 'assets/js/plugins/moment.min.js' %}"></script>
+
+
+<!-- Photoswipe files -->
+
+<script src="{% static 'assets/js/photo_swipe/photoswipe.min.js' %}"></script>
+<script src="{% static 'assets/js/photo_swipe/photoswipe-ui-default.min.js' %}"></script>
+<script src="{% static 'assets/js/photo_swipe/init-gallery.js' %}"></script>
+
+<!--  for Jasny fileupload -->
+<script src="{% static 'assets/js/plugins/jasny-bootstrap.min.js' %}"></script>
+
+
+<!-- Control Center for Paper Kit: parallax effects, scripts for the example pages etc -->
+
+<script src="{% static 'assets/js/paper-kit.js' %}" type="text/javascript"></script>
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+</body>
+
+</html>

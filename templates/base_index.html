@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KZDZK9X');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8" />
+  
+  <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="yandex-verification" content="bc944c0aababbeb8" />
+  <meta name="google-site-verification" content="me3yW_fJTPtWp1TZGQOOIdxHyyi69m4SoQYkw4k3P0A" />
+  
+  <title>
+    {% block title %}{% endblock title %}
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  
+ 
+  <style>
+    
+    a{text-decoration: none;}
+    @media (min-width:760px) {
+    .nav-menu {width: 45%; position: absolute; left: 55%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+    .nav-menu a {font-size: 13px; font-weight: 600; color: black;}
+    .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 8em; align-items: center; padding: 5px; }
+    #logo {margin-left: 5%; position: absolute;}
+    #logo img{width: 140px; height: 18px;}
+    #header-image {width: 100%; height: 500px; display: block; box-sizing: border-box; background-image: url("{% static 'images/first-page2.jpg' %}"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    #content-block {margin-left: 5%; margin-right: 5%; margin-top: 20px;}
+    h1.title {font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 50.4px; margin-bottom: 25px; margin-top: 30px; text-align: center; color: #333333;}
+    .hhtitle {text-align: center; font-size: 24px; font-weight: 500; font-family: 'Montserrat', sans-serif; color: rgb(102, 97, 91); }
+    .topline { border-style: solid; border-width: 0.7px; color: rgb(241, 234, 224)}
+    /* карусель */
+    .caruseltext {font-size: 25px; font-weight: 400; line-height: 27px; text-align: center; font-family: 'Noto Sans TC', sans-serif; color: rgb(102, 97, 91)}
+    .caruseltext.one {padding: 10% 10% 10% 10%}
+    .caruseltext.two, .caruseltext.three, .caruseltext.four {padding: 4% 10% 16% 10%}  
+    .slider{position:relative;overflow:hidden;max-width:100%; max-height: 300px; margin-left:0px;margin-right:0px;}
+    /* конец карусели */
+    #youWillKnow {display:flex; }
+    .youWillKnow-ramka {width: 255px; height: 242.05px;}
+    
+    h2.recommend {font-size: 39.2px; font-weight: 500; color: rgb(51, 51, 51); font-family: 'Montserrat', sans-serif; text-align: center}
+    #recommend-articles {display:flex; flex-direction: row; justify-content: space-between; text-align: center; align-items: center;}
+    #article-card {min-width: 360px;max-width: 360px; height: 600px; border-radius: 12px;  box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px;transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;}
+    #article-card:hover {transform: translateY(-10px); box-shadow: -1px 5px 8px 6px rgba(34, 60, 80, 0.15);}
+    #card-image-size img{box-sizing: border-box; min-width: 360px;max-width: 360px; max-height: 360px; background-size: contain;}
+    #article-card-image {margin-bottom: 20px; border-top-right-radius: 12px; border-top-left-radius: 12px;}
+    .my-description {text-align: center;}
+    }
+    @media (min-width:768px) and (max-width: 834px){
+      #youWillKnow {flex-direction: row; justify-content: center; flex-wrap: wrap; text-align: center; align-items: center;}
+      #article-card {min-width: 300px;max-width: 300px;}
+      #card-image-size img{min-width: 300px;max-width: 300px;}
+    }
+    @media (min-width:834px) {
+      .nav-menu {width: 42%; position: absolute; left: 57%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 13px; font-weight: 500; color: black;}
+      .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 8em; align-items: center; padding: 5px; }
+      /* cards */
+      #content-block {margin-left: 1%; margin-right: 1%; margin-top: 20px;}
+      #youWillKnow {flex-direction: row; justify-content: center; flex-wrap: wrap; text-align: center; align-items: center;}
+      #recommend-articles{width: 80%; margin-left: auto; margin-right: auto;}
+    }
+    @media (min-width:1024px) {
+      .nav-menu {width: 37%; position: absolute; left: 62%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 14px; font-weight: 500; color: black;}
+      #recommend-articles{width: 80%; margin-left: auto; margin-right: auto;}
+    }
+    @media (min-width:1112px) {
+      .nav-menu {width: 40%; position: absolute; left: 58%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      #youWillKnow{justify-content: space-between;}
+    }
+    @media (min-width:1366px) {
+      .nav-menu {width: 33%; position: absolute; left: 65%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 16px; font-weight: 500; color: black;}
+      .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 9em; align-items: center; padding: 5px; }
+      #content-block {margin-left: 7%; margin-right: 7%; margin-top: 20px;}
+      #article-card {min-width: 400px; max-width: 400px;  min-height: 600px;max-height: 600px;}
+      #card-image-size img{min-width: 400px; max-width: 400px;  min-height: 250px;max-height: 250px;}
+    }
+
+    @media (min-width:1504px) {
+    #header-image {width: 100%; height: 900px; display: block; box-sizing: border-box; background: url("{% static 'images/first-page2.jpg' %}"); background-size: cover; background-repeat: no-repeat; }
+    #content-block {margin-left: 12%; margin-right: 12%; margin-top: 20px;}
+    }
+    @media (min-width:1920px) {
+      .nav-menu {width: 25%; position: absolute; left: 67%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 16px; font-weight: 500; color: black;}
+      .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 9em; align-items: center; padding: 5px; }
+      #logo {margin-left: 8%; position: absolute;}
+      #logo img{width: 180px; height: 25px;}
+      #content-block {margin-left: 20%; margin-right: 20%; margin-top: 20px;}
+    }
+    @media (min-width:2070px) {
+      #content-block {margin-left: 20%; margin-right: 20%; margin-top: 20px;}
+    }
+    @media (min-width:2400px) {
+      #content-block {margin-left: 25%; margin-right: 25%; margin-top: 20px;}
+    }
+    @media (min-width:320px) and (max-width: 760px) {
+    .nav-menu {height: 0px; width: 0px; z-index: 5; top: 40px; margin-left: 60%; overflow: hidden; position: absolute; display: flex; flex-direction: column; justify-content: center; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in;}
+    .nav-menu-close {height: 240px; width: 40%; z-index: 5; top: 40px; margin-left: 60%; position: absolute; display: flex; flex-direction: column; justify-content: space-around; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in;}
+    .menu-icone {display: inline; content: url("{% static 'images/icons/menu.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;}
+    .close-button{display: inline; content: url("{% static 'images/icons/leave.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;} 
+    
+    #header-image {width: 100%; height: 235px; display: block; box-sizing: border-box; background: url("{% static 'images/first-page2.jpg' %}"); background-size: contain; background-repeat: no-repeat; }
+    #content-block {margin-left: 1%; margin-right: 1%; margin-top: 20px; box-sizing: border-box; }
+    h1.title {font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 50.4px; margin-bottom: 25px; margin-top: 30px; text-align: center; color: #333333;}
+    .hhtitle {text-align: center; font-size: 24px; font-weight: 500; font-family: 'Montserrat', sans-serif; color: rgb(102, 97, 91); }
+    .topline { border-style: solid; border-width: 0.7px; color: rgb(241, 234, 224)}
+    /* карусель */
+    .caruseltext {font-size: 18px; font-weight: 400; line-height: 27px; text-align: center; font-family: 'Noto Sans TC', sans-serif; color: rgb(102, 97, 91)}
+    .caruseltext.one {padding: 20% 10% 10% 10%}
+    .caruseltext.four {padding: 4% 5% 4% 5%}
+    .caruseltext.two, .caruseltext.three {padding: 4% 10% 16% 10%}
+    .slider{position:relative;overflow:hidden;max-width:100%; max-height: 440px; margin-left:0px;margin-right:0px;}
+    /* конец карусели */
+    
+    #youWillKnow {display:flex; flex-direction: column; text-align: center; align-items: center;}
+    .youWillKnow-ramka {width: 255px; height: 200px;}
+    h2.recommend {font-size: 39.2px; font-weight: 500; color: rgb(51, 51, 51); font-family: 'Montserrat', sans-serif; text-align: center}
+    #recommend-articles {display:flex; flex-direction: column; text-align: center; align-items: center;}
+    #article-card {max-width: 300px; max-height: 565px; min-height: 565px; box-sizing: border-box; margin-bottom: 20px; border-radius: 12px;  box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px;transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;}
+    #mobile-title{font-size: 21px;}
+    #article-card:hover {transform: translateY(-10px); box-shadow: -1px 5px 8px 6px rgba(34, 60, 80, 0.15);}
+    #card-image-size {box-sizing: border-box; max-width: 300px; max-height: 296px;}
+    #card-image-size img {min-width: 300px; max-width: 300px; max-height: 256px;}
+    #article-card-image {margin-bottom: 20px; border-top-right-radius: 12px; border-top-left-radius: 12px;}
+    .my-description {text-align: justify; text-indent: 15px; padding: 5px; font-size: 18px;}
+    #mobile-button {font-size: 12px;}
+    .button-read:nth-child(2){margin-top: 40px;}
+    }
+    @media (min-width:412px) and (max-width: 767px){
+    #article-card {max-width: 360px;}
+    #card-image-size img {min-width: 360px; max-width: 360px;}
+    }
+    
+    
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZDZK9X"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <nav id="chief-nav">
+      <li id="logo"><a  href="{% url 'index_list_url' %}"><img src="{% static 'images/logomini.png' %}"  alt="logo"></a></li>
+      <!-- id="mobile-nav" - для javascripta для взаимодействия с иконкой открыть - закрыть -->
+      <div class="nav-menu" id="visible-menu">
+        <!-- <li><i id="close-button" ></i></li> -->
+        <li><a href="{% url 'author_url' %}" data-target="">Об авторе</a></li>
+        <li><a href="{% url 'seo_list_url' %}" data-target="">Seo&Маркетинг</a></li>
+        <li><a href="{% url 'zakazat_url' %}"><img class="spaceship" src="{% static 'images/icons/spaceship.svg' %}" alt="order">Услуги</a></li>
+      </div>
+      <i class="menu-icone" id="mobile-icone"></i>
+    </nav>
+    
+  </header>
+  <div id="header-image"></div>
+  <div id="content-block">
+    <h1 class="title">Хотите <br>увеличить продажи?</h1>
+    <hr class="topline">
+    <p class="hhtitle">Сайт предназначен для предпринимателей, владельцев бизнеса и специалистов по маркетингу.</p>
+    <hr class="topline">
+
+    <!-- карусель   -->
+    <div class="slider">
+      <div class="slider__wrapper">
+        <div class="slider__items">
+          <div class="slider__item">
+            <p class="caruseltext one">Вы, как предприниматель или специалист компании, конечно же, ориентированы на увеличение продаж и получении большей прибыли.</p>
+          </div>
+          <div class="slider__item" >
+            <p class="caruseltext two">Осмелюсь предположить, что у вас ограниченный, заложенный в смету бюджет на продвижение ваших товаров или услуг, будь то $1000 или $50000 в месяц, он все равно лимитирован. Ваша задача инвестировать данный бюжет на продвижение как можно эффективнее, чтобы получить максимальную отдачу.</p>
+          </div>
+          <div class="slider__item" >
+            <p class="caruseltext three">Надеюсь, вы просчитываете эффективность от вложенных средств ROI и оцениваете, насколько это продуктивно вкладывать деньги в рекламные баннеры, рекламу на радио или телевидении, контекстную рекламу, брошюры, "бонусные откаты" и, конечно, естественное получение поискового трафика на ваш сайт.</p>
+          </div>
+          <div class="slider__item" >
+            <p class="caruseltext four">В этом ключе, на сайте представлены принципы работы, ведующие тенденции в сфере seo продвижения сайтов и интернет-маркетинга, чтобы вы имели достаточно ясное представление о возможности развития бизнеса в сети интернет, закреплению в топовых позициях поисковой выдачи и получению максимально эффективной отдачи от вложенных средств на продвижение.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Стрелки для перехода к предыдущему и следующему слайду -->
+      <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+      <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
+    </div>
+    <!-- конец карусели -->
+    <p class="hhtitle" style="margin-top: 70px; margin-bottom: 50px;">Вы узнаете:</p>
+    <div id="youWillKnow">
+      <div class="youWillKnow-ramka">
+        <div><i><img src="{% static 'images/icons/app-services.svg' %}" alt="Сео"></i></div>
+        <p class='firstpage_p'>Что собою представляет сео</p>
+      </div>
+      <div class="youWillKnow-ramka">
+        <div><i><img src="{% static 'images/icons/ranking.svg' %}" alt="Продвижения сайта в топ"></i></div>
+        <p class='firstpage_p'>Как продвигать сайт в топ</p>
+      </div>
+      <div class="youWillKnow-ramka">
+        <div><i><img src="{% static 'images/icons/compass.svg' %}" alt="Анализ конкурентов"></i></div>
+        <p class='firstpage_p'>Как анализировать и обходить конкурентов</p>
+      </div>
+      <div class="youWillKnow-ramka">
+        <div><i><img src="{% static 'images/icons/network.svg' %}" alt="Получение органического трафика"></i></div>
+        <p class='firstpage_p'>Как получать органический трафик на сайт</p>
+      </div>
+    </div>
+    <h2 class="recommend">Рекомендуемые статьи</h2>
+    <br/>
+    <div id="recommend-articles">
+      <div id="article-card">
+        <div id="card-image-size"><img id="article-card-image" src="{% static 'images/seo-chief-page/rocketseo_chiefpage.png' %}" alt="Быстрое продвижение сайта"/></div>
+        <div>
+          <a  href="{% url 'seo_one_one_url' %}" class='card-title-chiefpage' id="mobile-title">Быстрое продвижение сайта. Как не быть<span style="color:red;"> обманутым?!</a>
+          <br>
+          <p class='my-description'>
+            Вы узнаете, как не быть обманутым при обращении за продвижением сайта в топ, "подводные камни" данной сферы... 
+          </p>
+          <br />
+          <a  href="{% url 'seo_one_one_url' %}" id="mobile-button" class="button-read">ПРОЧИТАТЬ</a>
+        </div>
+      </div>
+      <div id="article-card">
+        <div id="card-image-size"><img id="article-card-image" src="{% static 'images/seo-chief-page/kak-uvelichit-trafik-na-175%.png' %}" alt="Как увеличить трафик на сайт"/></div>
+        <div>
+          <a  href="{% url 'seo_one_one_url' %}" class='card-title-chiefpage' id="mobile-title">Как увеличить трафик на <b><span style="color:red;">175%</span></b> с помощью обратных ссылок</a>
+          <br>
+          <p class='my-description'>
+            Пошагово разбирается метод для постоянного притока целевого трафика и его значительного увеличения 
+          </p>
+          <br />
+          <a  href="{% url 'seo_one.nine_url' %}" id="mobile-button" class="button-read">ПРОЧИТАТЬ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer style="margin-bottom: -70px;">
+    <div class="footer-nav">
+      <li><a href="{% url 'author_url' %}">Об авторе</a></li>
+      <li><a href="{% url 'contact_me_url' %}">Контакты</a></li>
+      <li><a href="{% url 'zakazat_url' %}"><i></i>Заказать продвижение</a></li>
+    </div>
+    <span class="copyright"> © Django, made with <b><i ></i></b> by me </span>
+  </footer>
+
+<!-- Plugins -->
+
+<script src="{% static 'code.js' %}"></script>
+<script src="{% static 'simple-adaptive-slider.js' %}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      // инициализация слайдера
+      var slider = new SimpleAdaptiveSlider('.slider', {
+        loop: true,
+        autoplay: true,
+        swipe: true
+      });
+    });
+</script>
+<!-- Yandex.Metrika counter Основной счетчик Метрики просмотра страниц-->
+<!-- <script type="text/javascript" >
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(80177671, "init", {
+       clickmap:true,
+       trackLinks:true,
+       accurateTrackBounce:true,
+       webvisor:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/80177671" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
+<!-- /Yandex.Metrika counter -->
+<!-- Global site tag (gtag.js) - Google Ads: 344751684 -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-344751684"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-344751684');
+  gtag('config', 'G-3DVTTS7EMJ');
+</script> -->
+
+</body>
+</html>

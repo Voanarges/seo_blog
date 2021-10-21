@@ -1,0 +1,56 @@
+ПРИМЕРЫ
+ЗДЕСЬ ПРЕДСТАВЛЕНЫ ШАБЛОНЫ НАПИСАНИЯ ТЕГОВ ДЛЯ ВСТАВКИ ТЕХ ИЛИ ИНЫХ ЭЛЕМЕНТОВ
+
+ИКОНКИ
+для вставки иконок nucleo идущик в комплекте
+
+<b><i class='nc-icon nc-alert-circle-i' style="text-indent: 0px; color:orange"></i></b>
+
+вставка СВОИХ иконок nucleo
+<img class="icon-imagine" src="{% static 'images/icons/robot.svg' %}" alt="поисковый робот">
+
+
+
+GIFY
+Вставка движущегося ГИФА
+<p class="row justify-content-center"> <img src="https://media.giphy.com/media/RCBQSWiMPTQly/giphy-downsized.gif" alt="Не оптимизированный сайт" ></p>
+
+КАРТИНКИ В СТАТЬЮ
+<p class="row justify-content-center"> <img src="{% static 'images/seo-articles/секрет успешного сео продвижения.jpg' %}" alt="Не оптимизированный сайт"></p>
+
+ОбТЕКАЕМАЯ КАРТИНКА
+<img src="{% static 'images/seo-articles/Анализ конкурентов.jpg' %}" alt="Анализ конкурентов" style="display: inline-block; float: left;">
+
+ИСТОЧНИК
+<p class="source"><i>Источник: Static</i></p>
+
+РАБОТА С ТЕКСТОМ:
+
+ПЕРЕЧЕНЬ СОДЕРЖИМОГО СТАТЬИ (#2 - это id конкретного заголовка)
+<p class="size">В этой статье мы рассмотрим ... Краткий обзор статьи:</p>
+<ul > <li><b><a href="#h2"></a></b></li></ul>
+<ul > <li><b><a href="#h3"></a></b></li></ul>
+<ul > <li><b><a href="#h4"></a></b></li></ul>
+
+ЗАГОЛОВКИ
+<h2 class="hh" id="h2"><b></b></h2>
+
+АБЗАЦЫ
+<p class="size"></p> - класс size является собственным
+
+перед перечнем итогов по тексту в конкретном заголовке
+<p class="size"> <b class="list">Еще раз, на что стоит обратить внимание и что помнить:</b>
+
+для перечня заключения:
+<p class="size"> <b class="list">что помнить:</b>
+	<ul><li><i></i></li></ul>
+	<ul><li><i></i></li></ul>
+	<ul><li><i></i></li></ul>
+	<ul><li><i></i></li></ul>
+	<ul><li><i></i></li></ul>
+
+выделение ОТДЕЛЬНЫХ СЛОВ
+<span style="color:red;">Яндексе</span> продвигать сайт </b>
+
+ОТДЕЛЬНЫЕ:
+<u></u> - для подчеркивания

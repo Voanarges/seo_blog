@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KZDZK9X');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8">
+  <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{% static 'images/logomini.png' %}">
+ 
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    Об авторе
+  </title>
+  
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+ 
+  <style>
+    /* body{font-family: 'Montserrat', sans-serif;} */
+    a{text-decoration: none;}
+    .text-block {padding: 8px;}
+    @media (min-width:768px) {
+      #myphoto {margin-right: 25px; margin-bottom: 20px; float: left;}
+      #content-block {height: 100%; margin-left: 15%; margin-right: 15%; margin-bottom: 5px; box-shadow: 0px 27px 27px rgba(34, 60, 80, 0.35); border-radius: 25px; z-index: 3;}
+      #content-block p {font-family: 'Noto Serif', serif; font-weight: 400; font-size: 16px; font-size: 1.2em; text-align: justify; text-indent: 2em; letter-spacing: 0.5px;}
+      
+      /* блог кнопки звонка */
+      #phone-block{display: flex; flex-direction: column; margin-left: 2%; margin-top: 3%;}
+      .phone-desktop-block {display: flex; flex-direction: row; justify-content: center; align-items: center;}
+      .phone-desktop-button {width: 230px; max-width: 230px;  display: flex; align-items: center; flex-direction: row; box-sizing: border-box; border-radius: 35px; transition: all 0.45s ease; }
+      .learn-more{border: 1px solid wheat; min-width: 55px; min-height: 55px; border-radius: 35px; display: flex; align-items: center; justify-content: center;}
+      .learn-more svg{animation: shake 175ms infinite ease-in-out; }
+      @keyframes shake {
+        0%  {
+          transform: rotate3d(0,0,1,-3deg);
+        }
+        50%  {
+          transform: rotate3d(0,0,1,3deg);
+        }
+        100%  {
+          transform: rotate3d(0,0,1,-3deg);
+        }
+      }
+      .learn-more:hover{cursor: pointer; border-color: black;}
+      .call-phone-text{font-size: 18px; font-weight: 500; margin-right: 10px; text-shadow: 8px 8px 3px rgba(150, 150, 150, 1);}
+      .phone-text{font-size: 20px; text-align: center; color: white; vertical-align: middle; margin-left: 25px;}
+      .whatsapp {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      top: 85%;
+      left: 86%;
+    }
+    .whatsapp__text{
+      font-size: 12px;
+      text-align: center;
+      text-orientation: sideways;
+      writing-mode: vertical-lr;
+      font-weight: 500;
+      display: block;
+      text-decoration: underline;
+      text-decoration-color:red;
+ 
+    }
+    .whatsapp__img{
+      max-width: 3em;
+      max-height: 3em;
+      min-width: 3em;
+      min-height: 3em;
+      text-orientation: sideways;
+      writing-mode: vertical-rl;
+      animation: shake 375ms infinite ease-in-out;
+    }
+    .whatsapp__img:hover{transform: scale(1.5);}
+    /* .whatsapp__img::after{
+      content: "WhatsApp";
+      font-size: 10px;
+      font-weight: 500;
+      color:black;
+      text-decoration: underline;
+      text-decoration-color:red;
+    } */
+      
+      
+      
+      footer {display: flex; flex-direction: row; width: 100%; height: 60px; position: relative; background-color: #ffffff; margin-top: 0px; flex-wrap: wrap; justify-content: center; z-index: -1;}
+      .footer-nav {width: 30%; position: absolute; top: 35%; left: 18%; display: flex; flex-direction: row; justify-content: space-around;}
+      .footer-nav a {font-size: 12px; font-weight: 600; font-family: "Montserrat", "Helvetica", Arial, sans-serif, sans-serif; color: rgb(119, 119, 119); text-decoration: rgb(119, 119, 119); text-decoration-color: rgb(119, 119, 119); text-decoration-style: solid; text-decoration-thickness: auto; line-height: 16px; word-wrap: normal;}
+      .copyright {position: absolute; align-self: center; margin-left: 50%;}
+      .copyright {font-size: 12px; font-weight: 400; color: rgb(119, 119, 119)}
+    }
+    @media (min-width:834px) {
+      .nav-menu {width: 42%; position: absolute; left: 57%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 13px; font-weight: 600; color: black;}
+      .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 8em; align-items: center; padding: 5px; }
+      /* блог кнопки звонка */
+      #phone-block{display: flex; flex-direction: column; margin-left: -30%; margin-top: 3%;}
+      /* cards */
+      #myphoto {margin-right: 25px; margin-bottom: 20px; float: left; height: 370px; width: 300px;}
+      #content-block {margin-left: 3%; margin-right: 3%; margin-top: 20px;}
+      #content-block p {font-family: 'Noto Serif', serif; font-weight: 400; font-size: 16px; letter-spacing: 0.5px; line-height: 18px; text-align: justify; text-indent: 1em;}
+      footer {display: flex; flex-direction: row; width: 100%; height: 30px; position: relative; background-color: #ffffff; margin-top: 0px; flex-wrap: wrap; justify-content: center; z-index: -1;}
+      .footer-nav {width: 45%; position: absolute; top: 23%; left: 8%; display: flex; flex-direction: row; justify-content: space-around;}
+      .copyright {position: absolute; align-self: center; margin-left: 50%; top:23%}
+      .whatsapp {top: 7%;left: 4%;}
+    }
+    @media (min-width:1024px) {
+      .nav-menu {width: 37%; position: absolute; left: 62%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 14px; font-weight: 500; color: black;}
+      /* блог кнопки звонка */
+      #phone-block{display: flex; flex-direction: column; margin-left: -50%; margin-top: 3%;}
+      .whatsapp {top: 7%;left: 4%;}
+    }
+    @media (min-width:1112px) {
+      .nav-menu {width: 40%; position: absolute; left: 58%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+    }
+    @media (min-width:1366px) {
+      .nav-menu {width: 33%; position: absolute; left: 65%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 16px; font-weight: 500; color: black;}
+      .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 9em; align-items: center; padding: 5px; }
+      #content-block {margin-left: 17%; margin-right: 17%; margin-top: 20px;}
+      footer {display: flex; flex-direction: row; width: 100%; height: 30px; position: relative; background-color: #ffffff; margin-top: 0px; flex-wrap: wrap; justify-content: center; z-index: -1;}
+      .footer-nav {width: 30%; position: absolute; top: 23%; left: 20%; display: flex; flex-direction: row; justify-content: space-around;}
+      .copyright {position: absolute; align-self: center; margin-left: 40%; top:23%}
+      .whatsapp {top: 52%;left: 83%;}
+    }
+    @media (min-width:1504px) {
+      #content-block {height: 800px; margin-left: 20%; margin-right: 20%; margin-top: 50px; padding: 10px;}
+      #myphoto {margin-right: 25px; margin-bottom: 20px; float: left; height: 400px; width: 330px;}
+      /* #content-block p {font-weight: 300; font-size: 18px; letter-spacing: 0.5px; line-height: 18px; text-align: justify; text-indent: 1em;} */
+      #content-block p { font-family: 'Noto Serif', serif; font-weight: 400; font-size: 16px; letter-spacing: 0.5px; line-height: 18px; text-align: justify; text-indent: 1em;}
+      .footer-nav {width: 25%; position: absolute; top: 35%; left: 25%; display: flex; flex-direction: row; justify-content: space-around;}
+      .copyright {position: absolute; align-self: center; margin-left: 32%;}
+      .whatsapp {top: 52%;left: 81%;}
+    }
+    @media (min-width:1920px) {
+      #content-block {height: 800px; margin-left: 25%; margin-right: 25%; margin-top: 50px; padding: 10px;}
+      /* блог кнопки звонка */
+      #phone-block{ margin-left: -50%; margin-top: 6%;}
+      .whatsapp {top: 52%;left: 75%;}
+    }
+    @media (min-width:2400px) {
+      #content-block {margin-left: 28%; margin-right: 28%; margin-top: 20px;}
+      .footer-nav {width: 22%; position: absolute; top: 35%; left: 30%;}
+      /* блог кнопки звонка */
+      #phone-block{ margin-left: -50%; margin-top: 9%;}
+      .whatsapp {top: 52%;left: 72%;}
+    }
+
+    @media (min-width:320px) and (max-width: 760px) {
+      .nav-menu {height: 0px; width: 0px; z-index: 5; top: 40px; margin-left: 60%; overflow: hidden; position: absolute; display: flex; flex-direction: column; justify-content: center; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in;}
+      .nav-menu-close {height: 240px; width: 40%; z-index: 5; top: 40px; margin-left: 60%; position: absolute; display: flex; flex-direction: column; justify-content: space-around; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in;}
+      .menu-icone {display: inline; content: url("{% static 'images/icons/menu.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;}
+      .close-button{display: inline; content: url("{% static 'images/icons/leave.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;} 
+      #myphoto {height: 438px; width: 345px;}
+      #content-block {height: 100%; margin-left: 2%; margin-right: 2%; margin-bottom: 5px; box-shadow: 0px 27px 27px rgba(34, 60, 80, 0.35); border-radius: 25px; z-index: 3; line-height: 1.5em;}
+      #content-block p { font-family: 'Noto Serif', serif; font-weight: 400; font-size: 1.1em; text-align: justify; text-indent: 1.5em;}
+      /* блог ЗВОНКА */
+    .phone-desktop-block{display: none;}
+    .Phone {
+      cursor: pointer;
+      position: absolute;
+      top: 2200px;
+      left: 225px;
+      display: block;
+      margin: 0;
+      width: 1em;
+      height: 1em;
+      font-size: 20vmin;
+      background-color: #3498db;
+      border-radius: 0.5em;
+      box-shadow:
+        0 0 0 0em rgba(#3498db, 0),
+        0em 0.05em 0.1em rgba(#000000, 0.2);
+      transform: translate3d(0, 0, 0) scale(1);}
+
+      .whatsapp {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      top: 69%;
+      left: 2%;
+    }
+    .whatsapp__text{
+      font-size: 12px;
+      font-weight: 800;
+      color:green;
+      text-orientation: sideways;
+      writing-mode: vertical-rl;
+      text-decoration: underline;
+      text-decoration-color:red;
+      
+      
+    }
+    .whatsapp__img{
+      max-width: 2.5em;
+      max-height: 2.5em;
+      min-width: 2.5em;
+      min-height: 2.5em;
+      text-orientation: sideways;
+      writing-mode: vertical-rl;
+      animation: shake 375ms infinite ease-in-out;
+    }
+      
+      footer {display: flex; flex-direction: row; width: 100%; height: 100px; position: relative; background-color: #ffffff; margin-top: 7px; flex-wrap: wrap; justify-content: center; z-index: -1;}
+      .footer-nav {width: 100%; position: absolute; top: 15%; display: flex; flex-direction: row; justify-content: space-around;}
+      .footer-nav a {font-size: 12px; font-weight: 600; font-family: "Montserrat", "Helvetica", Arial, sans-serif, sans-serif; color: rgb(119, 119, 119); text-decoration: rgb(119, 119, 119); text-decoration-color: rgb(119, 119, 119); text-decoration-style: solid; text-decoration-thickness: auto; line-height: 16px; word-wrap: normal;}
+      .copyright {position: absolute; align-self: center; padding-top: 20px;}
+      .copyright {font-size: 12px; font-weight: 400; font-family: 'Montserrat', sans-serif; color: rgb(119, 119, 119)}
+      @media (min-width:412px) and (max-width: 767px){
+      .Phone {
+      top: 1830px;
+      left: 330px;
+      font-size: 16vmin;}
+      } 
+    
+    }
+    
+    
+   
+  </style>
+</head>  
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZDZK9X"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <!-- Navbar -->
+    <nav id="chief-nav">
+      <li id="logo"><a  href="{% url 'index_list_url' %}"><img src="{% static 'images/logomini.png' %}"  alt="logo"></a></li>
+      <!-- id="mobile-nav" - для javascripta для взаимодействия с иконкой открыть - закрыть -->
+      <div class="nav-menu" id="visible-menu">
+        <!-- <li><i id="close-button" ></i></li> -->
+        <li><a href="{% url 'contact_me_url' %}" data-target="">Контакты</a></li>
+        <li><a href="{% url 'seo_list_url' %}" data-target="">Seo&Маркетинг</a></li>
+        <li><a href="{% url 'zakazat_url' %}"><img class="spaceship" src="{% static 'images/icons/spaceship.svg' %}" alt="order">Услуги</a></li>
+      </div>
+      <i class="menu-icone" id="mobile-icone"></i>
+    </nav>
+      <!-- end Navbar -->
+    <div id="content-block" class="text-block">
+      <img id="myphoto" src="{% static 'images/author-ownpage2.jpg' %}"  alt="author" style="display: inline-block; ">
+      <p>Если Вы посетили этот сайт, значит, как и я интересуетесь способами продвижения в интернете.</p>
+      <p>Что привело к этому меня?</p>
+      <p>Большую часть профессиональной деятельности я был в торговле.</p>
+      <p>Имел опыт, как личной предпринимательской деятельности в качестве ИП, так и ООО. Работал в крупной компании, где возглавлял отдел продаж с объемом $7 800 000 в год. Затем вновь вернулся «на вольные хлеба», где в 4 раза увеличил уровень личного дохода.</p>
+      <p>Когда мне понадобилось продвижение в интернете, я обратился к человеку, специализирующемуся на контекстной рекламе.</p>
+      <p>Запись к нему была на два месяца вперед, оплата $300 в день.</p>
+      <p>Наконец, пришел мой черед, мне что-то подобрали…что-то настроили…закинул деньги на контекстную рекламу, потом еще и еще... и НИЧЕГО!!!</p>
+      <p>Было некое разочарование и чувство надувательства.</p>
+      <p>Экономические потрясения нашей страны, желание обезопасить и усилить конкурентные преимущества в бизнесе, заставили вернуться к вопросу продвижения.</p>
+      <p>Имея оскомину недоверия «специалистам», решился на «сумасшествие» и взялся сам изучать язык программирования Python, Фреймворк Django, HTML, CSS, JavaScript, SEO и продвижение через контекстную рекламу Yandex Direct&Google ads, большей частью все на языке оригинала.</p>
+      <p>На освоение ушли годы, давалось очень трудно, рабочие процессы также никуда не исчезли.</p>
+      <p>Теперь я открыто делюсь опытом и помогаю бизнесу в решении задач: занятие ведущих позиций в поисковой выдаче, систематическое продвижение вверх, увеличение трафика и соответственно прибыли компаний.</p>
+      <div id="phone-block">
+        <div class="phone-desktop-block">
+          <div class="call-phone-text">Позвонить</div>
+          <svg style="margin-right: 15px;" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="red"><g><rect fill="none" height="24" width="24"/></g><g><g><polygon points="6.41,6 5,7.41 9.58,12 5,16.59 6.41,18 12.41,12"/><polygon points="13,6 11.59,7.41 16.17,12 11.59,16.59 13,18 19,12"/></g></g></svg>
+          <div id="phone-desktop" class="phone-desktop-button">
+            <div class="learn-more" >
+              <svg class="click_telephone_svg" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 48 48"><title>telephone</title><g><path fill="#444444" d="M32,21v-5c0-0.55231-0.44769-1-1-1h-2c-0.55225,0-1,0.44769-1,1v3h-8v-3c0-0.55231-0.44769-1-1-1h-2 c-0.55225,0-1,0.44769-1,1v5L3,35h42L32,21z"></path> <path fill="#565656" d="M5,43h38c1.10461,0,2-0.89545,2-2v-6H3v6C3,42.10455,3.89545,43,5,43z"></path> <ellipse fill="#E6E6E6" cx="24" cy="28" rx="7" ry="4"></ellipse> <path fill="#444444" d="M7.99999,5C4.68629,5,2,7.68629,2,10.99999V11v4c0,1.10457,0.89543,2,2,2h7c1.10457,0,2-0.89543,2-2v-5h22v5 c0,1.10457,0.89543,2,2,2h7c1.10457,0,2-0.89543,2-2v-4v-0.00001C46,7.68629,43.31371,5,40.00001,5H7.99999z"></path></g></svg>
+            </div>
+            <span class="phone-text">8-989-772-46-61</span>
+          </div>
+        </div>
+        <i class="Phone is-animating" onclick="document.location.href = 'tel:89897724661'"></i>
+        
+      </div>
+
+      <div class="whatsapp">
+        <a class="whatsapp__img" href="https://wa.me/79897724661">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+            <path style="fill:#EDEDED;" d="M0,512l35.31-128C12.359,344.276,0,300.138,0,254.234C0,114.759,114.759,0,255.117,0
+            S512,114.759,512,254.234S395.476,512,255.117,512c-44.138,0-86.51-14.124-124.469-35.31L0,512z" />
+            <path style="fill:#55CD6C;" d="M137.71,430.786l7.945,4.414c32.662,20.303,70.621,32.662,110.345,32.662
+            c115.641,0,211.862-96.221,211.862-213.628S371.641,44.138,255.117,44.138S44.138,137.71,44.138,254.234
+            c0,40.607,11.476,80.331,32.662,113.876l5.297,7.945l-20.303,74.152L137.71,430.786z" />
+            <path style="fill:#FEFEFE;"
+              d="M187.145,135.945l-16.772-0.883c-5.297,0-10.593,1.766-14.124,5.297
+            c-7.945,7.062-21.186,20.303-24.717,37.959c-6.179,26.483,3.531,58.262,26.483,90.041s67.09,82.979,144.772,105.048
+            c24.717,7.062,44.138,2.648,60.028-7.062c12.359-7.945,20.303-20.303,22.952-33.545l2.648-12.359
+            c0.883-3.531-0.883-7.945-4.414-9.71l-55.614-25.6c-3.531-1.766-7.945-0.883-10.593,2.648l-22.069,28.248
+            c-1.766,1.766-4.414,2.648-7.062,1.766c-15.007-5.297-65.324-26.483-92.69-79.448c-0.883-2.648-0.883-5.297,0.883-7.062
+            l21.186-23.834c1.766-2.648,2.648-6.179,1.766-8.828l-25.6-57.379C193.324,138.593,190.676,135.945,187.145,135.945" />
+          
+          </svg>
+        </a>
+        <div class="whatsapp__text">WhatsApp</div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-nav">
+        <li><a href="{% url 'seo_list_url' %}">Seo&Маркетинг</a></li>
+        <li><a href="{% url 'contact_me_url' %}">Контакты</a></li>
+        <li><a href="{% url 'zakazat_url' %}"><i></i> Заказать продвижение</a></li>
+      </div>
+     <span class="copyright"> © Django, made with <b><i ></i></b> by me </span>
+    </footer>
+
+<!--   Core JS Files   -->
+<script src="{% static 'code.js' %}"></script>
+
+
+<!-- Yandex.Metrika counter Основной счетчик Метрики просмотра страниц-->
+<!-- <script type="text/javascript" >
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(80177671, "init", {
+       clickmap:true,
+       trackLinks:true,
+       accurateTrackBounce:true,
+       webvisor:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/80177671" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
+<!-- /Yandex.Metrika counter -->
+<!-- Global site tag (gtag.js) - Google Ads: 344751684 -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-344751684"></script> -->
+<!-- <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-344751684');
+  gtag('config', 'G-3DVTTS7EMJ');
+</script> -->
+
+
+</body>
+
+</html>

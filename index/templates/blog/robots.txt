@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Allow: /sitemap
+Sitemap: https://www.webanatomia.ru/sitemap

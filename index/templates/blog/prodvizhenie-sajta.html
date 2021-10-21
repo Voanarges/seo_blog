@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KZDZK9X');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8" />
+  <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{% static 'images/logomini.png' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="yandex-verification" content="bc944c0aababbeb8" />
+  <meta name="google-site-verification" content="me3yW_fJTPtWp1TZGQOOIdxHyyi69m4SoQYkw4k3P0A" />
+  <meta name="description" content="Вы узнаете возможности и задачи, решаемые посредством контекстной рекламы, что для этого нужно и стоимость данных услуг.">
+  <title>
+    Контекстная реклама
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
+ 
+  <style>
+    a{text-decoration: none;}
+    body {font-family: 'Montserrat', sans-serif;}
+    @media (min-width:768px) {
+    /* .nav-menu {width: 45%; position: absolute; left: 55%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+    .nav-menu a {font-size: 13px; font-weight: 600; color: black;}
+    .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 8em; align-items: center; padding: 5px; }
+    #logo {margin-left: 5%; position: absolute;}
+    #logo img{width: 140px; height: 18px;} */
+    .nav-menu {width: 45%; position: absolute; left: 50%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+    .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 6em; align-items: center; padding: 2px; }
+    #logo {margin-left: 10%; position: absolute;}
+    #logo img{width: 120px; height: 16px;}
+    .nav-menu a {font-size: 12px; font-weight: 500; color: black;}
+    
+    #header-image {width: 100%; height: 500px; display: block; box-sizing: border-box; background: url("{% static 'images/meeting.jpg' %}"); background-size: cover; background-repeat: no-repeat; }
+    #content-block {margin-left: 1%; margin-right: 1%; margin-top: 20px;}
+    h1 {font-weight: 500; font-size: 33px; margin-bottom: 25px; margin-top: 30px; text-align: center; color: #333333;}
+    h2 {width: 80%; margin-left: auto; margin-right: auto; font-weight: 500; font-size: 32px; margin-bottom: 25px; margin-top: 80px; text-align: center; color: #333333;}
+    h3 {width: 80%; margin-left: auto; margin-right: auto;  font-weight: 500; font-size: 32px;  margin-top: 20px; margin-bottom: 0px; text-align: center; color: #333333;}
+    .hhtitle {text-align: center; font-size: 24px; color: rgb(102, 97, 91); }
+    .steps-title {text-align: center; font-size: 24px; font-weight: 500; color: black; margin: 0px;}
+    #zagolovki {display: flex; justify-content: center; flex-direction: column;}
+    /* карточка с обратной стороной */
+    .cols{display: flex; flex-direction: column; flex-wrap:nowrap;}
+    .col{min-width: 350px; max-width: 350px;margin: 1rem; cursor: pointer; margin-left: auto; margin-right: auto;}
+    .container{-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-perspective: 1000px;perspective: 1000px;}
+    .front.one{background: url('{% static "images/zakaz/target-audience.jpg" %}'); background-position: center; background-size: contain; }
+    .front.two{background: url('{% static "images/zakaz/potential-clients.jpg" %}'); background-position: center; background-size: contain; }
+    .front.three{background: url('{% static "images/zakaz/brand.jpg" %}'); background-position: center; background-size: contain; }
+    .front.four{background: url('{% static "images/zakaz/increase-clients.jpg" %}'); background-position: center; background-size: contain; }
+    .front.five{background: url('{% static "images/zakaz/konkurent.jpg" %}'); background-position: center; background-size: contain; }
+    .front.six{background: url('{% static "images/zakaz/loyal-clients.jpg" %}'); background-position: center; background-size: contain; }
+    .front,
+    .back{background-size: cover;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);border-radius: 10px;
+        background-position: center;
+        -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;text-align: center;
+        min-height: 280px;
+        height: auto;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 1.2rem;
+    }
+    .back{background: #cedce7;background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%); background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%); background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+    }
+    .front:after{ position: absolute;top: 0; left: 0;z-index: 1;width: 100%;height: 100%;content: '';display: block;opacity: .6; background-color: #000;-webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 10px; }
+    .container:hover .front,
+    .container:hover .back{
+        -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    }
+    .back{position: absolute; top: 0;left: 0;width: 100%; }
+    .inner{-webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);transform: translateY(-50%) translateZ(60px) scale(0.94);
+        top: 50%;position: absolute;left: 0;width: 100%;padding: 2rem;-webkit-box-sizing: border-box;box-sizing: border-box;outline: 1px solid transparent;-webkit-perspective: inherit;
+        perspective: inherit;
+        z-index: 2;
+    }
+    .container .back{-webkit-transform: rotateY(180deg);transform: rotateY(180deg);-webkit-transform-style: preserve-3d;transform-style: preserve-3d;}
+    .container .front{ -webkit-transform: rotateY(0deg);transform: rotateY(0deg);-webkit-transform-style: preserve-3d;transform-style: preserve-3d;}
+    .container:hover .back{-webkit-transform: rotateY(0deg);transform: rotateY(0deg);-webkit-transform-style: preserve-3d; transform-style: preserve-3d;}
+    .container:hover .front{-webkit-transform: rotateY(-180deg);transform: rotateY(-180deg);-webkit-transform-style: preserve-3d; transform-style: preserve-3d;}
+    .front .inner p{font-size: 1.5rem;margin-bottom: 2rem;position: relative; }
+    .front .inner p:after{content: '';width: 4rem; height: 2px; position: absolute;background: #C6D4DF; display: block;left: 0; right: 0;margin: 0 auto;bottom: -.75rem; }
+    .front .inner span{color: rgba(255,255,255,0.7);font-weight: 300;}
+    /* ЗАВЕРШЕНИЕ ВАРИАНТА №1 */
+    /* @keyframes touch {
+      0% {opacity: 0.9; animation-timing-function: ease-in-out; animation-duration: 600ms;}
+      25% {opacity: 0.1;animation-timing-function: ease-in-out; animation-duration: 600ms;}
+      50% {opacity: 0.9;animation-timing-function: ease-in-out; animation-duration: 600ms;}
+      75% {opacity: 0.1;animation-timing-function: ease-in-out; animation-duration: 600ms;}
+    }
+    .touch {display: none; max-width: 350px; max-height: 250px; min-width: 350px; min-height: 250px;border-radius: 12px; transform-style: preserve-3d;position: relative; box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px; position: absolute; top: 40px; z-index: 8; background: url("{% static 'images/zakaz/click.jpg' %}"); background-size: cover; background-position: center; background-repeat: no-repeat; box-sizing: border-box; animation: touch 3000ms ; } */
+    /* завершение карточки с обратной стороной */
+    .block-chief-description {display: flex; flex-direction: column; justify-content: center; }
+    .description-row{width: 100%; height: 400px; display: flex; flex-direction: column;   align-items: center; padding-top: 20px;}
+    /* .description-row.one{background-color: paleturquoise; z-index: -3;} */
+    .delimiter-line{width: 80%; height: 100px; margin-left: auto; margin-right: auto; position: relative; }
+    .delimiter-line:nth-child(even) {margin-top: 60px;}
+    .line{width: 100%; height: 50px; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color:burlywood}
+    .step{border-radius:50%; width: 70px; height: 70px;box-shadow: 4px 7px 8px 3px rgba(34, 60, 80, 0.2); position: absolute; top: 15px; left:45%;}
+    .step.one {background: url("{% static 'images/icons/one.jpg' %}"); border-radius: 50%; box-sizing: border-box; background-size: contain; background-position: center;}
+    .step.two {background: url("{% static 'images/icons/two.jpg' %}"); border-radius: 50%; box-sizing: border-box; background-size: contain; background-position: center;}
+    .step.three {background: url("{% static 'images/icons/three.jpg' %}"); border-radius: 50%; box-sizing: border-box; background-size: contain; background-position: center;}
+    .text-in-row{ width:80%; height: auto; border-radius: 12px; box-shadow: 4px 2px 8px 3px rgba(34, 60, 80, 0.2); padding-right: 3%; padding-left: 3%;}
+    .text-in-row:hover {cursor: pointer; animation: wobble;}
+    .text-in-row p{font-size: 18.9px; text-align: justify; text-indent: 1em; font-weight: 400; font-family: 'Montserrat', sans-serif; color: rgb(102, 97, 91); line-height: 30px; hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto;}
+    .third-part-buttons{display: flex; flex-direction: row; width: 100%; position: relative; height: auto; border-top-right-radius:12px; border-top-left-radius: 12px; margin-top: 30px;}
+    .under {width:25%; height: 100px; border-top-right-radius:12px; border-top-left-radius: 12px;   background: linear-gradient(to right, #ffefba, #ffffff); padding: 5px 20px 5px 20px; border: 1px solid #ffefba; z-index: 1; position: relative;}
+    .under:hover {cursor: pointer;}
+    .under p{font-size: 12px; text-align: justify; text-indent: 2em; font-weight: 500; font-family: 'Montserrat', sans-serif; color: black; }
+    #buttons-cover {display: block; max-width: 300px; min-width: 300px; max-height: 112px; min-height: 112px; z-index: 9; background: linear-gradient(rgba(255, 255, 255, 0)); position: absolute; top: 0px; left:0px; border-top-right-radius:12px; border-top-left-radius: 12px;}
+    .reading-one{display: block;  width: 100%; height: auto; background: linear-gradient(to right, #ffefba, #ffffff); padding: 5px 20px 5px 20px; animation: effect 1000ms; box-sizing: border-box;}
+    .reading{display: none; width: 100%; height: auto; background: linear-gradient(to right, #ffefba, #ffffff); padding: 5px 20px 5px 20px; animation: effect 1000ms; box-sizing: border-box;}
+    @keyframes effect {from {opacity: 0.3; animation-timing-function: ease; animation-duration: 1000ms;} to {opacity: 1; animation-timing-function: ease-in-out; animation-duration:1000ms;}}
+    #third-part-reading-block {width:100%; height: auto; }
+    #third-part-reading-block p{font-size: 16px; text-align: justify; text-indent: 2em; font-weight: 500; font-family: 'Montserrat', sans-serif; color: black;}
+    .icon-imagine {display: inline-block;box-sizing: border-box;width: 25px;height: 25px;vertical-align: baseline;}
+    #firth-part-block {margin-top: 150px; margin-bottom: 150px; padding: 10px 20px 10px 20px; width:80%; margin-left: auto; margin-right: auto; height: auto; border-radius: 12px; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color:red; border-top-style: solid; border-top-width: 2px; border-top-color:red; box-shadow: 9px 8px 5px 4px rgba(34, 60, 80, 0.2); background: linear-gradient(to right, #ece9e6, #ffffff); }
+    #firth-part-block p{font-size: 18px; text-align: justify; text-indent: 2em; font-weight: 500; font-family: 'Montserrat', sans-serif; color:black;}
+    #price-block {display: flex; flex-direction: column; justify-content: space-between; width: 100%; position: relative; flex-wrap: wrap;}
+    .price{min-width: 400px; max-width: 400px; min-height: 450px; max-height: 450px; border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px; margin: 25px auto;}
+    .price img{min-width: 400px; max-width: 400px;min-height: 250px; max-height: 250px;  box-sizing: border-box; border-top-left-radius: 12px; border-top-right-radius: 12px; background-position: center;}
+    .price hr{border: 0.3px solid  rgb(241, 234, 224); width: 80%; margin-left: 10%; margin-right: 10%;}
+    .price-description {padding: 5px 10px 5px 10px; font-size: 16px;text-indent: 0.5em; font-family: 'Montserrat', sans-serif; color:black;}
+    .price-description.text{text-align: center; font-weight: 600;} .price-description.zena {text-align: justify; font-weight: 500; }
+    /* кнопа детали и ее содержимое */
+    .cover_detail_fon_hide{position: relative; display: none;  background-color: #f2f3f8; min-width: 100%; max-width: 100%; height: auto; padding: 7% 1%; margin-left: auto; margin-right: auto; box-sizing: border-box;}
+    .detail_price_card{background-color: white;display: flex; flex-direction: column; justify-content: space-around; border-radius: 12px; max-width: 90%; min-height: 380px; margin: auto; box-sizing: border-box; box-shadow: 2px 4px 8px 6px rgba(34, 60, 80, 0.2);}
+    .detail_price_card_description{ padding: 10px; min-height: 100%; display: flex;flex-direction: column; justify-content: flex-start}
+    .detail_price_card_delimeter{padding: 5% 0% 5% 0%;}
+    .detail_price_card_delimeter::after{border: orange 1px dashed; width: 80%; height: 100%; content: ""; display: block; margin: 0 auto;}
+    .detail_price_card_description span{font-size: 14px; font-weight: 500;}
+    #price_card_description_title{font-size: 16px; font-weight: 600; margin-left: auto; margin-right: auto;}
+    .detail_price_card_description p{font-size: 13px; font-weight: 400; max-width: 450px; box-sizing: border-box;}
+    .detail_card_buttom_css{display: block;transform: translate(-50%, -50%);width: 100px;height: 20px;text-align: center;text-decoration: none;text-transform: uppercase;letter-spacing: 1px;border: 2px solid transparent;border-radius: 50px;font-size: 12px;font-weight: 400;color:teal;transition: 0.5s;overflow: hidden;}
+    .detail_card_buttom_css::after{content: '\27A5'; position: absolute; top: 0; left: 0}
+    .detail_card_buttom_css:hover{color: #fff; cursor: pointer;}
+    .detail_card_buttom_css span{position: absolute; width: 100%;height: 100%;background: rgba(161, 51, 180, 0.5);transition: 0.5s;z-index: -1;}
+    .detail_card_buttom_css span:nth-child(1) {top: -100%;left: -100%;}
+    .detail_card_buttom_css:hover span:nth-child(1) {top: 0;left: 0;}
+    .detail_card_buttom_css span:nth-child(2) {bottom: -100%;left: -100%;}
+    .detail_card_buttom_css:hover span:nth-child(2) {bottom: 0;left: 0;}
+    .detail_card_buttom_css span:nth-child(3) {top: -100%;right: -100%;}
+    .detail_card_buttom_css:hover span:nth-child(3) {top: 0;right: 0;}
+    .detail_card_buttom_css span:nth-child(4) {bottom: -100%;right: -100%;}
+    .detail_card_buttom_css:hover span:nth-child(4) {bottom: 0;right: 0; }
+    .close_detail_css::after{content: 'свернуть \2717'; color:red; position: absolute; top: 95%; left:80%;}
+    .close_detail_css:hover{opacity: 0.5; cursor: pointer;}
+    
+    /* блог кнопки звонка */
+    #phone-block{display: flex; flex-direction: column; position: absolute; top: 1470px; left:40px; margin-bottom: 60px;}
+    .phone-desktop-block {display: flex; flex-direction: row; justify-content: center; align-items: center;}
+    .phone-desktop-button {width: 300px; max-width: 300px;  display: flex; align-items: center; flex-direction: row; box-sizing: border-box; border-radius: 35px; transition: all 0.45s ease; }
+    .learn-more{border: 1px solid wheat; min-width: 75px; min-height: 75px; border-radius: 35px; display: flex; align-items: center; justify-content: center;}
+    .learn-more svg{animation: shake 175ms infinite ease-in-out; }
+    @keyframes shake {
+      0%  {
+        transform: rotate3d(0,0,1,-3deg);
+      }
+      50%  {
+        transform: rotate3d(0,0,1,3deg);
+      }
+      100%  {
+        transform: rotate3d(0,0,1,-3deg);
+      }
+    }
+    .learn-more:hover{cursor: pointer; border-color: black;}
+    .call-phone-text{font-size: 20px; font-weight: 500; margin-right: 10px; text-shadow: 8px 8px 3px rgba(150, 150, 150, 1);}
+    .phone-text{font-size: 20px; text-align: center; color: white; vertical-align: middle; margin-left: 25px;}
+    .whatsapp {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 85%;
+      left: 5%;
+    }
+    .whatsapp__text{
+      font-size: 12px;
+      text-align: center;
+      text-orientation: sideways;
+      writing-mode: vertical-lr;
+      font-weight: 500;
+      display: none;
+ 
+    }
+    .whatsapp__img{
+      max-width: 3em;
+      max-height: 3em;
+      min-width: 3em;
+      min-height: 3em;
+      text-orientation: sideways;
+      writing-mode: vertical-rl;
+      animation: shake 375ms infinite ease-in-out;
+    }
+    .whatsapp__img:hover{transform: scale(1.5);}
+    .whatsapp__img::after{
+      content: "WhatsApp";
+      font-size: 10px;
+      font-weight: 500;
+      color:black;
+      text-decoration: underline;
+      text-decoration-color:red;
+    }
+
+    .discount-title {font-size: 30px; font-weight: 500; text-align: center;}
+    .promotion__timer {margin-top:100px; width: 100%; font-family: 'Montserrat', sans-serif; color:black; display: flex; flex-direction: row; justify-content: space-between; }
+    .timer {display: flex; flex-direction: row; justify-content: space-between; width: 100%; height: auto; position: relative; flex-wrap: wrap; margin-top: 15%;}
+    .timer__block {width: 60px; height: 90px; font-size: 18px; text-align: center;  box-shadow: 0px 3px 5px 7px rgba(34, 60, 80, 0.2);}
+    .discount-text {width: 55%; height: auto; font-size: 18px; text-align: justify; text-indent: 1.5em; font-weight: 500; background: #fbfff4; }
+    .all-timer-part { width: 40%; height: auto; margin-top: 30px;}
+    .time-number {font-size: 40px;font-weight: 400; } .timer__block p{font-size: 12px;font-weight: 500; margin-top: 10px; }
+    
+    
+    #recomendation-article-block {display: flex; flex-direction: column; justify-content: space-between; width: 100%; position: relative; margin-top: 0px; margin-left: auto; margin-right: auto;}
+    #recomendation-article-card {margin-left: auto; margin-right: auto; min-width: 400px; max-width: 400px; min-height: 520px;  border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px;transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease; margin-top: 40px;}
+    #recomendation-article-card:hover {transform: translateY(-10px); box-shadow: -1px 5px 8px 6px rgba(34, 60, 80, 0.15);}
+    #recomendation-article-card hr{border: 0.3px solid  rgb(241, 234, 224); width: 80%; margin-left: 10%; margin-right: 10%;}
+    #rec-image-size {box-sizing: border-box; min-width: 400px; max-width: 400px; max-height: 250px; border-top-left-radius: 12px; border-top-right-radius: 12px;}
+    .before-title-green {font-size: 15px; font-weight: 600; color: rgb(107, 208, 152); text-align: right ; padding-right: 10px;}
+    .card-title {text-align: center; font-size: 20px; font-weight: 600; color: rgb(102, 97, 91); padding: 0px 10px 0px 10px; }
+    .card-title a{color: rgb(102, 97, 91);}
+    .before-title-orange {font-size: 15px; font-weight: 600; color: rgb(255, 165, 0); text-align: right ; padding-right: 10px;}
+    .article-description-part {color: rgb(154, 154, 154); font-weight: 400; font-size: 18px; text-align: justify; text-indent: 10px; padding: 0px 10px 0px 10px;}
+    .article-time-read {color: rgb(154, 154, 154); font-weight: 500;  font-size: 15px; text-align: left; }
+    .article-time-read {padding: 10px 10px 0px 240px;}
+    .after-article{width:100%; border-top-color: orange; border-top-style:  solid; border-top-width: 1px; border-bottom: none; border-right: none; border-right:none; margin-top: 170px;}
+    .first-hr-in-bottom {margin-top: 50px;}
+    .first-hr-in-bottom.two{margin-top: 100px;}
+    .first-hr-in-bottom.three{margin-top: 80px;}
+
+    .footer-nav { position: absolute; top: 35%; left: 3%; width: 47%;}
+  }
+  @media (min-width:768px)  and (max-width: 1023px){
+    
+    .call-me-fon {display:flex; align-content: center; flex-direction: column; justify-self: center; width: 100%; height: 320px; margin-top: 50px; margin-bottom: 150px; margin-left: auto; margin-right: auto; background: #effdff; border-top: 1px solid burlywood; border-bottom: 1px solid burlywood}
+    .call-me-block {display: flex; flex-direction: column; justify-content: space-between; min-width: 266px; max-width: 266px; height: 50px; margin-left: auto; margin-right: auto; position: relative;}
+    .form {height: 33px; text-align: center; font-size: 18px; font-family: 'Montserrat', sans-serif; font-weight: 500; color:black; padding: 5px 10px 5px 10px; box-shadow: 0px 3px 5px 3px rgba(34, 60, 80, 0.2);}
+    .form.name{min-width: 266px; max-width: 266px; margin-top: 40px;} .form.phone{min-width: 266px; max-width: 266px;}
+    .form.submit{height: 44px; min-width: 266px; max-width: 266px;  background: red; text-align: center; padding: 9px 10px 9px 10px; font-weight: 500; color: white; background:linear-gradient(to right, #000000, #434343); position: absolute; top: 160px; left: 11px}
+    .form.submit:hover{opacity: 0.7; cursor: pointer;}
+    .title-zakaz{text-align: center; font-size: 19px; font-weight: 500; color:black; margin-left: auto; margin-right: auto;}
+    
+  }
+    @media (min-width:834px) {
+      .nav-menu {width: 42%; position: absolute; left: 57%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 13px; font-weight: 500; color: black;}
+      .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 6em; align-items: center; padding: 2px; }
+      /* cards */
+      #content-block {margin-left: 1%; margin-right: 1%; margin-top: 20px;}
+      .cols{display: flex; flex-direction: row; flex-wrap: wrap; margin: 0 auto; justify-content: center;}
+    }
+    @media (min-width:1024px) {
+      .nav-menu {width: 37%; position: absolute; left: 62%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 14px; font-weight: 500; color: black;}
+      #logo {margin-left: 10%; position: absolute;}
+      #logo img{width: 140px; height: 18px;}
+
+      #price-block {display: flex; flex-direction: row; justify-content: space-between; width: 100%; position: relative; flex-wrap: wrap;}
+      .price{min-width: 300px; max-width: 300px; min-height: 450px; max-height: 450px; border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px; margin: 25px auto;}
+      .price img{min-width: 300px; max-width: 300px;min-height: 250px; max-height: 250px;}
+      .detail_price_card_description{padding: 10px 10px 10px 100px;}
+      .call-me-fon {display:flex; align-content: center; flex-direction: column; width: 100%; height: auto; margin-top: 150px; margin-bottom: 150px; background: #effdff; border: 1px solid burlywood;}
+      .call-me-block {display: flex; flex-direction: row; justify-content: space-between; width: 85%; height: 50px; margin:auto;}
+      .form {height: 33px; text-align: center; font-size: 18px; font-family: 'Montserrat', sans-serif; font-weight: 500; color:black; padding: 5px 10px 5px 10px; box-shadow: 0px 3px 5px 3px rgba(34, 60, 80, 0.2);}
+      .form.name{width: 266px;} .form.phone{width: 266px;}
+      .form.submit{height: 44px;width: 266px;  background: red; text-align: center; padding: 9px 10px 9px 10px; font-weight: 500; color: white; background:linear-gradient(to right, #000000, #434343);}
+      .form.submit:hover{opacity: 0.7; cursor: pointer;}
+      .title-zakaz{text-align: center; font-size: 20px; font-family: 'Montserrat', sans-serif; font-weight: 500; color:black; margin-left: auto; margin-right: auto;}
+      #recomendation-article-block {flex-direction: row; }
+      #recomendation-article-card {min-width: 300px; max-width: 300px; min-height: 500px; max-height: 500px; } 
+      #rec-image-size {box-sizing: border-box; min-width: 300px; max-width: 300px; max-height: 250px;}
+      .card-title {text-align: center; font-size: 16px;}
+      .article-description-part{font-size: 14px;}
+      .first-hr-in-bottom {margin-top: 10px;}
+      .first-hr-in-bottom.two{margin-top: 20px;}
+      .first-hr-in-bottom.three{margin-top: 12px;}
+      .article-time-read {padding: 10px 10px 0px 160px;}
+      /* блог кнопки звонка */
+      #phone-block{display: flex; flex-direction: column; position: absolute; top: 500px; left:65px;}
+      
+    }
+    @media (min-width:1112px) {
+      .nav-menu {width: 40%; position: absolute; left: 58%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      
+      .under p{font-size: 14px;}
+      .call-me-fon{min-height: 200px;}
+      .title-zakaz{font-size: 28px;}
+      .timer {width: 80%; margin-left: auto; margin-right: auto;}
+      .timer__block {width: 70px; height: 90px; font-size: 18px;}
+      .footer-nav {width: 35%;}
+    }
+    @media (min-width:1366px) {
+      .nav-menu {width: 33%; position: absolute; left: 65%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 16px; font-weight: 500; color: black;}
+      .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 8em; align-items: center; padding: 2px 1px 2px 5px; }
+      #logo img{width: 160px; height: 20px;}
+      #content-block {margin-left: 7%; margin-right: 7%; margin-top: 20px;}
+      .under p{font-size: 16px;}
+      .timer {display: flex; flex-direction: row; justify-content: space-between; width: 85%; height: auto; position: relative; flex-wrap: wrap; margin-top: 15%; margin-left: auto; margin-right: auto;}
+      .price{min-width: 360px; max-width: 360px; min-height: 420px; max-height: 420px; border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px; margin: 25px auto;}
+      .price img{min-width: 360px; max-width: 360px;}
+      /* кнопа детали и ее содержимое */
+    .cover_detail_fon_hide{position: relative; display: none; background-color: #f2f3f8; min-width: 100%; max-width: 100%; height: auto; padding: 7% 1%;margin-left: auto; margin-right: auto;}
+    .detail_price_card{background-color: white;display: flex; flex-direction: row; justify-content: space-around; border-radius: 12px; width: 95%; min-height: 380px; margin: auto; box-sizing: border-box; box-shadow: 2px 4px 8px 6px rgba(34, 60, 80, 0.2);}
+    .detail_price_card_description{ padding: 10px; min-height: 100%; display: flex;flex-direction: column; justify-content: flex-start}
+    .detail_price_card_delimeter{padding: 5% 0% 5% 0%;}
+    .detail_price_card_delimeter::after{border: orange 1px dashed; width: 80%; height: 100%; content: ""; display: block; transform: rotate(180deg);}
+    .detail_price_card_description span{font-size: 14px; font-weight: 500;}
+    #price_card_description_title{font-size: 16px; font-weight: 600; margin-left: 35%; }
+    .detail_price_card_description p{font-size: 13px; font-weight: 400; max-width: 450px; box-sizing: border-box;}
+    .detail_card_buttom_css{display: block;transform: translate(-50%, -50%);width: 100px;height: 20px;text-align: center;text-decoration: none;text-transform: uppercase;letter-spacing: 1px;border: 2px solid transparent;border-radius: 50px;font-size: 12px;font-weight: 400;color:teal;transition: 0.5s;overflow: hidden;}
+    .detail_card_buttom_css::after{content: '\27A5'; position: absolute; top: 0; left: 0}
+    .detail_card_buttom_css:hover{color: #fff; cursor: pointer;}
+    .detail_card_buttom_css span{position: absolute; width: 100%;height: 100%;background: rgba(161, 51, 180, 0.5);transition: 0.5s;z-index: -1;}
+    .detail_card_buttom_css span:nth-child(1) {top: -100%;left: -100%;}
+    .detail_card_buttom_css:hover span:nth-child(1) {top: 0;left: 0;}
+    .detail_card_buttom_css span:nth-child(2) {bottom: -100%;left: -100%;}
+    .detail_card_buttom_css:hover span:nth-child(2) {bottom: 0;left: 0;}
+    .detail_card_buttom_css span:nth-child(3) {top: -100%;right: -100%;}
+    .detail_card_buttom_css:hover span:nth-child(3) {top: 0;right: 0;}
+    .detail_card_buttom_css span:nth-child(4) {bottom: -100%;right: -100%;}
+    .detail_card_buttom_css:hover span:nth-child(4) {bottom: 0;right: 0; }
+    .close_detail_css::after{content: '\2717'; color:red; position: absolute; top: 4%; left:2%;}
+    .close_detail_css:hover{opacity: 0.5; cursor: pointer;}
+    }
+   
+   
+    @media (min-width:1504px) {
+    #header-image {width: 100%; height: 900px; display: block; box-sizing: border-box; background: url("{% static 'images/meeting.jpg' %}"); background-size: cover; background-repeat: no-repeat; }
+    #content-block {margin-left: 12%; margin-right: 12%; margin-top: 20px;}
+    #recomendation-article-card {min-width: 360px; max-width: 360px; min-height: 540px; max-height: 540px; } 
+    #rec-image-size {box-sizing: border-box; min-width: 360px; max-width: 360px; max-height: 250px;}
+    .card-title {text-align: center; font-size: 18px;}
+    .article-description-part{font-size: 16px;}
+    .first-hr-in-bottom {margin-top: 10px;}
+    .first-hr-in-bottom.two{margin-top: 34px;}
+    .first-hr-in-bottom.three{margin-top: 30px;}
+    .article-time-read {padding: 20px 10px 0px 200px;}
+    
+    }
+    @media (min-width:1920px) {
+      .nav-menu {width: 20%; position: absolute; left: 73%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 16px; font-weight: 500; color: black;}
+      .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 9em; align-items: center; padding: 2px 1px 2px 15px; }
+      #logo {margin-left: 8%; position: absolute;}
+      #logo img{width: 180px; height: 25px;}
+      #content-block {margin-left: 15%; margin-right: 15%; margin-top: 20px;}
+      .timer {display: flex; flex-direction: row; justify-content: space-between; width: 80%; height: auto; position: relative; flex-wrap: wrap; margin-left: auto; margin-right: auto; margin-top: 15%;}
+      .footer-nav {left: 7%; width: 25%;}
+      .copyright {position: absolute; top: 35%; margin-left: 80%;}
+      .whatsapp { top: 85%; left: 12%;}
+    }
+    @media (min-width:2070px) {
+      #content-block {margin-left: 20%; margin-right: 20%; margin-top: 20px;}
+    }
+    @media (min-width:2400px) {
+      #content-block {margin-left: 25%; margin-right: 25%; margin-top: 20px;}
+      .footer-nav {left: 10%; width: 20%;}
+      .whatsapp { top: 85%; left: 21%;}
+    }
+
+    @media (min-width:320px) and (max-width: 760px) {
+    #chief-nav {background-color: white; display: flex; flex-direction: row; justify-content: space-between; width: 100%; height: 60px; position: fixed; -webkit-box-shadow: -1px 7px 6px 6px rgba(34, 60, 80, 0.2);-moz-box-shadow: -1px 7px 6px 6px rgba(34, 60, 80, 0.2);box-shadow: -1px 3px 6px 6px rgba(34, 60, 80, 0.2); margin: 0px; padding: 0px; z-index: 8;}
+    .nav-menu {height: 0px; width: 0px; z-index: 5; top: 40px; margin-left: 60%; overflow: hidden; position: absolute; display: flex; flex-direction: column; justify-content: center; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in;}
+    .nav-menu-close {height: 240px; width: 40%; z-index: 5; top: 60px; margin-left: 60%; position: absolute; display: flex; flex-direction: column; justify-content: space-around; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in;}
+    .menu-icone {display: inline; content: url("{% static 'images/icons/menu.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;}
+    .close-button{display: inline; content: url("{% static 'images/icons/leave.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;} 
+    #header-image {width: 100%; height: 235px; display: block; box-sizing: border-box; background: url("{% static 'images/meeting.jpg' %}"); background-size: cover; background-repeat: no-repeat; }
+    #content-block {margin-left: 1%; margin-right: 1%; margin-top: 20px; box-sizing: border-box; }
+    
+    h1 {font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 27px; margin-bottom: 25px; margin-top: 30px; text-align: center; color: #333333;}
+    h2 {width: 100%; margin-left: auto; margin-right: auto; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 30px; margin-bottom: 25px; margin-top: 80px; text-align: center; color: #333333;}
+    h3 {width: 80%; margin-left: auto; margin-right: auto;  font-weight: 500; font-size: 32px;  margin-top: 20px; margin-bottom: 0px; text-align: center; color: #333333;}
+    .hhtitle {text-align: center; font-size: 24px; font-weight: 500; font-family: 'Montserrat', sans-serif; color: rgb(102, 97, 91); margin-top: 50px;}
+    .steps-title {text-align: center; font-size: 21px; font-weight: 500; font-family: 'Montserrat', sans-serif; color: black; margin: 0px;}
+    #zagolovki {display: flex; justify-content: center; flex-direction: column;}
+    /* карточка с обратной стороной */
+    .cols{display: flex; flex-wrap: wrap;}
+    .col{min-width: 300px; max-width: 300px; margin: 1rem auto}
+    .container{-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-perspective: 1000px;perspective: 1000px;}
+    .front,
+    .back{background-size: contain;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);border-radius: 10px;
+        background-position: center;
+        -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;text-align: center;
+        min-height: 280px;
+        height: auto;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 1.2rem;
+    }
+    .back{background: #cedce7;background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%); background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%); background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+    }
+    .front:after{ position: absolute;top: 0; left: 0;z-index: 1;width: 100%;height: 100%;content: '';display: block;opacity: .6; background-color: #000;-webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 10px; }
+    .container:hover .front,
+    .container:hover .back{
+        -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    }
+    .back{position: absolute; top: 0;left: 0;width: 100%; }
+    .inner{-webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);transform: translateY(-50%) translateZ(60px) scale(0.94);
+        top: 50%;position: absolute;left: 0;width: 100%;padding: 2rem;-webkit-box-sizing: border-box;box-sizing: border-box;outline: 1px solid transparent;-webkit-perspective: inherit;
+        perspective: inherit;
+        z-index: 2;
+    }
+    .container .back{-webkit-transform: rotateY(180deg);transform: rotateY(180deg);-webkit-transform-style: preserve-3d;transform-style: preserve-3d;}
+    .container .front{ -webkit-transform: rotateY(0deg);transform: rotateY(0deg);-webkit-transform-style: preserve-3d;transform-style: preserve-3d;}
+    .container:hover .back{-webkit-transform: rotateY(0deg);transform: rotateY(0deg);-webkit-transform-style: preserve-3d; transform-style: preserve-3d;}
+    .container:hover .front{-webkit-transform: rotateY(-180deg);transform: rotateY(-180deg);-webkit-transform-style: preserve-3d; transform-style: preserve-3d;}
+    .front .inner p{font-size: 1.5rem;margin-bottom: 2rem;position: relative; }
+    .front .inner p:after{content: '';width: 4rem; height: 2px; position: absolute;background: #C6D4DF; display: block;left: 0; right: 0;margin: 0 auto;bottom: -.75rem; }
+    .front .inner span{color: rgba(255,255,255,0.7);font-weight: 300;}
+    /* ЗАВЕРШЕНИЕ ВАРИАНТА №1 */
+    /* @keyframes touch {
+      0% {opacity: 0.9; animation-timing-function: ease-in-out; animation-duration: 600ms;}
+      25% {opacity: 0.1;animation-timing-function: ease-in-out; animation-duration: 600ms;}
+      50% {opacity: 0.9;animation-timing-function: ease-in-out; animation-duration: 600ms;}
+      75% {opacity: 0.1;animation-timing-function: ease-in-out; animation-duration: 600ms;}
+    }
+    .touch {display: none; max-width: 400px; max-height: 300px; min-width: 400px; min-height: 300px;border-radius: 12px; transform-style: preserve-3d;position: relative; box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px; position: absolute; top: 40px; z-index: 8; background: url("{% static 'images/zakaz/click.jpg' %}"); background-size: cover; background-position: center; background-repeat: no-repeat; box-sizing: border-box; animation: touch 3000ms ; } */
+    /* завершение карточки с обратной стороной */
+    .block-chief-description {display: flex; flex-direction: column; justify-content: center; }
+    .description-row{width: 100%; height: 400px; display: flex; flex-direction: column;   align-items: center; padding-top: 20px;}
+    .description-row.one{margin-bottom: 300px;}
+    .delimiter-line{width: 80%; height: 100px; margin-left: auto; margin-right: auto; position: relative; }
+    .delimiter-line:nth-child(even) {margin-top: 240px;}
+    .line{width: 100%; height: 50px; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color:burlywood}
+    .step{border-radius:50%; width: 50px; height: 50px;box-shadow: 4px 7px 8px 3px rgba(34, 60, 80, 0.2); position: absolute; top: 25px; left:43%;}
+    .step.one {background: url("{% static 'images/icons/one.jpg' %}"); border-radius: 50%; box-sizing: border-box; background-size: contain; background-position: center;}
+    .step.two {background: url("{% static 'images/icons/two.jpg' %}"); border-radius: 50%; box-sizing: border-box; background-size: contain; background-position: center;}
+    .step.three {background: url("{% static 'images/icons/three.jpg' %}"); border-radius: 50%; box-sizing: border-box; background-size: contain; background-position: center;}
+    .text-in-row{width:80%; height: auto; border-radius: 12px; box-shadow: 4px 2px 8px 3px rgba(34, 60, 80, 0.2); padding-right: 3%; padding-left: 3%;}
+    .text-in-row p{font-size: 18.9px; text-align: justify; text-indent: 1em; font-weight: 400; font-family: 'Montserrat', sans-serif; color: rgb(102, 97, 91); line-height: 30px; hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto;}
+    .third-part-buttons{display: flex; flex-direction: column; width: 100%; position: relative; height: auto; border-top-right-radius:12px; border-top-left-radius: 12px; margin-top: 30px;}
+    .under {height: 100px; border-top-right-radius:12px; border-top-left-radius: 12px; border-bottom-right-radius: 24px;  background: linear-gradient(to right, #ffefba, #ffffff); padding: 5px 20px 5px 20px; border: 1px solid #ffefba; z-index: 1; position: relative; border-left-color: orangered; border-bottom-color: orangered;}
+    .under.first {width:65%;} .under.second {width:73%;} .under.third {width:78%;} .under.firth {width:85%;} 
+    .under:hover {cursor: pointer;}
+    .under p{font-size: 16px; text-align: justify; text-indent: 2em; font-weight: 500; font-family: 'Montserrat', sans-serif; color: black; }
+    #buttons-cover {display: block; max-width: 400px; min-width: 400px; max-height: 112px; min-height: 112px; z-index: 9; background: linear-gradient(rgba(255, 255, 255, 0)); position: absolute; top: 0px; left:0px; border-top-right-radius:12px; border-top-left-radius: 12px;}
+    .reading-one{display: block;  width: 100%; height: auto; background: linear-gradient(to right, #ffefba, #ffffff); padding: 5px 20px 5px 20px; animation: effect 1000ms; box-sizing: border-box;}
+    .reading{display: none; width: 100%; height: auto; background: linear-gradient(to right, #ffefba, #ffffff); padding: 5px 20px 5px 20px; animation: effect 1000ms; box-sizing: border-box;}
+    @keyframes effect {from {opacity: 0.3; animation-timing-function: ease; animation-duration: 1000ms;} to {opacity: 1; animation-timing-function: ease-in-out; animation-duration:1000ms;}}
+    #third-part-reading-block {max-width: 400px; height: auto;}
+    #third-part-reading-block p{font-size: 16px; text-align: justify; text-indent: 2em; font-weight: 500; font-family: 'Montserrat', sans-serif; color: black;}
+    .icon-imagine {display: inline-block;box-sizing: border-box;width: 25px;height: 25px;vertical-align: baseline;}
+    #firth-part-block {margin-top: 120px; margin-bottom: 120px; padding: 10px 20px 10px 20px; width:80%; margin-left: auto; margin-right: auto; height: auto; border-radius: 12px; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color:red; border-top-style: solid; border-top-width: 2px; border-top-color:red; box-shadow: 9px 8px 5px 4px rgba(34, 60, 80, 0.2); background: linear-gradient(to right, #ece9e6, #ffffff); }
+    #firth-part-block p{font-size: 18px; text-align: justify; text-indent: 2em; font-weight: 500; font-family: 'Montserrat', sans-serif; color:black;}
+    #price-block {display: flex; flex-direction: column; justify-content: space-between; width: 100%; position: relative; }
+    .price{max-width: 300px; max-height: 380px; border-radius: 12px; box-shadow: 0px 3px 5px 3px rgba(34, 60, 80, 0.2); margin-top: 30px; margin-left: auto; margin-right: auto;}
+    .price img{max-width: 300px; max-height: 220px; min-width: 300px; min-height: 220px; box-sizing: border-box; border-top-left-radius: 12px; border-top-right-radius: 12px;}
+    .price hr{border: 0.3px solid  rgb(241, 234, 224); width: 80%; margin-left: 10%; margin-right: 10%;}
+    .price-description {padding: 0px 7px 5px 7px; font-size: 14px;text-indent: 0.5em; font-family: 'Montserrat', sans-serif; color:black;}
+    .price-description.text{text-align: center; font-weight: 600;} .price-description.zena {text-align: justify; font-weight: 500; }
+    /* кнопа детали и ее содержимое */
+    .cover_detail_fon_hide{position: relative; display: none;  background-color: #f2f3f8; min-width: 100%; max-width: 100%; height: auto; padding: 7% 1%;margin-left: auto; margin-right: auto; box-sizing: border-box;}
+    .detail_price_card{background-color: white;display: flex; flex-direction: column; justify-content: space-around; border-radius: 12px; max-width: 90%; min-height: 380px; margin: auto; box-sizing: border-box; box-shadow: 2px 4px 8px 6px rgba(34, 60, 80, 0.2);}
+    .detail_price_card_description{ padding: 10px; min-height: 100%; display: flex;flex-direction: column; justify-content: flex-start}
+    .detail_price_card_delimeter{padding: 5% 0% 5% 0%;}
+    .detail_price_card_delimeter::after{border: orange 1px dashed; width: 80%; height: 100%; content: ""; display: block; margin: 0 auto;}
+    .detail_price_card_description span{font-size: 14px; font-weight: 500;}
+    #price_card_description_title{font-size: 16px; font-weight: 600; margin-left: auto; margin-right: auto;}
+    .detail_price_card_description p{font-size: 13px; font-weight: 400; max-width: 450px; box-sizing: border-box;}
+    .detail_card_buttom_css{display: block;transform: translate(-50%, -50%);width: 100px;height: 20px;text-align: center;text-decoration: none;text-transform: uppercase;letter-spacing: 1px;border: 2px solid transparent;border-radius: 50px;font-size: 12px;font-weight: 400;color:teal;transition: 0.5s;overflow: hidden;}
+    .detail_card_buttom_css::after{content: '\27A5'; position: absolute; top: 0: left: 0}
+    .detail_card_buttom_css:hover{color:red; cursor: pointer;}
+    #detai_price_card_button_open:hover{color:red; cursor: pointer;}
+    /* .detail_card_buttom_css span{position: absolute; width: 100%;height: 100%;background: rgba(161, 51, 180, 0.5);transition: 0.5s;z-index: -1;}
+    .detail_card_buttom_css span:nth-child(1) {top: -100%;left: -100%;}
+    .detail_card_buttom_css:hover span:nth-child(1) {top: 0;left: 0;}
+    .detail_card_buttom_css span:nth-child(2) {bottom: -100%;left: -100%;}
+    .detail_card_buttom_css:hover span:nth-child(2) {bottom: 0;left: 0;}
+    .detail_card_buttom_css span:nth-child(3) {top: -100%;right: -100%;}
+    .detail_card_buttom_css:hover span:nth-child(3) {top: 0;right: 0;}
+    .detail_card_buttom_css span:nth-child(4) {bottom: -100%;right: -100%;}
+    .detail_card_buttom_css:hover span:nth-child(4) {bottom: 0;right: 0; } */
+    .close_detail_css::after{content: 'свернуть \2717'; color:red; position: absolute; top: 98%; left:60%;}
+    .close_detail_css:hover{opacity: 0.5; cursor: pointer;}
+    
+    
+    .discount-title {font-size: 30px; font-weight: 500; text-align: center; margin-left: auto; margin-right: auto;}
+    .promotion__timer {margin-top:100px; width: 100%; font-family: 'Montserrat', sans-serif; color:black; display: flex; flex-direction: column; justify-content: space-between; }
+    .timer {display: flex; flex-direction: row; justify-content: space-between; width: 90%; height: auto; position: relative; margin-top: 10%; margin-left: auto; margin-right: auto;}
+    .timer__block {width: 50px; height: 65px; font-size: 17px; text-align: center;  box-shadow: 0px 3px 5px 3px rgba(34, 60, 80, 0.2);}
+    .discount-text {width: 100%; height: auto; font-size: 17px; text-align: justify; text-indent: 1.5em; font-weight: 500; background: #fbfff4; }
+    .discount-text p {padding-left: 5px; padding-right: 5px;}
+    .all-timer-part { width: 100%; height: auto; margin-top: 30px;}
+    .time-number {font-size: 30px;font-weight: 400; } .timer__block p{font-size: 14px;font-weight: 500; margin-top: 6px; }
+    .call-me-fon {position: relative; display:flex; align-content: center; flex-direction: column; justify-self: center; width: 100%; height: 320px; margin-top: 100px; margin-bottom: 100px; background: #effdff; border-top: 1px solid burlywood; border-bottom: 1px solid burlywood}
+    .call-me-block {display: flex; flex-direction: column; justify-content: space-between; width: 266px; height: 50px; margin-left: auto; margin-right: auto; position: relative;}
+    /* #callback-mobile-button:after{content: (<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><title>telephone</title><g><path fill="#444444" d="M32,21v-5c0-0.55231-0.44769-1-1-1h-2c-0.55225,0-1,0.44769-1,1v3h-8v-3c0-0.55231-0.44769-1-1-1h-2 c-0.55225,0-1,0.44769-1,1v5L3,35h42L32,21z"></path> <path fill="#565656" d="M5,43h38c1.10461,0,2-0.89545,2-2v-6H3v6C3,42.10455,3.89545,43,5,43z"></path> <ellipse fill="#E6E6E6" cx="24" cy="28" rx="7" ry="4"></ellipse> <path fill="#444444" d="M7.99999,5C4.68629,5,2,7.68629,2,10.99999V11v4c0,1.10457,0.89543,2,2,2h7c1.10457,0,2-0.89543,2-2v-5h22v5 c0,1.10457,0.89543,2,2,2h7c1.10457,0,2-0.89543,2-2v-4v-0.00001C46,7.68629,43.31371,5,40.00001,5H7.99999z"></path></g></svg>); color:red; min-width: 35px; min-height: 35px; cursor: pointer;} */
+    /* блог ЗВОНКА */
+    .phone-desktop-block{display: none;}
+    .Phone {
+    cursor: pointer;
+    position: absolute;
+    top: 1200px;
+    left: 10px;
+    display: block;
+    margin: 0;
+    width: 1em;
+    height: 1em;
+    font-size: 20vmin;
+    background-color: #3498db;
+    border-radius: 0.5em;
+    box-shadow:
+      0 0 0 0em rgba(#3498db, 0),
+      0em 0.05em 0.1em rgba(#000000, 0.2);
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+    .form {height: 33px; text-align: center; font-size: 18px; font-family: 'Montserrat', sans-serif; font-weight: 500; color:black; padding: 5px 10px 5px 10px; box-shadow: 0px 3px 5px 3px rgba(34, 60, 80, 0.2);}
+    .form.name{width: 266px;} .form.phone{width: 266px;}
+    .form.submit{height: 44px; min-width: 272px;  background: red; text-align: center; padding: 9px 10px 9px 10px; font-weight: 500; color: white; background:linear-gradient(to right, #000000, #434343); position: absolute; top: 120px; left: 11px}
+    .form.submit:hover{opacity: 0.7; cursor: pointer;}
+    .title-zakaz{text-align: center; font-size: 30px; font-family: 'Montserrat', sans-serif; font-weight: 500; color:black; margin-left: auto; margin-right: auto;}
+
+    #recomendation-article-block {display: flex; flex-direction: column; justify-content: space-between; width: 100%; position: relative; margin-top: 0px; margin-left: auto; margin-right: auto;}
+    #recomendation-article-card {min-width: 300px; max-width: 300px; min-height: 520px; margin-left: auto; margin-right: auto; border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px;transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease; margin-top: 40px;}
+    #recomendation-article-card:hover {transform: translateY(-10px); box-shadow: -1px 5px 8px 6px rgba(34, 60, 80, 0.15);}
+    #recomendation-article-card hr{border: 0.3px solid  rgb(241, 234, 224); width: 80%; margin-left: 10%; margin-right: 10%;}
+    #rec-image-size {box-sizing: border-box; min-width: 300px; max-width: 300px; max-height: 250px; border-top-left-radius: 12px; border-top-right-radius: 12px;}
+    .before-title-green {font-size: 15px; font-weight: 600; color: rgb(107, 208, 152); text-align: right ; padding-right: 20px;}
+    .card-title {text-align: center; font-size: 20px; font-weight: 600; color: rgb(102, 97, 91); padding: 0px 10px 0px 10px; }
+    .card-title a{color: rgb(102, 97, 91);}
+    .before-title-orange {font-size: 15px; font-weight: 600; color: rgb(255, 165, 0); text-align: right ; padding-right: 20px;}
+    .article-description-part {color: rgb(154, 154, 154); font-weight: 400; font-size: 18px; text-align: justify; text-indent: 10px; padding: 0px 10px 0px 10px;}
+    .article-time-read {color: rgb(154, 154, 154); font-weight: 500;  font-size: 15px; text-align: left; }
+    .article-time-read {padding: 5px 10px 0px 150px;}
+    .after-article{width:80%; border-top-color: orange; border-top-style:  solid; border-top-width: 1px; border-bottom: none; border-right: none; border-right:none; margin-top: 170px;}
+    .first-hr-in-bottom {margin-top: 50px;}
+    
+    .whatsapp {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      top: 85%;
+      left: 2%;
+    }
+    .whatsapp__text{
+      font-size: 9px;
+      font-weight: 600;
+      color:black;
+      text-orientation: sideways;
+      writing-mode: vertical-rl;
+      text-decoration: underline;
+      text-decoration-color:red;
+      
+      
+    }
+    .whatsapp__img{
+      max-width: 2em;
+      max-height: 2em;
+      min-width: 2em;
+      min-height: 2em;
+      text-orientation: sideways;
+      writing-mode: vertical-rl;
+      animation: shake 375ms infinite ease-in-out;
+    }
+    .whatsapp__img:hover{transform: scale(1.5);}
+    /* .whatsapp__img::before{
+      content: "WhatsApp";
+      font-size: 9px;
+      font-weight: 600;
+      color:black;
+    } */
+    }
+    @media (min-width:412px) and (max-width: 767px){
+      .col{min-width: 360px; max-width: 360px; margin: 1rem auto}
+      .price{max-width: 360px; max-height: 380px; border-radius: 12px; box-shadow: 0px 3px 5px 3px rgba(34, 60, 80, 0.2); margin-top: 30px; margin-left: auto; margin-right: auto;}
+      .price img{max-width: 360px; max-height: 220px; min-width: 360px; min-height: 220px; box-sizing: border-box; border-top-left-radius: 12px; border-top-right-radius: 12px;}
+      .timer{width: 75%;}
+      #recomendation-article-card {min-width: 360px; max-width: 360px; min-height: 520px;}
+      #rec-image-size {box-sizing: border-box; min-width: 360px; max-width: 360px; max-height: 250px;}
+      .article-time-read {padding: 5px 10px 0px 180px;}
+      .Phone {
+    position: absolute;
+    top: 1200px;
+    left: 10px;
+    font-size: 16vmin;
+  }
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZDZK9X"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <nav id="chief-nav">
+      <li id="logo"><a  href="{% url 'index_list_url' %}"><img src="{% static 'images/logomini.png' %}"  alt="logo"></a></li>
+      <!-- id="mobile-nav" - для javascripta для взаимодействия с иконкой открыть - закрыть -->
+      <div class="nav-menu" id="visible-menu">
+        <!-- <li><i id="close-button" ></i></li> -->
+        <li><a href="{% url 'author_url' %}" data-target="">Об авторе</a></li>
+        <li><a href="{% url 'seo_list_url' %}" data-target="">Seo&Маркетинг</a></li>
+        <li><a href="{% url 'zakazat_url' %}"><img class="spaceship" src="{% static 'images/icons/spaceship.svg' %}" alt="order">Услуги</a></li>
+      </div>
+      <i class="menu-icone" id="mobile-icone"></i>
+    </nav>
+    
+  </header>
+  <div id="header-image"></div>
+  <div id="content-block">
+    
+    <!-- НАЧАЛО БЛОКА ПРЕЗЕНТАЦИИ С ФОТО И УСЛУГАМИ -->
+    
+    <div id="zagolovki">
+      <h1>Заинтересованы в продвижении вашего сайта и увеличении прибыли?!</h1>
+        <!-- <br> Получить максимальную отдачу от каждого вложенного в продвижение рубля? -->
+      <p class="hhtitle"><u>Вот, как это работает:</u> </p>
+      </div>
+
+
+    <div clasAs="block-chief-description">
+      <div class="delimiter-line"><div class="line"></div><div class="step one"></div></div>
+      <p class="steps-title">Проясним, это ли вам нужно</p>
+      <div class="description-row one">
+        <div class="animate__animated animate__heartBeat text-in-row"><p>Вы хотите получить нужный охват аудитории и максимальную отдачу от вложений.</p></div>
+        <div class="animate__animated animate__heartBeat text-in-row"><p>Вы хотите отчетливо видеть сколько прибыли дает каждый инвестированный в продвижение рубль.</p></div>
+        <div class="animate__animated animate__heartBeat text-in-row"><p>Вы хотите, чтобы рекламный бюджет расходовался только за действия, приносящие прибыль(заказ товаров или услуг, отправка заявки, звонок).</p></div>
+        <div class="text-in-row"><p style="text-align: center; font-weight: 500; color: black">Все так? Движемся дальше.</p></div>
+      </div>
+      <div class="delimiter-line"><div class="line"></div><div class="step two"></div></div>
+      <p class="steps-title">Какие задачи решает реклама и продвижение</p>
+      <p style="text-align: center; font-size: 12px; font-weight: 500; color:red; margin-left: auto; margin-right: auto; margin-top: -5px;">*наведите курсор на карточку</p>
+      <!-- НАЧАЛО БЛОКА С КАРТОЧКАМИ -->
+      <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" style="background: url('{% static "images/zakaz/target-audience.jpg" %}'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+                <div class="inner">
+                  <p>Выбор нужной вам аудитории.</p>
+                  <!-- <span>Lorem ipsum</span> -->
+                </div>
+              </div>
+              <div class="back">
+                <div class="inner">
+                <p>Объявления будут показаны только нужной вам аудитории: по полу, возрасту, доходу, семейному положению, географии проживания и прочим критериям.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col" data_click ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" style="background: url('{% static "images/zakaz/potential-clients.jpg" %}'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+                <div class="inner">
+                  <p>Только потенциально заинтересованным!</p>
+                </div>
+              </div>
+              <div class="back">
+                <div class="inner">
+                  <p>Предлагаете товары и услуги премиум сегмента? Объявления увидят те, кто заинтересован и может себе позволить!</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" style="background: url('{% static "images/zakaz/brand.jpg" %}'); background-position: center; background-size: cover;  background-repeat: no-repeat;">
+                <div class="inner">
+                  <p>Ваш бренд будет знаменит!</p>
+                  
+                </div>
+              </div>
+              <div class="back">
+                <div class="inner">
+                  <p>Интернет будет "кричать" о Вас! <br> Вас будут видеть ГДЕ нужно и КОМУ нужно!</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" style="background: url('{% static "images/zakaz/increase-clients.jpg" %}'); background-position: center; background-size: cover;  background-repeat: no-repeat;">
+                <div class="inner">
+                  <p>Постоянный приток новых клиентов</p>
+                </div>
+              </div>
+              <div class="back">
+                <div class="inner">
+                  <p>Эффективно настроенная реклама дает постоянный и стабильный приток заинтересованных клиентов.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" style="background: url('{% static "images/zakaz/konkurent.jpg" %}'); background-position: center; background-size: cover;  background-repeat: no-repeat;">
+                <div class="inner">
+                  <p>Получите аудиторию Конкурентов!</p>
+                </div>
+              </div>
+              <div class="back">
+                <div class="inner">
+                  <p>Благодаря анализу конкурентов и проверенных стратегий - их аудитория станет Вашей!</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" style="background: url('{% static "images/zakaz/loyal-clients.jpg" %}'); background-position: center; background-size: cover;  background-repeat: no-repeat;">
+                <div class="inner">
+                  <p>Активное взаимодействие</p>
+                </div>
+              </div>
+              <div class="back">
+                <div class="inner">
+                  <p>Активно взаимодействуйте с Вашими клиентами и завершите продажу интересующимся!</p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- ЗАВЕРШЕНИЕ БЛОКА С ОБОРОТНЫМИ КАРТОЧКАМИ -->
+
+      <div class="delimiter-line" style="margin-top: 60px;"><div class="line"></div><div class="step three"></div></div>
+      <p class="steps-title">Как это работает и что для этого нужно. </p>
+      <p style="text-align: center; font-size: 12px; font-weight: 500; color:red; margin-left: auto; margin-right: auto; margin-top: -5px;">*просмотрите содержимое нажав на каждую вкладку</p>
+      <div class="third-part-buttons" id='click-button'>
+        <div class="under first" ><i id="buttons-cover"></i> <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"><title>archery-target</title><g><path fill="#C19F85" d="M24.43 5.08a0.52 0.52 0 0 0-0.35-0.37l-2.87-0.96-0.96-2.87a0.52 0.52 0 0 0-0.86-0.21l-3.12 3.12a0.52 0.52 0 0 0-0.12 0.53l1.04 3.12c0.05 0.14 0.18 0.28 0.33 0.33l3.12 1.04a0.52 0.52 0 0 0 0.53-0.12l3.12-3.12a0.52 0.52 0 0 0 0.14-0.49z"></path><path fill="#E6E6E6" d="M9.88 6.76a8.32 8.32 0 1 0 0 16.64 8.32 8.32 0 1 0 0-16.64z"></path><path fill="#E86C60" d="M9.88 24.96c-5.45 0-9.88-4.43-9.88-9.88s4.43-9.88 9.88-9.88 9.88 4.43 9.88 9.88-4.43 9.88-9.88 9.88z m0-17.68c-4.3 0-7.8 3.5-7.8 7.8s3.5 7.8 7.8 7.8 7.8-3.5 7.8-7.8-3.5-7.8-7.8-7.8z"></path><path fill="#E86C60" d="M9.88 21.32c-3.44 0-6.24-2.8-6.24-6.24s2.8-6.24 6.24-6.24 6.24 2.8 6.24 6.24-2.8 6.24-6.24 6.24z m0-10.4c-2.29 0-4.16 1.87-4.16 4.16s1.87 4.16 4.16 4.16 4.16-1.87 4.16-4.16-1.87-4.16-4.16-4.16z"></path><path fill="#E86C60" d="M9.88 13a2.08 2.08 0 1 0 0 4.16 2.08 2.08 0 1 0 0-4.16z"></path><path fill="#87613E" d="M9.88 15.6a0.52 0.52 0 0 1-0.37-0.89l13-13a0.52 0.52 0 1 1 0.74 0.74l-13 13a0.52 0.52 0 0 1-0.37 0.15z"></path></g></svg>Определяем <br><span style="padding-left: 25px;">вашу аудиторию и задачи</span> </p></div>
+        <div class="under second"><i id="buttons-cover"></i><p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"><title>content-360deg</title><g><path d="M7.44 7.44q-0.62 0.18-1.2 0.39a20.64 20.64 0 0 0-0.52 4.65 20.65 20.65 0 0 0 0.51 4.65q0.58 0.22 1.2 0.4a19.23 19.23 0 0 1 0-10.1z" fill="#4d8b9d"></path><path d="M12.48 23.4c-1.89 0-3.61-1.87-4.65-4.67q-0.65-0.15-1.25-0.35c1.15 3.64 3.34 6.06 5.9 6.06s4.76-2.41 5.9-6.06q-0.6 0.19-1.25 0.35c-1.05 2.8-2.76 4.67-4.65 4.67z" fill="#4d8b9d"></path><path d="M18.73 7.83q-0.15-0.65-0.35-1.25c-1.15-3.64-3.34-6.06-5.9-6.06s-4.76 2.41-5.9 6.06q0.6-0.19 1.25-0.35c1.05-2.8 2.76-4.67 4.65-4.67s3.61 1.87 4.65 4.67q0.22 0.58 0.4 1.2a18.78 18.78 0 0 1 0.67 5.05 18.79 18.79 0 0 1-0.68 5.04q0.62-0.18 1.2-0.39a20.64 20.64 0 0 0 0.52-4.65 20.65 20.65 0 0 0-0.51-4.65z" fill="#4d8b9d"></path><path d="M18.38 6.58q0.19 0.6 0.35 1.25c2.8 1.05 4.67 2.76 4.67 4.65 0 3.1-5 5.72-10.92 5.72s-10.92-2.62-10.92-5.72 5-5.72 10.92-5.72a18.79 18.79 0 0 1 5.04 0.68q-0.18-0.62-0.39-1.2a20.64 20.64 0 0 0-4.65-0.52c-6.71 0-11.96 2.97-11.96 6.76s5.25 6.76 11.96 6.76 11.96-2.97 11.96-6.76c0-2.57-2.41-4.76-6.06-5.9z" fill="#7ed3dd"></path><path fill="#2a4b55" d="M12.48 9.36a3.12 3.12 0 1 0 0 6.24 3.12 3.12 0 1 0 0-6.24z"></path></g></svg>Создаем <br><span style="padding-left: 25px;">"Семантическое ядро"</span></p></div>
+        <div class="under third"><i id="buttons-cover"></i><p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"><title>settings-gear</title><g><path fill="#B3B3B3" d="M23.92 9.88h-2.14c-0.5 0-0.95-0.3-1.14-0.79a1.23 1.23 0 0 1 0.26-1.35l1.51-1.51a0.52 0.52 0 0 0 0-0.74l-2.94-2.94a0.52 0.52 0 0 0-0.74 0l-1.51 1.51c-0.35 0.35-0.88 0.46-1.37 0.25a1.23 1.23 0 0 1-0.77-1.13v-2.14a0.52 0.52 0 0 0-0.52-0.52h-4.16a0.52 0.52 0 0 0-0.52 0.52v2.14c0 0.5-0.3 0.95-0.79 1.14a1.23 1.23 0 0 1-1.35-0.26l-1.51-1.51a0.52 0.52 0 0 0-0.74 0l-2.94 2.94a0.52 0.52 0 0 0 0 0.74l1.51 1.51c0.35 0.35 0.46 0.88 0.25 1.37a1.23 1.23 0 0 1-1.13 0.77h-2.14a0.52 0.52 0 0 0-0.52 0.52v4.16a0.52 0.52 0 0 0 0.52 0.52h2.14c0.5 0 0.95 0.3 1.14 0.79a1.23 1.23 0 0 1-0.26 1.35l-1.51 1.51a0.52 0.52 0 0 0 0 0.74l2.94 2.94a0.52 0.52 0 0 0 0.74 0l1.51-1.51c0.35-0.35 0.88-0.46 1.37-0.25a1.23 1.23 0 0 1 0.77 1.13v2.14a0.52 0.52 0 0 0 0.52 0.52h4.16a0.52 0.52 0 0 0 0.52-0.52v-2.14c0-0.5 0.3-0.95 0.79-1.14a1.23 1.23 0 0 1 1.35 0.26l1.51 1.51a0.52 0.52 0 0 0 0.74 0l2.94-2.94a0.52 0.52 0 0 0 0-0.74l-1.51-1.51c-0.35-0.35-0.46-0.88-0.25-1.37a1.23 1.23 0 0 1 1.13-0.77h2.14a0.52 0.52 0 0 0 0.52-0.52v-4.16a0.52 0.52 0 0 0-0.52-0.52z m-11.44 6.24a3.64 3.64 0 1 1 0-7.28 3.64 3.64 0 0 1 0 7.28z"></path><path fill="#969696" d="M12.48 6.76c-3.16 0-5.72 2.56-5.72 5.72s2.56 5.72 5.72 5.72 5.72-2.56 5.72-5.72-2.56-5.72-5.72-5.72z m0 9.36a3.64 3.64 0 1 1 0-7.28 3.64 3.64 0 0 1 0 7.28z"></path></g></svg>Техническая<br><span style="padding-left: 25px;">составляющая</span></p></div>
+        <div class="under firth"><i id="buttons-cover"></i><p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"><title>metrics</title><g><path fill="#5B5B5B" d="M3.64 1.04a1.04 1.04 0 0 0-1.04 1.04v14.6c-1.24 0.72-2.08 2.06-2.08 3.6 0 2.29 1.87 4.16 4.16 4.16 1.54 0 2.88-0.84 3.6-2.08h14.6a1.04 1.04 0 0 0 1.04-1.04c0-11.18-9.1-20.28-20.28-20.28z"></path><path fill="#E86C60" d="M4.68 22.36a2.07 2.07 0 0 1-1.47-0.61 2.08 2.08 0 0 1 0-2.94c0.56-0.56 4.74-3.35 7.17-4.95a0.52 0.52 0 1 1 0.73 0.72c-1.61 2.44-4.39 6.62-4.96 7.17a2.07 2.07 0 0 1-1.47 0.61z"></path><path fill="#444444" d="M19.34 18.2c-0.24 0-0.45-0.16-0.51-0.4-1.33-5.76-5.91-10.34-11.67-11.68a0.52 0.52 0 0 1 0.24-1.01c6.14 1.42 11.03 6.31 12.44 12.45a0.52 0.52 0 0 1-0.5 0.64z"></path><path fill="#72C472" d="M15.03 10.45a0.52 0.52 0 0 1-0.36-0.16 15.55 15.55 0 0 0-7.51-4.17 0.52 0.52 0 0 1-0.39-0.62c0.07-0.28 0.34-0.45 0.63-0.39a16.59 16.59 0 0 1 8 4.45 0.52 0.52 0 0 1-0.37 0.89z"></path></g></svg>Оптимизация<br><span style="padding-left: 25px;">рекламной кампании</span</p></div>
+      </div>
+      <div id="third-part-reading-block">
+          <div class="animate__animated animate__hinge reading-one" id="click-reading" >
+            <p class="animate__animated animate__lightSpeedInLeft"><img class="icon-imagine" src="{% static 'images/icons/archery-target.svg' %}" alt="Определяем аудиторию и задачи">Составляем образ вашего клиента: пол, возраст, семейное положение, доход, интересы, предпочтения</p>
+            <p class="animate__animated animate__lightSpeedInLeft"><img class="icon-imagine" src="{% static 'images/icons/archery-target.svg' %}" alt="Определяем аудиторию и задачи">Определяем задачи, которые должна выполнить рекламная компания: просмотр определенного количества страниц, заказ обратного звонка, заполнение некой формы, заказа товара или услуги действия вы хотите</p>
+            <p class="animate__animated animate__lightSpeedInLeft"><img class="icon-imagine" src="{% static 'images/icons/archery-target.svg' %}" alt="Определяем аудиторию и задачи">В зависимости от задач определяем стратегию. Сделать ваш бренд узнаваемым - одна стратегия, побудить людей совершить заказ - другая. 
+              Например, в первом случае вы будете платить за показ объявлений и клики. А в ситуации, если нужно получить от человека обратный звонок - рекламный бюджет будет списывать только за совершенное действие (не показ объявления, а именно, за нажатие пользователем кнопки «заказать звонок»)</p>
+          </div>
+          <div class="animate__animated animate__hinge  reading" id="click-reading">
+            <p class="animate__animated animate__lightSpeedInLeft"><img class="icon-imagine" src="{% static 'images/icons/nucleoss.svg' %}" alt="Создаем семантическое ядро">Абсолютно все потенциальные клиенты ищут товары и услуги в интернете по определенным «ключевым словам». Например: <i>«туры на Бали для двоих»</i>.</p>
+            <p class="animate__animated animate__lightSpeedInRight"><img class="icon-imagine" src="{% static 'images/icons/nucleoss.svg' %}" alt="Создаем семантическое ядро">Поисковые системы Яндекс и Google выдают в результатах поиска сайты и рекламу максимально соответствующую вводимому пользователю запросу. <br> Соответственно, если тех или иных «ключевых слов» не прописано в семантическом ядре вашей рекламной компании и сайта (для seo продвижения) - ваш сайт или рекламная компания Поисковыми системами не будет показана пользователям. Если же у конкурентов это проработано, то будут показаны они и опять же, мы можете обойти конкурентов в качестве проработки запросов пользователей.</p>
+            <p class="animate__animated animate__lightSpeedInRight"><img class="icon-imagine" src="{% static 'images/icons/nucleoss.svg' %}" alt="Создаем семантическое ядро">Сложность в том, что люди мыслят по-разном и в рамках одной тематики могут вводить для поиска совершенно разные запросы: <i>«Бали туры», «туры вдвоем», «туры в Бали», «двоем на Бали"</i>. Для нас с вами эти сочетания в общем идентичны, но для поисковых систем - они все разные! <br>Если у конкурента указано: «двоем на Бали», а у вас нет - поисковая система покажет его объявление/сайт.</p>
+            <p class="animate__animated animate__lightSpeedInLeft"><img class="icon-imagine" src="{% static 'images/icons/nucleoss.svg' %}" alt="Создаем семантическое ядро">Задача собрать все эти запросы, для этого используются специальные ресурсы и методики, самостоятельно (качественно) это сделать крайне сложно.</p>
+          </div>
+          <div class="reading" id="click-reading">
+            <p class="animate__animated animate__fadeInDown"><img class="icon-imagine" src="{% static 'images/icons/settings-gear.svg' %}" alt="Технические настройки для рекламы">Проверяю ваш сайт на наличие технических возможностей к продвижению и в зависимости от ваших целей, необходимо установить те или иные формы и функции взаимодействия с пользователями.</p>
+            <p class="animate__animated animate__fadeInDown"><img class="icon-imagine" src="{% static 'images/icons/settings-gear.svg' %}" alt="Технические настройки для рекламы">Подключение сайта к системе мониторинга и анализа действий пользователей на сайте.</p>
+            <p class="animate__animated animate__fadeInDown"><img class="icon-imagine" src="{% static 'images/icons/settings-gear.svg' %}" alt="Технические настройки для рекламы">Подключение счетчиков на сайт для анализа и корректировки эффективности рекламных компаний.</p>
+            <p class="animate__animated animate__fadeInDown"><img class="icon-imagine" src="{% static 'images/icons/settings-gear.svg' %}" alt="Технические настройки для рекламы">При необходимости устанавливаем «коллтрекинг» на сайт для осуществления звонков (и их анализа) с сайта в ваш отдел продаж.</p>
+          </div>
+          <div class="reading" id="click-reading">
+            <p class="animate__animated animate__rotateInUpLeft"><img class="icon-imagine" src="{% static 'images/icons/metrics.svg' %}" alt="Оптимизация рекламной кампании">Рекламная кампания не то, что можно включить один раз и «пожинать плоды».</p>
+            <p class="animate__animated animate__rotateInUpLeft"><img class="icon-imagine" src="{% static 'images/icons/metrics.svg' %}" alt="Оптимизация рекламной кампании">Рекламную кампанию нужно постоянно анализировать на предмет эффективности тех или иных ключевых слов, текстов, баннеров, стоимости.</p>
+            <p class="animate__animated animate__rotateInUpLeft"><img class="icon-imagine" src="{% static 'images/icons/metrics.svg' %}" alt="Оптимизация рекламной кампании">Анализировать насколько эффективно реклама отвечает запросам пользователей. От этого зависит и стоимость рекламы, чем хуже она подготовлена - тем дороже она вам обойдется и не результативней будет. И напротив, чем лучше проработано - тем дешевле и эффективней будет.</p>
+          </div>
+        </div>
+
+        <div id=firth-part-block>
+          <p>ИТОГО: выше описана лишь небольшая часть возможностей продвижения посредством платной рекламы, процедуры подготовки к ней и ее осуществления. Если изложить все подробно - вам придется не спать и не есть и провести за чтением много суток…</p>
+          <p>Многое зависит от Вашего бизнеса, целей и задач.</p>
+          <p>Все это обговорим по телефону и при встрече, после уже сможете принять взвешенное решение.</p>
+        </div>
+
+        <h2>Стоимость настройки и ведения рекламной кампании</h2>
+        <div id="price-block">
+          <div class="price">
+            <img src="{% static 'images/zakaz/yandex-reklama.png' %}" alt="Стоимость настройки и ведения Яндекс Директ">
+            <p class="price-description text">Настройка и запуск рекламной кампании в Яндекс или Google</p>
+            <hr>
+            <p class="price-description zena">Цена: от <span style="text-decoration: line-through; text-decoration-color: red; text-decoration-thickness: 1px; letter-spacing: 1.5px;"><b>19000</b> </span> р. <span style="color:red; padding-left: 20px; letter-spacing: 1px"><b>15200</b></span> р. </p> 
+            <span class="detail_card_buttom_css" id="detai_price_card_button_open" style="margin-left: 80%; ">
+              <span></span><span></span><span></span><span></span>
+              детали
+            </span>
+          </div>
+          <div class="price">
+            <img src="{% static 'images/zakaz/yan-google.jpg' %}" alt="Стоимость настройки и ведения Яндекс директ и Google ads">
+            <p class="price-description text">Настройка и запуск рекламной кампании в Яндекс+Google</p>
+            <hr>
+            <p class="price-description zena">Цена: от <span style="text-decoration: line-through; text-decoration-color: red; text-decoration-thickness: 1px; letter-spacing: 1.5px;"><b>28500</b> </span> р. <span style="color:red; padding-left: 20px; letter-spacing: 1px"><b>22800</b></span> р.</p> 
+            <span class="detail_card_buttom_css" id="detai_price_card_button_open" style="margin-left: 80%; ">
+              <span></span><span></span><span></span><span></span>
+              детали
+            </span>
+          </div>
+          <div class="price">
+            <img src="{% static 'images/zakaz/analitica.jpg' %}" alt="Стоимость комплексного продвижения в интернете">
+            <p class="price-description text">Веб-аналитика<br>Яндекс.Метрика и Google Analytics.</p>
+            <hr> 
+            <p class="price-description zena">Цена: от <span style="text-decoration: line-through; text-decoration-color: red; text-decoration-thickness: 1px; letter-spacing: 1.5px;"><b>13000</b> </span> р. <span style="color:red; padding-left: 20px; letter-spacing: 1px"><b>10400</b></span> р.</p>
+            <span class="detail_card_buttom_css" id="detai_price_card_button_open" style="margin-left: 80%; ">
+              <span></span><span></span><span></span><span></span>
+              детали
+            </span>
+          </div>
+          <div class="cover_detail_fon_hide" id="detai_price_card_button">
+            <span id="close_detail_menu_butom" class="close_detail_css"></span>
+            <div class="detail_price_card">
+              <div class="detail_price_card_description top">
+                <p id="price_card_description_title">Настроим</p>
+                <p><span>Поисковую рекламу</span><br> У определенной аудитории уже есть интерес к вашему предложению. Мы побуждаем их к совершению покупки через актуальную рекламу в нужное время.</p>
+                <p><span>Ретаргетинг</span><br>Покажем рекламу и убедим тех, кто уже посетил ваш сайт и проявил интерес, но еще не сделал заказ. </p>
+                <p><span>Рекламная сеть Яндекс</span><br>Хотите максимального охвата аудитории? Среднесуточная
+                  аудитория площадок РСЯ — более 65 млн пользователей, можем охватить всех! </p>
+              </div>
+              <div class="detail_price_card_delimeter"></div>
+              <div class="detail_price_card_description bottom">
+                <p id="price_card_description_title">Вы получите</p>
+                <p>Настроенный рекламный аккаунт (Если кампания уже запущена, мы оптимизируем ее в рамках текущего бюджета).</p>
+                <p>Проработанную семантику (ключевые фразы, тексты объявлений).</p>
+                <p>Эффективно работающие рекламные кампании.</p>
+                <p>Синхронизацию с системами аналитики.</p>
+                <p>Необходимое количество заявок в рамках заданных KPI.</p>
+                <p>Оптимизацию кампаний в зависимости от бизнес-целей и статистики.</p>
+                <p>Ежемесячную отчетность и закрывающие документы.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cover_detail_fon_hide" id="detai_price_card_button">
+            <span id="close_detail_menu_butom" class="close_detail_css"></span>
+            <div class="detail_price_card">
+              <div class="detail_price_card_description top">
+                <p id="price_card_description_title">Настроим</p>
+                <p><span>Поисковую рекламу</span><br> У определенной аудитории уже есть интерес к вашему предложению. Мы побуждаем их к совершению покупки через актуальную рекламу в нужное время.</p>
+                <p><span>Ретаргетинг</span><br>Покажем рекламу и убедим тех, кто уже посетил ваш сайт и проявил интерес, но еще не сделал заказ. </p>
+                <p><span style="color:red">Кампании в Рекламной сети Яндекса
+                  и контекстно-медийной сети Google</span><br>Запустим рекламу под любые маркетинговые цели и этапы воронки продаж на сайтах партнеров Яндекса и Google, на YouTube, в мобильных приложениях, почте Gmail и не только</p>
+                  <p><span>Рекламу в Google Merchant Center</span><br> Покажем карточки ваших товаров с ценой тогда, когда пользователи будут искать эти товары.</p>
+                </div>
+              <div class="detail_price_card_delimeter"></div>
+              <div class="detail_price_card_description bottom">
+                <p id="price_card_description_title">Вы получите</p>
+                <p>Настроенный рекламный аккаунт (Если кампания уже запущена, мы оптимизируем ее в рамках текущего бюджета).</p>
+                <p>Проработанную семантику (ключевые фразы, тексты объявлений).</p>
+                <p>Эффективно работающие рекламные кампании.</p>
+                <p>Синхронизацию с системами аналитики.</p>
+                <p>Необходимое количество заявок в рамках заданных KPI.</p>
+                <p>Оптимизацию кампаний в зависимости от бизнес-целей и статистики.</p>
+                <p>Ежемесячную отчетность и закрывающие документы.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cover_detail_fon_hide" id="detai_price_card_button">
+            <span id="close_detail_menu_butom" class="close_detail_css"></span>
+            <div class="detail_price_card">
+              <div class="detail_price_card_description top">
+                <p id="price_card_description_title"><span style="color:red">C помощью Веб-аналитики</span> </p>
+                <p>Узнаете, откуда приходят посетители и как они ведут себя на сайте.</p>
+                <p>Определите стоимость привлечения клиента.</p>
+                <p>Сможете оптимизировать расходы за счет сокращения неэффективных ключевых слов и фокусироваки на нужных.</p>
+                <p>Анализировать вложения/отдачу в зависимости от рекламных кампаний и используемой рекламной плодащки</p>
+                <p>Понять, что мешает пользователям выполнить целевые действия</p>
+              </div>
+              <div class="detail_price_card_delimeter"></div>
+              <div class="detail_price_card_description bottom">
+                <p id="price_card_description_title">Вы получите</p>
+                <p>Подробный аудит настроек Яндекс.Метрики и Google Analytics с рекомендациями по их улучшению.</p>
+                <p>Правильно настроенные системы веб-аналитики (Google Analytics, Яндекс.Метрику).</p>
+                <p>Интеграцию инструментов веб-аналитики с системами коллтрекинга для отслеживания целевых звонков.</p>
+                <p>Статистические данные, на основе которых можно оценить рентабельность того или иного рекламного инструмента.</p>
+                <p><span>Для e-commerce проектов</span><br> Google Analytics и Яндекс.Метрику для электронной торговли.</p>
+                <p>Воронку продаж с подробной детализацией вплоть до ключевых слов.</p>
+              </div>
+            </div>
+          </div>
+          <div id="phone-block">
+            <div class="phone-desktop-block">
+              <div class="call-phone-text">Позвонить</div>
+              <svg style="margin-right: 15px;" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="red"><g><rect fill="none" height="24" width="24"/></g><g><g><polygon points="6.41,6 5,7.41 9.58,12 5,16.59 6.41,18 12.41,12"/><polygon points="13,6 11.59,7.41 16.17,12 11.59,16.59 13,18 19,12"/></g></g></svg>
+              <div id="phone-desktop" class="phone-desktop-button">
+                <div class="learn-more" >
+                  <svg class="click_telephone_svg" xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 48 48"><title>telephone</title><g><path fill="#444444" d="M32,21v-5c0-0.55231-0.44769-1-1-1h-2c-0.55225,0-1,0.44769-1,1v3h-8v-3c0-0.55231-0.44769-1-1-1h-2 c-0.55225,0-1,0.44769-1,1v5L3,35h42L32,21z"></path> <path fill="#565656" d="M5,43h38c1.10461,0,2-0.89545,2-2v-6H3v6C3,42.10455,3.89545,43,5,43z"></path> <ellipse fill="#E6E6E6" cx="24" cy="28" rx="7" ry="4"></ellipse> <path fill="#444444" d="M7.99999,5C4.68629,5,2,7.68629,2,10.99999V11v4c0,1.10457,0.89543,2,2,2h7c1.10457,0,2-0.89543,2-2v-5h22v5 c0,1.10457,0.89543,2,2,2h7c1.10457,0,2-0.89543,2-2v-4v-0.00001C46,7.68629,43.31371,5,40.00001,5H7.99999z"></path></g></svg>
+                </div>
+                <span class="phone-text">8-989-772-46-61</span>
+              </div>
+            </div>
+            <i class="Phone is-animating" onclick="document.location.href = 'tel:89897724661'"></i>
+          </div>
+        </div>
+
+        
+
+        <div class="call-me-fon">
+          
+          <!-- <i class="Phone is-animating" onclick="document.location.href = 'tel:89897724661'"></i> -->
+          <p class="title-zakaz">Закажите обратный звонок</p>
+          <form class="call-me-block" method="post" id="prodvizhenie-sajta" type="submit" onsubmit="ym(80177671,'reachGoal','form-reklama')">
+            {% csrf_token %}
+            <div>
+              {{ name }}
+              <label for="id_name"></label>
+              <input type="text" maxlength="30" name="name" class="form name" required placeholder="Ваше имя">
+            </div>
+            <div>
+              {{ phone }}
+              <label for="id_phone"></label>
+              <input type="tel" name="phone" class="form phone" required placeholder="Ваш номер телефона">
+            </div>
+
+            <div>
+              <!-- <div type="submit" class="form submit">Перезвонить</div> -->
+              <!-- <button type="submit" class="form submit">Перезвонить</button> -->
+              <button  class="form submit" id="click-form" >Перезвонить</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- <i class="Phone is-animating"><form id="callback-button"  action="tel:89897724661">Нажмите, чтобы позвонить</form></i> -->
+        <!-- <div id="callback-mobile-button"><form action="tel:89897724661"></form></div> -->
+
+        </div>
+        <!-- <div class="delimiter-line"><div class="line"></div></div> -->
+        <div class="promotion__timer">
+          <div class="discount-text">
+            <p class="discount-title">Акция для новых клиентов!</p>
+            <p>Продвижение в интернете своих товаров и услуг - это искусство и большой объем знаний.</p>
+            <p>Чтобы Вы могли увидеть в действии все преимущества современных технологий, рост прибыли и эффективность от вложений.</p>
+            <p>В рамках ограниченного предложения, я предлагаю скидку<span style="color:red"> 20% </span> на ежемесячную стоимость обслуживания, которую Вы сможете дополнительно инвестировать в продвижение.</p>
+          </div>
+          <div class="all-timer-part">
+            <div class="discount-title">Осталось до конца акции:</div>
+              <div class="timer">
+                <div class="timer__block">
+                  <span id="days" class="time-number">12</span>
+                  <p>дней</p>
+                </div>
+                <div class="timer__block">
+                  <span id="hours" class="time-number">20</span>
+                  <p>часов</p>
+                </div>
+                <div class="timer__block">
+                  <span id="minutes" class="time-number">56</span>
+                  <p>минут</p>
+                </div>
+                <div class="timer__block">
+                  <span id="seconds" class="time-number">20</span>
+                  <p>секунд</p>
+                </div>
+              </div>
+          </div>
+          
+        </div>
+          
+        <hr class="after-article">
+        <h3>Полезные статьи о продвижении:</h3>
+        <div id="recomendation-article-block">
+          
+          <div id="recomendation-article-card">
+              <img id="rec-image-size" src="{% static 'images/seo-chief-page/bystroe-prodvizhenie-sajta-small.jpg' %}" alt="Быстрое продвижение сайта">
+              <p class="before-title-green">ПРОДВИЖЕНИЕ</p>
+              <p class='card-title'><a href="{% url 'seo_one_one_url' %}">Быстрое продвижение сайта. Как не быть<span style="color:red;"> обманутым?!</a></p>
+              <p class="article-description-part">
+                  Вы узнаете, как не быть обманутым при обращении за продвижением сайта в топ, "подводные камни" данной сферы... 
+              </p>
+              
+              <hr class="first-hr-in-bottom">
+              <p class="article-time-read one">10 мин чтения</p>
+          </div>
+            <div id="recomendation-article-card">
+              <img id="rec-image-size" src="{% static 'images/seo-chief-page/sekret-uspeshnogo-seo-prodvizheniya-sajtov-small.jpg' %}" alt="Быстрое продвижение сайта">
+              <p class="before-title-orange">Ключевые знания</p>
+              <p class='card-title'><a href="{% url 'seo_one_two_url' %}">Секрет успешного seo продвижения сайтов</a></p>
+              <p class="article-description-part">
+                Рассматриваем ключевые моменты для успешного сео продвижения сайта. С чего нужно начинать и как двигаться.. 
+              </p>
+              <hr class="first-hr-in-bottom two">
+              <p class="article-time-read two">20 мин чтения</p>
+          </div>
+      
+          <div id="recomendation-article-card">
+              <img id="rec-image-size" src="{% static 'images/seo-chief-page/kak-uvelichit-trafik-na-175%.png' %}" alt="How increase your trafic">
+              <p class="before-title-orange">Увеличение трафика</p>
+              <p class='card-title'><a href="{% url 'seo_one.nine_url' %}">Как увеличить трафик на <b><span style="color:red;">175%</span></b> с помощью обратных ссылок</a></p>
+              <p class="article-description-part">
+                Пошагово разбирается метод для постоянного притока целевого трафика и его значительного увеличения
+              </p>
+              <hr class="first-hr-in-bottom three">
+              <p class="article-time-read three">10 мин чтения</p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      
+    </div>
+    
+    
+    
+    <!-- <div id="reklama-block">
+      <div id="presantation-card" data-presenatation-card>
+        <div id='back-card'><p>Нечто интересное</p></div>
+        <div id="card-face">
+          <img src="{% static 'images/seo_optimization.webp' %}" alt="">
+          <p>Что представляет собою контекстная реклама</p>
+        </div>
+      </div>
+    </div> -->
+
+  
+    
+
+    
+    <!-- КОНЕЦ БЛОКА ПРЕЗЕНТАЦИИ С ФОТО И УСЛУГАМИ -->
+    <div class="whatsapp">
+      <a class="whatsapp__img" href="https://wa.me/79897724661">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+        <path style="fill:#EDEDED;" d="M0,512l35.31-128C12.359,344.276,0,300.138,0,254.234C0,114.759,114.759,0,255.117,0
+          S512,114.759,512,254.234S395.476,512,255.117,512c-44.138,0-86.51-14.124-124.469-35.31L0,512z"/>
+        <path style="fill:#55CD6C;" d="M137.71,430.786l7.945,4.414c32.662,20.303,70.621,32.662,110.345,32.662
+          c115.641,0,211.862-96.221,211.862-213.628S371.641,44.138,255.117,44.138S44.138,137.71,44.138,254.234
+          c0,40.607,11.476,80.331,32.662,113.876l5.297,7.945l-20.303,74.152L137.71,430.786z"/>
+        <path style="fill:#FEFEFE;" d="M187.145,135.945l-16.772-0.883c-5.297,0-10.593,1.766-14.124,5.297
+          c-7.945,7.062-21.186,20.303-24.717,37.959c-6.179,26.483,3.531,58.262,26.483,90.041s67.09,82.979,144.772,105.048
+          c24.717,7.062,44.138,2.648,60.028-7.062c12.359-7.945,20.303-20.303,22.952-33.545l2.648-12.359
+          c0.883-3.531-0.883-7.945-4.414-9.71l-55.614-25.6c-3.531-1.766-7.945-0.883-10.593,2.648l-22.069,28.248
+          c-1.766,1.766-4.414,2.648-7.062,1.766c-15.007-5.297-65.324-26.483-92.69-79.448c-0.883-2.648-0.883-5.297,0.883-7.062
+          l21.186-23.834c1.766-2.648,2.648-6.179,1.766-8.828l-25.6-57.379C193.324,138.593,190.676,135.945,187.145,135.945"/><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+        </svg>
+      </a>
+      <div class="whatsapp__text">WhatsApp</div>
+    </div>
+  </div>
+
+  
+
+
+  <footer style="margin-bottom: -70px;">
+    <div class="footer-nav">
+      <li><a href="{% url 'author_url' %}">Об авторе</a></li>
+      <li><a href="{% url 'contact_me_url' %}">Контакты</a></li>
+      <li><a href="{% url 'zakazat_url' %}"><i></i>Заказать продвижение</a></li>
+    </div>
+    <span class="copyright"> © Django, made with <b><i ></i></b> by me </span>
+  </footer>
+
+<!-- Plugins -->
+
+<script src="{% static 'zakaz.js' %}"></script>
+
+
+<!-- Yandex.Metrika counter Основной счетчик Метрики просмотра страниц и отслеживания конверсий-->
+<!-- <script type="text/javascript" >
+	(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  
+	ym(80177671, "init", {
+		 clickmap:true,
+		 trackLinks:true,
+		 accurateTrackBounce:true,
+		 webvisor:true
+	});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/80177671" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
+<!-- /Yandex.Metrika counter -->
+
+<!-- Global site tag (gtag.js) - Google Ads: 344751684 -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-344751684"></script> -->
+<!-- <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-344751684');
+  gtag('config', 'G-3DVTTS7EMJ');
+</script> -->
+<!-- Event snippet for Отправка формы для потенциальных клиентов conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<!-- <script>
+  // моя доработка для button
+  const clickForm=document.getElementById('click-form');
+  clickForm.addEventListener('click', (e)=>{
+    if(e.target){
+      return gtag_report_conversion();
+    }
+  })
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-344751684/aZmUCPmk9MsCEMT8saQB',
+        'event_callback': callback
+    });
+    return false;
+  }
+</script> -->
+  
+
+</body>
+</html>

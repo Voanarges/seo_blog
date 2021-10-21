@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KZDZK9X');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    Заказать продвижение
+  </title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <style>
+	a{text-decoration: none;}
+	body {font-family: 'Montserrat', sans-serif; color: black;}
+
+	@media (min-width:768px){
+    .nav-menu {width: 40%; position: absolute; left: 55%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+    .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 7em; align-items: center; padding: 5px; }
+    #logo {margin-left: 10%; position: absolute;}
+    #logo img{width: 120px; height: 16px;}
+    .nav-menu a {font-size: 14px; font-weight: 500; color: black;}
+    #content-block {margin-left: 1%; margin-right: 1%; margin-top: 70px; margin-bottom: 400px;}
+    .hhtitle {text-align: center; font-size: 22px; font-weight: 500; color: black; }
+    #predlojenie-line {display: flex; flex-direction: row; justify-content: space-between; width: 100%; position: relative; margin-top: 70px; margin-left: auto; margin-right: auto;}
+    #article-presentation-card {min-width: 330px; max-width: 330px; height: 570px;  border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px;transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease; margin-top: 40px;}
+    #article-presentation-card:hover {transform: translateY(-10px); box-shadow: -1px 5px 8px 6px rgba(34, 60, 80, 0.15); cursor: pointer;}
+    #article-presentation-card hr{border: 0.3px solid  rgb(241, 234, 224); width: 80%; margin-left: 10%; margin-right: 10%;}
+    .hr-class {margin-top: 69px;}
+    .hr-class-two{margin-top: 50px;}
+    #card-image-size{box-sizing: border-box; min-width: 330px; max-width: 330px; max-height: 250px; min-height: 250px; border-top-left-radius: 12px; border-top-right-radius: 12px; }
+    .article-description-part {color: black; font-weight: 400; font-size: 18px; text-align: justify; text-indent: 10px; padding: 0px 10px 0px 10px;}
+    .small-description{color:grey; font-weight: 500; font-size: 14px; text-align: justify; text-indent: 5px; padding: 0px 10px 0px 10px;}
+	}
+  @media (min-width:834px) {
+      .nav-menu {width: 42%; position: absolute; left: 57%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 13px; font-weight: 500; color: black;}
+      .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 8em; align-items: center; padding: 5px; }
+      /* cards */
+      #content-block {margin-left: 2%; margin-right: 2%; margin-top: 20px;}
+      #predlojenie-line{width: 100%; margin-left: auto; margin-right: auto;}
+      #article-presentation-card {min-width: 380px; max-width: 380px; height: 610px;}
+      #card-image-size {box-sizing: border-box; min-width: 380px; max-width: 380px; max-height: 270px; min-height: 270px;}
+      
+    }
+    @media (min-width:1024px) {
+      .nav-menu {width: 37%; position: absolute; left: 60%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 14px; font-weight: 500; color: black;}
+      .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 8em; align-items: center; padding: 5px; }
+      #logo img{width: 140px; height: 18px;}
+      #predlojenie-line{width: 100%; margin-left: auto; margin-right: auto;}
+      #article-presentation-card {min-width: 450px; max-width: 450px; height: 610px;}
+      #card-image-size {box-sizing: border-box; min-width: 450px; max-width: 450px; max-height: 300px; min-height: 300px;}
+    }
+    @media (min-width:1112px) {
+      .nav-menu {width: 32%; position: absolute; left: 62%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      #logo img{width: 140px; height: 18px;}
+      #predlojenie-line{width: 90%;}
+    }
+    @media (min-width:1366px) {
+      .nav-menu {width: 33%; position: absolute; left: 65%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 16px; font-weight: 500; color: black;}
+      .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 10em; align-items: center; padding: 2px 0px 2px 20px; }
+      #content-block {margin-left: 10%; margin-right: 10%; margin-top: 20px;}
+      
+    }
+	@media (min-width:1504px) {
+    .nav-menu {width: 28%; position: absolute; left: 65%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+    .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 10em; align-items: center; padding: 2px 0px 2px 20px; }
+
+    .footer-nav { position: absolute; top: 35%; left: 25%; display: flex; flex-direction: row; justify-content: space-between; width: 10%;}
+    #content-block {margin-left: 12%; margin-right: 12%; margin-top: 20px; }
+    .footer-nav { position: absolute; top: 35%; left: 15%; width: 15%;}
+	}
+  @media (min-width:1920px) {
+      .nav-menu {width: 25%; position: absolute; left: 67%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 16px; font-weight: 500; color: black;}
+      .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 10em; align-items: center; padding: 2px 0px 2px 20px; }
+      #logo {margin-left: 8%; position: absolute;}
+      #logo img{width: 160px; height: 22px;}
+      #content-block {margin-left: 20%; margin-right: 20%; margin-top: 20px;}
+  }
+  @media (min-width:2070px) {
+      #content-block {margin-left: 20%; margin-right: 20%; margin-top: 20px;}
+    }
+  @media (min-width:2400px) {
+    .nav-menu {width: 20%; position: absolute; left: 72%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+    #content-block {margin-left: 25%; margin-right: 25%; margin-top: 20px;}
+  }
+
+	@media (min-width:320px) and (max-width: 760px) {
+    .nav-menu {height: 0px; width: 0px; z-index: 5; top: 40px; margin-left: 60%; overflow: hidden; position: absolute; display: flex; flex-direction: column; justify-content: center; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in;}
+    .nav-menu-close {height: 200px; width: 40%; z-index: 5; top: 40px; margin-left: 60%; position: absolute; display: flex; flex-direction: column; justify-content: space-around; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in;}
+    .menu-icone {display: inline; content: url("{% static 'images/icons/menu.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;}
+    .close-button{display: inline; content: url("{% static 'images/icons/leave.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;} 
+    #header-image {width: 100%; height: 235px; display: block; box-sizing: border-box; background: url("{% static 'images/zakaz/meeting.jpg' %}"); background-size: cover; background-repeat: no-repeat; }
+    
+    .hr-class {margin-top: 69px;}
+    .hr-class-two{margin-top: 40px;}
+    #content-block {margin-left: 1%; margin-right: 1%; margin-top: 20px; margin-bottom: 400px;}
+    .hhtitle {text-align: center; font-size: 20px; font-weight: 500; color: black; }
+    #predlojenie-line {margin: 0px auto; display: flex; flex-direction: column; justify-content: center; width: 90%; position: relative;}
+    #article-presentation-card { width: 300px; height: 520px;  border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px;transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease; margin-top: 40px;}
+    #article-presentation-card:hover {transform: translateY(-10px); box-shadow: -1px 5px 8px 6px rgba(34, 60, 80, 0.15); cursor: pointer;}
+    #article-presentation-card hr{border: 0.3px solid  rgb(241, 234, 224); width: 80%; margin-left: 10%; margin-right: 10%;}
+    #card-image-size {box-sizing: border-box; min-width: 300px; max-width: 300px; max-height: 300px; border-top-left-radius: 12px; border-top-right-radius: 12px;}
+    .article-description-part {color: black; font-weight: 400; font-size: 16px; text-align: justify; text-indent: 10px; padding: 0px 10px 0px 10px;}
+    .small-description{color:grey; font-weight: 500; font-size: 14px; text-align: justify; text-indent: 5px; padding: 0px 10px 0px 10px;}
+	}
+  @media (min-width:384px) and (max-width: 760px){
+    #predlojenie-line{width: 85%;}
+  }
+  @media (min-width:412px) and (max-width: 760px){
+    #predlojenie-line{width: 90%;}
+    #article-presentation-card { width: 360px;}
+    #card-image-size{min-width: 360px; max-width: 360px;}
+  }
+
+	</style>
+ 
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZDZK9X"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+	<header>
+		<nav id="chief-nav">
+			<li id="logo"><a  href="{% url 'index_list_url' %}"><img src="{% static 'images/logomini.png' %}"  alt="logo"></a></li>
+			<!-- id="mobile-nav" - для javascripta для взаимодействия с иконкой открыть - закрыть -->
+			<div class="nav-menu" id="visible-menu">
+				<!-- <li><i id="close-button" ></i></li> -->
+				<li><a href="{% url 'author_url' %}" data-target="">Об авторе</a></li>
+        <li><a href="{% url 'index_list_url' %}" data-target="">Главная</a></li>
+				<li><a href="{% url 'seo_list_url' %}" data-target="">Seo&Маркетинг</a></li>
+				
+			</div>
+			<i class="menu-icone" id="mobile-icone"></i>
+		</nav>	
+	</header>
+  
+  <div id="content-block">
+    <div id="predlojenie-line">
+      <!-- <div id="article-presentation-card">
+        <a href="{% url 'semantika_url' %}">
+          <img id="card-image-size" src="{% static 'images/zakaz/advertising.jpg' %}" alt="продвижение сайта ">
+          <p class="hhtitle">Заинтересованы в продвижении вашего сайта и увеличения прибыли?!</p>
+          <p class="article-description-part">
+          Посмотрите, то ли это, что нужно Вашему бизнесу и ответит ли на Ваши задачи.
+          </p>
+          <hr>
+          <p class="small-description"><span style="color:red">Вы узнаете:</span> возможности и задачи, решаемые посрдеством контекстной рекламой, что для этого нужно и стоимость данных услуг. </p>
+        </a>
+      </div> -->
+
+      <div id="article-presentation-card">
+        <a href="{% url 'seo_prodvijenie_url' %}">
+          <img id="card-image-size" src="{% static 'images/zakaz/seo-fon.jpg' %}" alt="продвижение сайта ">
+          <p class="hhtitle">SEO продвижение</p>
+          <p class="article-description-part">
+          Посмотрите, то ли это, что нужно Вашему бизнесу и ответит ли на Ваши задачи.
+          </p>
+          
+          <hr class="hr-class">
+          <p class="small-description"><span style="color:red">Вы узнаете:</span> что собою представляет CEO и что входит в ежемесячную стоимость обслуживания </p>
+        </a>
+      </div>
+
+      <div id="article-presentation-card">
+        <a href="{% url 'prodvizhenie_sajta_url' %}">
+          <img id="card-image-size" src="{% static 'images/meeting.jpg' %}" alt="продвижение сайта ">
+          <p class="hhtitle">Контекстная реклама<br>Yandex Direct&Google AdWords</p>
+          <p class="article-description-part">
+          Посмотрите, то ли это, что нужно Вашему бизнесу и ответит ли на Ваши задачи.
+          </p>
+          <hr class="hr-class-two">
+          <p class="small-description"><span style="color:red">Вы узнаете:</span> возможности и задачи, решаемые посредством контекстной рекламой, что для этого нужно и стоимость данных услуг. </p>
+        </a>
+      </div>
+     
+    </div>
+  </div>
+
+	<footer >
+		<div class="footer-nav">
+			<li><a href="{% url 'author_url' %}">Об авторе</a></li>
+			<li><a href="{% url 'seo_list_url' %}">Seo&Маркетинг</a></li>
+		</div>
+  		<span class="copyright"> © Django, made with <b><i ></i></b> by me </span>
+	</footer>
+
+<script src="{% static 'code.js' %}"></script>
+<!-- Plugins -->
+<!-- Yandex.Metrika counter Основной счетчик Метрики просмотра страниц-->
+<!-- <script type="text/javascript" >
+	(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  
+	ym(80177671, "init", {
+		 clickmap:true,
+		 trackLinks:true,
+		 accurateTrackBounce:true,
+		 webvisor:true
+	});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/80177671" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
+<!-- /Yandex.Metrika counter -->
+<!-- Global site tag (gtag.js) - Google Ads: 344751684 -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-344751684"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-344751684');
+  gtag('config', 'G-3DVTTS7EMJ');
+</script> -->
+
+</body>
+
+</html>

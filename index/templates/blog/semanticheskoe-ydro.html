@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KZDZK9X');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8" />
+  <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="yandex-verification" content="bc944c0aababbeb8" />
+  <meta name="google-site-verification" content="me3yW_fJTPtWp1TZGQOOIdxHyyi69m4SoQYkw4k3P0A" />
+  
+  <title>
+    {% block title %}{% endblock title %}
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  
+ 
+  <style>
+    a{text-decoration: none;}
+    @media (min-width:768px) {
+    #header-image {width: 100%; height: 500px; display: block; box-sizing: border-box; background: url("{% static 'images/zakaz/nuclear-chief.webp' %}"); background-size: cover; background-repeat: no-repeat; }
+    #content-block {margin-left: 10%; margin-right: 10%; margin-top: 20px;}
+    h1 {font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 50.4px; margin-bottom: 25px; margin-top: 30px; text-align: center; color: #333333;}
+    /* h2 {width: 80%; margin-left: auto; margin-right: auto; font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 50.4px; margin-bottom: 25px; margin-top: 80px; text-align: center; color: #333333;}
+    .hhtitle {text-align: center; font-size: 24px; font-weight: 500; font-family: 'Montserrat', sans-serif; color: rgb(102, 97, 91); }
+    .steps-title {text-align: center; font-size: 24px; font-weight: 500; font-family: 'Montserrat', sans-serif; color: black; margin: 0px;}
+    #zagolovki {display: flex; justify-content: center; flex-direction: column;}
+    /* карточка с обратной стороной */
+    /* #articles-line-block {display: flex; flex-direction: row; justify-content: space-between; width: 100%; position: relative; flex-wrap: wrap; }
+    #reklama-block {display: flex; flex-direction: row; position: relative; flex-wrap: wrap; z-index: 5;} */
+    
+    
+
+
+  }
+
+    @media (min-width:1504px) {
+    #header-image {width: 100%; height: 900px; display: block; box-sizing: border-box; background: url("{% static 'images/zakaz/nuclear-chief.webp' %}"); background-size: cover; background-repeat: no-repeat; }
+    #content-block {margin-left: 26%; margin-right: 26%; margin-top: 20px;}
+  
+    }
+
+    @media (min-width:320px) and (max-width: 760px) {
+    .nav-menu {height: 0px; width: 0px; z-index: 5; top: 40px; margin-left: 60%; overflow: hidden; position: absolute; display: flex; flex-direction: column; justify-content: center; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in;}
+    .nav-menu-close {height: 240px; width: 40%; z-index: 5; top: 40px; margin-left: 60%; position: absolute; display: flex; flex-direction: column; justify-content: space-around; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in;}
+    .menu-icone {display: inline; content: url("{% static 'images/icons/menu.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;}
+    .close-button{display: inline; content: url("{% static 'images/icons/leave.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;} 
+    #header-image {width: 100%; height: 235px; display: block; box-sizing: border-box; background: url("{% static 'images/zakaz/nuclear-chief.webp' %}"); background-size: cover; background-repeat: no-repeat; }
+    #content-block {margin-left: 1%; margin-right: 1%; margin-top: 20px; box-sizing: border-box; }
+    
+    h1 {font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 27px; margin-bottom: 25px; margin-top: 30px; text-align: center; color: #333333;}
+    h2 {width: 100%; margin-left: auto; margin-right: auto; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 30px; margin-bottom: 25px; margin-top: 80px; text-align: center; color: #333333;}
+    .hhtitle {text-align: center; font-size: 24px; font-weight: 500; font-family: 'Montserrat', sans-serif; color: rgb(102, 97, 91); margin-top: 50px;}
+    
+    
+    }
+    
+    
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZDZK9X"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <nav id="chief-nav">
+      <li id="logo"><a  href="{% url 'index_list_url' %}"><img src="{% static 'images/logomini.png' %}"  alt="logo"></a></li>
+      <!-- id="mobile-nav" - для javascripta для взаимодействия с иконкой открыть - закрыть -->
+      <div class="nav-menu" id="visible-menu">
+        <!-- <li><i id="close-button" ></i></li> -->
+        <li><a href="{% url 'author_url' %}" data-target="">Об авторе</a></li>
+        <li><a href="{% url 'seo_list_url' %}" data-target="">Seo&Маркетинг</a></li>
+        <li><a href="{% url 'zakazat_url' %}"><img class="spaceship" src="{% static 'images/icons/spaceship.svg' %}" alt="order">Заказать </a></li>
+      </div>
+      <i class="menu-icone" id="mobile-icone"></i>
+    </nav>
+    
+  </header>
+  <div id="header-image"></div>
+  <div id="content-block">
+    
+    <!-- НАЧАЛО БЛОКА ПРЕЗЕНТАЦИИ С ФОТО И УСЛУГАМИ -->
+    
+ 
+
+    
+    <!-- КОНЕЦ БЛОКА ПРЕЗЕНТАЦИИ С ФОТО И УСЛУГАМИ -->
+  </div>
+
+
+  <footer style="margin-bottom: -70px;">
+    <div class="footer-nav">
+      <li><a href="{% url 'author_url' %}">Об авторе</a></li>
+      <li><a href="{% url 'contact_me_url' %}">Контакты</a></li>
+      <li><a href="{% url 'zakazat_url' %}"><i></i>Заказать продвижение</a></li>
+    </div>
+    <span class="copyright"> © Django, made with <b><i ></i></b> by me </span>
+  </footer>
+
+<!-- Plugins -->
+
+<script src="{% static 'zakaz.js' %}"></script>
+<!-- <script src="{% static 'simple-adaptive-slider.js' %}"></script> -->
+<!-- Yandex.Metrika counter Основной счетчик Метрики просмотра страниц-->
+<!-- <script type="text/javascript" >
+	(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  
+	ym(80177671, "init", {
+		 clickmap:true,
+		 trackLinks:true,
+		 accurateTrackBounce:true,
+		 webvisor:true
+	});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/80177671" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
+<!-- /Yandex.Metrika counter -->
+<!-- Global site tag (gtag.js) - Google Ads: 344751684 -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-344751684"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-344751684');
+  gtag('config', 'G-3DVTTS7EMJ');
+</script> -->
+
+
+</body>
+</html>

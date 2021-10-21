@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KZDZK9X');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8">
+  <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    {% block title %}{% endblock title %}
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <style>
+    body{font-family: 'Montserrat', sans-serif;}
+    a{text-decoration: none;}
+    .hhtitle:hover{cursor: pointer;}
+    .hhtitle a{color: rgb(102, 97, 91)}
+    .hhtitle {text-align: center; font-size: 18px; font-weight: 500;color: rgb(102, 97, 91); padding: 0px 10px 0px 10px; }
+    .before-title-green {font-size: 11px; font-weight: 600; color: rgb(107, 208, 152); text-align: right ; padding-right: 10px;}
+    .before-title-orange {font-size: 11px; font-weight: 600;  color: rgb(255, 165, 0); text-align: right ; padding-right: 10px;}
+    .article-description-part {color: rgb(154, 154, 154); font-weight: 400; font-size: 15px; text-align: justify; text-indent: 10px; padding: 0px 10px 0px 10px;}
+    .article-time-read {color: rgb(154, 154, 154); font-weight: 500; font-size: 12px; text-align: left; }
+    #article-presentation-card hr{border: 0.3px solid  rgb(241, 234, 224); width: 80%; margin-left: 10%; margin-right: 10%;}
+    @media (min-width:768px){
+    #content-block{margin-left: 15%; margin-right: 15%;}
+    #header-image {width: 100%; height: 600px; display: block; box-sizing: border-box; background: url("{% static 'images/first-page2.jpg' %}"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    h1.title {font-weight: 500; font-size: 50.4px; margin-bottom: 25px; margin-top: 30px; text-align: center; color: #333333;}
+    #articles-line-block {width: 90%; position: relative; }
+    /* #article-presentation-card:nth-child(2), :nth-child(5){margin-left: 60px; margin-right: 60px; } */
+    #article-presentation-card {border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px;transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease; margin-top: 40px; margin-left: auto; margin-right: auto;}
+    #article-presentation-card:hover {transform: translateY(-10px); box-shadow: -1px 5px 8px 6px rgba(34, 60, 80, 0.15);}
+    #card-image-size {box-sizing: border-box;  border-top-left-radius: 12px; border-top-right-radius: 12px;}
+    
+    }
+    @media (min-width:768px) and (max-width: 834px){
+      #articles-line-block {display: flex; flex-direction: column; justify-content: center; flex-wrap: wrap;}
+      #article-presentation-card {min-width: 360px; max-width: 360px; min-height: 535.6px;max-height: 535.6px;}
+      #card-image-size{min-width: 360px; max-width: 360px; min-height: 230px; max-height: 230px;}
+      .article-time-read.one, .two, .three {padding: 20px 10px 0px 240px;}
+      .article-time-read.four, .five {padding: 0px 10px 0px 240px;}
+      
+      #article-presentation-card:nth-child(1) hr{margin-top: 60px;} #article-presentation-card:nth-child(3) hr{margin-top: 50px;}
+    }
+
+    @media (min-width:834px) {
+      .nav-menu {width: 42%; position: absolute; left: 57%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 13px; font-weight: 500; color: black;}
+      .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 8em; align-items: center; padding: 5px; }
+      /* cards */
+      #content-block {margin-left: 1%; margin-right: 1%; margin-top: 20px;}
+      #articles-line-block{width: 90%; margin-left: auto; margin-right: auto; }
+      #article-presentation-card {min-width: 360px; max-width: 360px; min-height: 535.6px;max-height: 535.6px;}
+      #card-image-size{min-width: 360px; max-width: 360px; min-height: 230px; max-height: 230px;}
+      
+      /* #article-presentation-card:nth-child(4) {margin-left: 60px; margin-right: 60px;}
+      #article-presentation-card:nth-child(5) {margin-left: 0px; margin-right: 60px;} */
+    }
+    @media (min-width:1024px) {
+      .nav-menu {width: 37%; position: absolute; left: 62%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 14px; font-weight: 500; color: black;}
+      #articles-line-block {display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap; margin-left: auto; margin-right: auto;}
+      #article-presentation-card {min-width: 360px; max-width: 360px; min-height: 535.6px;max-height: 535.6px;}
+      #card-image-size{min-width: 360px; max-width: 360px; min-height: 230px; max-height: 230px;}
+      .article-time-read.one, .two, .three {padding: 20px 10px 0px 240px;}
+      .article-time-read.four, .five {padding: 0px 10px 0px 240px;}
+      #article-presentation-card:nth-child(1) hr{margin-top: 60px;} #article-presentation-card:nth-child(3) hr{margin-top: 50px;}#article-presentation-card:nth-child(2) hr{margin-top: 20px;}
+    }
+    @media (min-width:1112px) {
+      .nav-menu {width: 40%; position: absolute; left: 58%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+    }
+    @media (min-width:1366px) {
+      .nav-menu {width: 33%; position: absolute; left: 65%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 16px; font-weight: 500; color: black;}
+      .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 9em; align-items: center; padding: 5px; }
+      #content-block {margin-left: 7%; margin-right: 7%; margin-top: 20px; }
+      
+      
+    }
+    @media (min-width:1504px) {
+    #header-image {width: 100%; height: 900px; display: block; box-sizing: border-box; background: url("{% static 'images/first-page2.jpg' %}"); background-size: cover; background-repeat: no-repeat; }
+    #content-block {margin-left: 5%; margin-right: 5%; margin-top: 20px;}
+    #article-presentation-card:nth-child(1) hr{margin-top: 70px;} #article-presentation-card:nth-child(3) hr{margin-top: 50px;}#article-presentation-card:nth-child(2) hr{margin-top: 30px;}
+    }
+    @media (min-width:1920px) {
+      .nav-menu {width: 25%; position: absolute; left: 67%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 16px; font-weight: 500; color: black;}
+      .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 9em; align-items: center; padding: 5px; }
+      #logo {margin-left: 8%; position: absolute;}
+      #logo img{width: 180px; height: 25px;}
+      #content-block {margin-left: 15%; margin-right: 15%; margin-top: 20px;}
+      #article-presentation-card {min-width: 360px; max-width: 360px; min-height: 535.6px;max-height: 535.6px;}
+      #card-image-size{min-width: 360px; max-width: 360px; min-height: 250px; max-height: 250px;}
+      .article-time-read.one, .two, .three {padding: 10px 10px 0px 240px;}
+      
+    }
+    @media (min-width:2070px) {
+      #content-block {margin-left: 15%; margin-right: 15%; margin-top: 20px;}
+    }
+    @media (min-width:2400px) {
+      #content-block {margin-left: 20%; margin-right: 20%; margin-top: 20px;}
+    }
+    @media (min-width:320px) and (max-width: 767px) {
+    .nav-menu {height: 0px; width: 0px; z-index: 5; top: 40px; margin-left: 60%; overflow: hidden; position: absolute; display: flex; flex-direction: column; justify-content: space-around; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in;}
+    .nav-menu-close {height: 240px; width: 40%; z-index: 5; top: 40px; margin-left: 60%; position: absolute; display: flex; flex-direction: column; justify-content: space-around; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in;}
+    
+    .menu-icone {display: inline; content: url("{% static 'images/icons/menu.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;} 
+    .close-button{display: inline; content: url("{% static 'images/icons/leave.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;} 
+    #header-image {width: 100%; height: 235px; display: block; box-sizing: border-box; background: url("{% static 'images/first-page2.jpg' %}"); background-size: contain; background-repeat: no-repeat; }
+    #content-block {margin-left: 1%; margin-right: 1%; margin-top: 20px; box-sizing: border-box; }
+    h1.title {font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 28px; margin-bottom: 10px; margin-top: 30px; text-align: center; color: #333333;}
+    
+    #articles-line-block {display: flex; flex-direction: column; justify-content: space-around; width: 100%; position: relative; align-items: center;}
+    #article-presentation-card {width: 300px; height: 550px;  border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px;transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease; margin-top: 40px;}
+    #article-presentation-card:hover {transform: translateY(-10px); box-shadow: -1px 5px 8px 6px rgba(34, 60, 80, 0.15);}
+    #card-image-size {box-sizing: border-box; min-width: 300px;max-width: 300px; max-height: 287.6px; border-top-left-radius: 12px; border-top-right-radius: 12px;}
+    .article-time-read.one, .three {padding: 30px 10px 0px 160px;} .article-time-read.two{padding: 20px 10px 0px 160px;}
+    .article-time-read.four, .five {padding: 0px 10px 0px 160px;}
+  }
+  @media (min-width:412px) and (max-width: 767px){
+    #article-presentation-card {width: 400px; height: 570px; }
+    #card-image-size {box-sizing: border-box; min-width: 400px;max-width: 400px;}
+    .article-time-read.one, .three {padding: 20px 10px 0px 230px;} .article-time-read.two{padding: 10px 10px 0px 230px;}
+    .article-time-read.four {padding: 10px 10px 0px 230px;}
+    .article-time-read.five {padding: 0px 10px 0px 230px;}
+    .article-time-read:nth-child(1) hr{margin-top: 60px;}
+  }
+  </style>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZDZK9X"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <!-- Navbar -->
+    <nav id="chief-nav">
+      <li id="logo"><a  href="{% url 'index_list_url' %}"><img src="{% static 'images/logomini.png' %}"  alt="logo"></a></li>
+      <!-- id="mobile-nav" - для javascripta для взаимодействия с иконкой открыть - закрыть -->
+      <div class="nav-menu" id="visible-menu">
+        <!-- <li><i id="close-button" ></i></li> -->
+        <li><a href="{% url 'author_url' %}" data-target="">Об авторе</a></li>
+        <li><a href="{% url 'contact_me_url' %}" data-target="">Контакты</a></li>
+        <li><a href="{% url 'zakazat_url' %}"><img class="spaceship" src="{% static 'images/icons/spaceship.svg' %}" alt="order">Услуги</a></li>
+      </div>
+      <i class="menu-icone" id="mobile-icone"></i>
+    </nav>
+  <!-- end Navbar -->
+  <div id="header-image"></div>
+  <div id="content-block">
+	  <h1 class="title">Лучшее о seo продвижении</h1>
+	  <br />
+    <div id="articles-line-block">
+      <div id="article-presentation-card">
+        <img id="card-image-size" src="{% static 'images/seo-chief-page/bystroe-prodvizhenie-sajta-small.jpg' %}" alt="Быстрое продвижение сайта">
+        <p class="before-title-green">ПРОДВИЖЕНИЕ</p>
+        <p class='hhtitle'><a href="{% url 'seo_one_one_url' %}">Быстрое продвижение сайта. Как не быть<span style="color:red;"> обманутым?!</a></p>
+        <p class="article-description-part">
+          Вы узнаете, как не быть обманутым при обращении за продвижением сайта в топ, "подводные камни" данной сферы... <br/>
+        </p>
+        <hr>
+        <p class="article-time-read one">10 мин чтения</p>
+      </div>
+      <div id="article-presentation-card">
+        <img id="card-image-size" src="{% static 'images/seo-chief-page/sekret-uspeshnogo-seo-prodvizheniya-sajtov-small.jpg' %}" alt="Быстрое продвижение сайта">
+        <p class="before-title-orange">Ключевые знания</p>
+        <p class='hhtitle'><a href="{% url 'seo_one_two_url' %}">Секрет успешного seo продвижения сайтов</a></p>
+        <p class="article-description-part">
+          Рассматриваем ключевые моменты для успешного сео продвижения сайта. С чего нужно начинать и как двигаться.. <br/><br><br>
+        </p>
+        <hr>
+        <p class="article-time-read two">20 мин чтения</p>
+      </div>
+
+      <div id="article-presentation-card">
+        <img id="card-image-size" src="{% static 'images/seo-chief-page/kak-uvelichit-trafik-na-175%.png' %}" alt="How increase your trafic">
+        <p class="before-title-orange">Увеличение трафика</p>
+        <p class='hhtitle'><a href="{% url 'seo_one.nine_url' %}">Как увеличить трафик на <b><span style="color:red;">175%</span></b> с помощью обратных ссылок</a></p>
+        <p class="article-description-part">
+          Пошагово разбирается метод для постоянного притока целевого трафика и его значительного увеличения<br/><br>
+        </p>
+        <hr>
+        <p class="article-time-read three">10 мин чтения</p>
+      </div>
+
+      <div id="article-presentation-card">
+        <img id="card-image-size" src="{% static 'images/seo-chief-page/youtube-small.jpg' %}" alt="Что нужно для продвижения в ютубе">
+        <p class="before-title-green">РАСКРУТКА YouTube</p>
+        <p class='hhtitle'><a href="{% url 'seo_one_three_url' %}"><b><span style="color:red;">Топ-4</span></b> 
+          шага для продвижения в ютубе и получения реальных подписчиков</a></p>
+        <p class="article-description-part">
+          В статье приведены четыре практических шага для выстраивания правильной стратегии для получения реальных подписчиков и раскрутки своего YouTube канала
+        </p>
+        <hr>
+        <p class="article-time-read four">15 мин чтения</p>
+      </div>
+
+      <div id="article-presentation-card">
+        <img id="card-image-size" src="{% static 'images/seo-chief-page/copywrighting-seo-page.jpg' %}" alt="Быстрое продвижение сайта">
+        <p class="before-title-orange">Ключевые знания</p>
+        <p class='hhtitle'><a href="{% url 'seo_one_seven_url' %}"><span style="color: green;"><strong>5</strong></span> шагов <br>для написания эффективной статьи контент-маркетинга</a></p>
+        <p class="article-description-part">
+          Описано пять практических шагов для написания контент – маркетинга, в том числе: главные основы, с чего начать, где брать идеи и практические инструменты в написании
+        </p>
+        <hr>
+        <p class="article-time-read five">16 мин чтения</p>
+      </div>
+    </div>
+  </div>
+
+  <footer style="margin-bottom: -70px;">
+    <div class="footer-nav">
+      <li><a href="{% url 'author_url' %}">Об авторе</a></li>
+      <li><a href="{% url 'contact_me_url' %}">Контакты</a></li>
+      <li><a href="{% url 'zakazat_url' %}"><i></i> Заказать продвижение</a></li> 
+    </div>
+   <span class="copyright"> © Django, made with <b><i ></i></b> by me </span>
+  </footer>
+
+<!-- Plugins -->
+<script src="{% static 'code.js' %}"></script>
+<script src="{% static 'simple-adaptive-slider.js' %}"></script>
+<!-- Yandex.Metrika counter Основной счетчик Метрики просмотра страниц-->
+<!-- <script type="text/javascript" >
+	(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  
+	ym(80177671, "init", {
+		 clickmap:true,
+		 trackLinks:true,
+		 accurateTrackBounce:true,
+		 webvisor:true
+	});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/80177671" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
+<!-- /Yandex.Metrika counter -->
+<!-- <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-344751684');
+  gtag('config', 'G-3DVTTS7EMJ');
+</script> -->
+</body>
+
+</html>

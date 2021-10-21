@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KZDZK9X');</script>
+	<!-- End Google Tag Manager -->
+  <meta charset="utf-8" />
+  <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    {% block title %}{% endblock title %}
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <style>
+	a{text-decoration: none;}
+	
+	@media (min-width:768px){
+	.form-block{display:flex; justify-content: center; position: relative; margin-left:auto; margin-right: auto; margin-top: 5%; margin-bottom: 6%; min-width: 450px; max-width: 650px; min-height: 450px; max-height: 450px; box-shadow: 1px 7px 8px 4px rgba(34, 60, 80, 0.2); border-radius: 12px; box-sizing: border-box; background-image: url('{% static "images/get-message.webp" %}'); background-size: contain; background-repeat: no-repeat; background-position: center;}
+	.message-text{position: absolute; top: 12%; text-align: center; line-height: 16px;font-family: 'Montserrat', sans-serif; color: black; font-size: 16px; font-weight: 500;}
+	#return	{margin-top: 200px; margin-left: auto;margin-right: auto; text-align: center; font-family: 'Montserrat', sans-serif; color: black; font-size: 18px; font-weight: 500;}
+    #return svg{vertical-align: baseline;}
+}
+	@media (min-width:1504px) {
+	.form-block{ margin-top:10%; }
+    #return	{margin-top: 20px; margin-left: auto;margin-right: auto; margin-bottom: 14%; text-align: center; font-family: 'Montserrat', sans-serif; color: black; font-size: 18px; font-weight: 500;}
+	#return svg{vertical-align: baseline;}
+	}
+	@media (min-width:320px) and (max-width: 760px) {
+    .nav-menu {height: 0px; width: 0px; z-index: 5; top: 40px; margin-left: 60%; overflow: hidden; position: absolute; display: flex; flex-direction: column; justify-content: center; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in;}
+    .nav-menu-close {height: 240px; width: 40%; z-index: 5; top: 40px; margin-left: 60%; position: absolute; display: flex; flex-direction: column; justify-content: space-around; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in; z-index: 3;}
+    .menu-icone {display: inline; content: url("{% static 'images/icons/menu.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;}
+    .close-button{display: inline; content: url("{% static 'images/icons/leave.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;} 
+	.form-block{display:flex; justify-content: center; position: relative; margin-left:auto; margin-right: auto; margin-top: 5%; margin-bottom: 30%; min-width: 400px; max-width: 400px; min-height: 450px; max-height: 450px; box-shadow: 1px 7px 8px 4px rgba(34, 60, 80, 0.2); border-radius: 12px; box-sizing: border-box; background-image: url('{% static "images/get-message.webp" %}'); background-size: contain; background-repeat: no-repeat; background-position: center;}
+	.message-text{position: absolute; top: 19%; text-align: center; line-height: 16px; font-family: 'Montserrat', sans-serif; color: black; font-size: 13px; font-weight: 500;}
+    #return	{margin-top: 20px; margin-left: auto;margin-right: auto; margin-bottom: 14%; text-align: center; font-family: 'Montserrat', sans-serif; color: black; font-size: 18px; font-weight: 500;}
+	#return svg{vertical-align: baseline;}	
+}
+  </style>
+ 
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZDZK9X"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<header>
+		<nav id="chief-nav">
+			<li id="logo"><a  href="{% url 'index_list_url' %}"><img src="{% static 'images/logomini.png' %}"  alt="logo"></a></li>
+			<!-- id="mobile-nav" - для javascripta для взаимодействия с иконкой открыть - закрыть -->
+			<div class="nav-menu" id="visible-menu">
+				<!-- <li><i id="close-button" ></i></li> -->
+				<li><a href="{% url 'author_url' %}" data-target="">Об авторе</a></li>
+				<li><a href="{% url 'seo_list_url' %}" data-target="">Seo&Маркетинг</a></li>
+				<li><a href="{% url 'zakazat_url' %}"><img class="spaceship" src="{% static 'images/icons/spaceship.svg' %}" alt="order">Услуги</a></li>
+			</div>
+			<i class="menu-icone" id="mobile-icone"></i>
+		</nav>	
+	</header>
+  <!-- Navbar -->
+
+  <!-- end Navbar -->
+	<div class="form-block">
+		<div class="message-text">
+			<i><img class="icon-imagine" src="{% static 'images/icons/c-check.svg' %}" alt="поисковый робот" style="height: 25px; width: 25px;"></i>
+			<p>Ваше сообщение отправлено.</p>
+			<p>Я свяжусь с вами в ближайшее время</p>
+		</div>
+	</div>
+    <div id="return"><a href="{% url 'seo_prodvijenie_after_Submit_url' %}"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"><title>sharing</title><g><path d="M21.32 6.24h-1.04a0.52 0.52 0 0 0 0 1.04h1.04a1.56 1.56 0 0 1 1.56 1.56v12.48a1.56 1.56 0 0 1-1.56 1.56h-15.6a1.56 1.56 0 0 1-1.56-1.56v-5.2a0.52 0.52 0 0 0-1.04 0v5.2a2.6 2.6 0 0 0 2.6 2.6h15.6a2.6 2.6 0 0 0 2.6-2.6v-12.48a2.6 2.6 0 0 0-2.6-2.6z" fill="#aeaeae"></path><path d="M10.09 17.11a0.52 0.52 0 0 0 0.31-0.47v-3.64c5.02 0.05 6.61 1.61 8.43 3.96a0.52 0.52 0 0 0 0.93-0.32c0-9.32-4.89-10.82-9.36-10.91v-3.65a0.52 0.52 0 0 0-0.86-0.39l-8.32 7.28a0.52 0.52 0 0 0-0.05 0.73 0.56 0.56 0 0 0 0.05 0.05l8.32 7.28a0.52 0.52 0 0 0 0.55 0.08z" fill="#fa9856"></path></g></svg>Вернуться на страницу</a></div>
+	<!-- <div id="return"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"><title>sharing</title><g><path d="M21.32 6.24h-1.04a0.52 0.52 0 0 0 0 1.04h1.04a1.56 1.56 0 0 1 1.56 1.56v12.48a1.56 1.56 0 0 1-1.56 1.56h-15.6a1.56 1.56 0 0 1-1.56-1.56v-5.2a0.52 0.52 0 0 0-1.04 0v5.2a2.6 2.6 0 0 0 2.6 2.6h15.6a2.6 2.6 0 0 0 2.6-2.6v-12.48a2.6 2.6 0 0 0-2.6-2.6z" fill="#aeaeae"></path><path d="M10.09 17.11a0.52 0.52 0 0 0 0.31-0.47v-3.64c5.02 0.05 6.61 1.61 8.43 3.96a0.52 0.52 0 0 0 0.93-0.32c0-9.32-4.89-10.82-9.36-10.91v-3.65a0.52 0.52 0 0 0-0.86-0.39l-8.32 7.28a0.52 0.52 0 0 0-0.05 0.73 0.56 0.56 0 0 0 0.05 0.05l8.32 7.28a0.52 0.52 0 0 0 0.55 0.08z" fill="#fa9856"></path></g></svg>Вернуться на страницу</div> -->
+ 
+
+
+  
+	<footer style="margin-top: 50px;">
+		<div class="footer-nav">
+			<li><a href="{% url 'author_url' %}">Об авторе</a></li>
+			<li><a href="{% url 'seo_list_url' %}">Seo&Маркетинг</a></li>
+			<li><a href="{% url 'zakazat_url' %}"><i></i>Заказать продвижение</a></li>
+		</div>
+  		<span class="copyright"> © Django, made with <b><i ></i></b> by me </span>
+	</footer>
+
+<script src="{% static 'code.js' %}"></script>
+<!-- Plugins -->
+<!-- Yandex.Metrika counter Основной счетчик Метрики просмотра страниц-->
+<!-- <script type="text/javascript" >
+	(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  
+	ym(80177671, "init", {
+		 clickmap:true,
+		 trackLinks:true,
+		 accurateTrackBounce:true,
+		 webvisor:true
+	});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/80177671" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
+<!-- /Yandex.Metrika counter -->
+<!-- Global site tag (gtag.js) - Google Ads: 344751684 -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-344751684"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-344751684');
+  gtag('config', 'G-3DVTTS7EMJ');
+  
+</script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+
+<head>
+
+  <meta charset="utf-8" />
+  <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    {% block title %}{% endblock title %}
+  </title>
+  <meta itemprop="description" name="description" content="{% block description %}{% endblock description %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <style>
+    a{text-decoration: none;}
+    
+    blockquote {font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 20px;}
+  
+  @media (min-width:768px){
+    #header-image {width: 100%; height: 600px; display: block; box-sizing: border-box; background: url("{% static 'images/first-page2.webp' %}"); background-size: cover; background-repeat: no-repeat; }
+    #content-block {width: 730px; margin-left: auto; margin-right: auto; margin-top: 230px;}
+    
+
+    .under-nav-block{width:100%; height: 150px; background-color:rgba(0, 0, 0, 0.5); position: relative;display: flex; flex-direction: column; align-items: center; z-index: 1;}
+    .author-photo{display: block; position:absolute; top:40%; width: 150px; height: 150px; border-radius: 50%; z-index: 3; box-sizing: border-box; background-size: contain; background-repeat: no-repeat; }
+    .author-name{position:absolute; top:145%;text-align: center; font-size: 22.4px; line-height: 1.2em;font-weight: 300; font-family: 'Montserrat', sans-serif;}
+    .title {font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 50.4px; margin-bottom: 25px; margin-top: 30px; text-align: center; color: #333333;}
+    .hhtitle {text-align: center; font-size: 24px; font-weight: 500; font-family: 'Montserrat', sans-serif; color: black; }
+    #title-close-articles{text-align: center; font-size: 24px; font-weight: 500; margin-left: auto; margin-right: auto; color: black; margin-top: 100px; margin-bottom: -20px;}
+    .badge {display: inline-block; padding: 5px; text-align:center; background-color: rgb(251, 198, 88);border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;border-top-left-radius: 4px;border-top-right-radius: 4px;color: rgb(255, 255, 255);font-size: 12.5px;letter-spacing: 1px; font-weight: 500; font-family: 'Montserrat', sans-serif;line-height: 13.5px; margin-top: 50px; margin-bottom: 10px;}
+    .icon-imagine {display: inline-block; box-sizing: border-box; width: 22px; height: 22px;vertical-align: baseline;}
+    .article-top-image {box-sizing: border-box; max-width: 730px; max-height: 437px; border-top-left-radius: 12px;border-top-right-radius: 12px; align-items: center; overflow: hidden;} 
+    .article-top-image img {min-width: 386; max-width: 730px; min-height: 437px;border-top-left-radius: 12px;border-top-right-radius: 12px}
+    .article-content p{font-size: 18.9px; text-align: justify; text-indent: 2em; font-weight: 400; font-family: 'Montserrat', sans-serif; color: rgb(102, 97, 91); line-height: 30px; hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto;}
+    .inside-article-menu{font-size: 18.9px; text-align: left; text-indent: 2em; font-weight: 500; font-family: 'Montserrat', sans-serif; color: rgb(81, 188, 218); line-height: 28px}
+    .list{font-size: 20px; font-weight: 500; font-family: 'Montserrat', sans-serif; color:rgb(255, 165, 0);}
+    .list-under, .list-under ul{font-size: 19px; font-weight: 400; font-family: 'Montserrat', sans-serif; color: black;}
+    .tell-about-article{display: flex; flex-direction: row; justify-content: space-between; margin-left: 45%; width:335px; margin-right: 10%;}
+    .tell-about-article p {margin-top: 0px;}
+    
+    .after-article{width:90%; border-top-color: orange; border-top-style:  solid; border-top-width: 1px; border-bottom: none; border-right: none; border-right:none;}
+    .article-content a:hover{color: #e66675;}
+    #block-similar-articles {display: flex; flex-direction: row; justify-content: space-between; margin-left: auto; margin-right: auto; width: 1100px;}
+    #article-presentation-card {border-radius: 12px; width: 350px; height: 514px; box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px;transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease; margin-top: 40px; }
+    #article-presentation-card:hover {transform: translateY(-10px); box-shadow: -1px 5px 8px 6px rgba(34, 60, 80, 0.15);}
+    #card-image-size {border-top-left-radius: 12px; border-top-right-radius: 12px; box-sizing: border-box; max-width: 350px; min-width: 350px; max-height: 262.5px; min-height: 262.5px;}
+    #article-title {text-align: center;}
+    #article-title a {font-size: 22px; color: black; font-weight: 500; }
+    #article-description-part {color: rgb(154, 154, 154); font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 18px; text-align: justify; text-indent: 20px; line-height: 25px; padding: 4px;}
+  
+  }
+  @media (min-width:834px) {
+      .nav-menu {width: 42%; position: absolute; left: 57%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+      .nav-menu a {font-size: 13px; font-weight: 600; color: black;}
+      .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 8em; align-items: center; padding: 5px; }
+      /* cards */
+      #content-block {margin-left: 1%; margin-right: 1%; margin-top: 20px;}
+      .title {font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 50.4px; margin-bottom: 25px; margin-top: 180px; text-align: center; color: #333333;}
+      #block-similar-articles {display: flex; flex-direction: column; justify-content: space-between; margin-left: auto; margin-right: auto; width: 80%}
+      #article-presentation-card {width: 450px; height: 514px; margin: 40px auto; border-radius: 12px;}
+      #card-image-size {box-sizing: border-box; max-width: 450px; min-width: 450px; border-top-left-radius: 12px; border-top-right-radius: 12px;}
+      .footer-nav { position: absolute; width: 40%; top: 35%; left: 10%; display: flex; flex-direction: row; justify-content: space-between; }
+      
+    }
+  @media (min-width:1024px) {
+    .nav-menu {width: 37%; position: absolute; left: 62%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+    .nav-menu a {font-size: 14px; font-weight: 600; color: black;}
+    #content-block {margin-left: 5%; margin-right: 5%; margin-top: 20px; margin-left: auto; margin-right: auto;}
+  }
+  @media (min-width:1112px) {
+    .nav-menu {width: 40%; position: absolute; left: 58%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+  }
+  @media (min-width:1366px) {
+    .nav-menu {width: 33%; position: absolute; left: 65%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+    .nav-menu a {font-size: 16px; font-weight: 600; color: black;}
+    .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 9em; align-items: center; padding: 5px; }
+    #content-block {margin-left: 5%; margin-right: 5%; margin-top: 20px; margin-left: auto; margin-right: auto;}
+    #block-similar-articles {display: flex; flex-direction: row; justify-content: space-between; margin-left: auto; margin-right: auto; width: 80%}
+    #article-presentation-card {width: 320px; height: 514px; margin: 40px auto; }
+    #card-image-size {box-sizing: border-box; max-width: 320px; min-width: 320px;}
+    #article-description-part{font-size: 14px}
+    .footer-nav { position: absolute; width: 30%; top: 35%; left: 15%;}
+  }
+
+  @media (min-width:1504px) {
+  .nav-menu {width: 35%; position: absolute; left: 60%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+  
+  }
+  @media (min-width:1920px) {
+    .nav-menu {width: 25%; position: absolute; left: 67%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+    .nav-menu a {font-size: 16px; font-weight: 600; color: black;}
+    .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 9em; align-items: center; padding: 5px; }
+    #logo {margin-left: 8%; position: absolute;}
+    #logo img{width: 180px; height: 25px;}
+    #article-presentation-card {width: 400px; height: 514px; margin: 40px auto; }
+    #card-image-size {box-sizing: border-box; max-width: 400px; min-width: 400px;}
+    #article-description-part{font-size: 16px}
+    
+  }
+  @media (min-width:2070px) {
+    #content-block {margin-left: 15%; margin-right: 15%;margin-top: 20px; margin-left: auto; margin-right: auto;}
+    #block-similar-articles{width: 70%}
+    .footer-nav { position: absolute; width: 20%; top: 35%; left: 20%;}
+  }
+  @media (min-width:2400px) {
+    #content-block {margin-left: 18%; margin-right: 18%;margin-top: 20px; margin-left: auto; margin-right: auto;}
+    #block-similar-articles{width: 60%}
+    .footer-nav { position: absolute; width: 16%; top: 35%; left: 25%;}
+  }
+  @media (min-width:320px) and (max-width: 760px) {
+    .nav-menu {height: 0px; width: 0px; z-index: 5; top: 40px; margin-left: 60%; overflow: hidden; position: absolute; display: flex; flex-direction: column; justify-content: center; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in;}
+    .nav-menu-close {height: 240px; width: 40%; z-index: 5; top: 40px; margin-left: 60%; position: absolute; display: flex; flex-direction: column; justify-content: space-around; background-color: rgba(8, 120, 212, 0.69); transition: all 0s ease-in; z-index: 3;}
+    .menu-icone {display: inline; content: url("{% static 'images/icons/menu.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;}
+    .close-button{display: inline; content: url("{% static 'images/icons/leave.svg' %}"); width: 18px; height: 18px; position: absolute; top: 30%; margin-left: 85%; cursor: pointer;} 
+    
+    #content-block {margin-left: 3%; margin-right: 3%; margin-top: 200px;}
+    .under-nav-block{width:100%; height: 180px; background-color:rgba(0, 0, 0, 0.5); position: relative;display: flex; flex-direction: column; align-items: center; z-index: 1;}
+    .author-photo{display: block; position:absolute; top: 55%; width: 150px; height: 150px; border-radius: 50%; z-index: 3; box-sizing: border-box; background-size: contain; background-repeat: no-repeat; }
+    .author-name{position:absolute; top:130%;text-align: center; font-size: 15.4px; line-height: 1.2em;font-weight: 300; font-family: 'Montserrat', sans-serif;}
+    .title {font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 32px; margin-bottom: 25px; margin-top: 30px; text-align: center; color: #333333;}
+    .hhtitle {text-align: center; font-size: 20px; font-weight: 400; font-family: 'Montserrat', sans-serif; color: black; }
+    #title-close-articles{text-align: center; font-size: 24px; font-weight: 500; margin-left: auto; margin-right: auto; color: black; margin-top: 100px; margin-bottom: -20px;}
+    .badge {display: inline-block; padding: 5px; text-align:center; background-color: rgb(251, 198, 88);border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;border-top-left-radius: 4px;border-top-right-radius: 4px;color: rgb(255, 255, 255);font-size: 12.5px;letter-spacing: 1px; font-weight: 500; font-family: 'Montserrat', sans-serif;line-height: 13.5px; margin-top: 50px; margin-bottom: 10px;}
+    .icon-imagine {display: inline-block; box-sizing: border-box; width: 22px; height: 22px;vertical-align: baseline;}
+    .article-top-image {box-sizing: border-box; max-width: 300px; max-height: 229px; border-top-left-radius: 12px;border-top-right-radius: 12px; margin-left: auto; margin-right: auto; overflow: hidden;} 
+    .article-top-image img {min-width: 300; max-width: 300px; min-height: 229px;border-top-left-radius: 12px;border-top-right-radius: 12px}
+    .article-content p{font-size: 16.9px; text-align: justify; text-indent: 2em; font-weight: 400; font-family: 'Montserrat', sans-serif; color: rgb(102, 97, 91); line-height: 30px; hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto;}
+    .inside-article-menu{font-size: 16px; text-align: left; text-indent: 2em; font-weight: 500; font-family: 'Montserrat', sans-serif; color: rgb(81, 188, 218); line-height: 28px}
+    .list{font-size: 20px; font-weight: 500; font-family: 'Montserrat', sans-serif; color:rgb(255, 165, 0);}
+    .list-under, .list-under ul{font-size: 16px; font-weight: 400; font-family: 'Montserrat', sans-serif; color: black;}
+    .tell-about-article{display: flex; flex-direction: row; justify-content: space-between; margin-left: 5%;  margin-right: 7%; margin-top: 40px;}
+    .tell-about-article p {margin-top: 0px; font-size: 14px;}
+
+    .after-article{width:90%; border-top-color: orange; border-top-style:  solid; border-top-width: 1px; border-bottom: none; border-right: none; border-right:none;}
+    .article-content a:hover{color: #e66675;}
+    #block-similar-articles {display: flex; flex-direction: column; justify-content: space-between; margin-left: 3%; margin-right: 3%; }
+    #article-presentation-card {border-radius: 12px; width: 300px; height: 514px; box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px; margin-top: 40px; margin-left:auto; margin-right: auto; transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease; margin-top: 40px;}
+    #article-presentation-card:hover {transform: translateY(-10px); box-shadow: -1px 5px 8px 6px rgba(34, 60, 80, 0.15);}
+    #card-image-size {box-sizing: border-box; min-width: 300px; max-width: 300px; max-height: 262.5px; border-top-left-radius: 12px; border-top-right-radius: 12px;}
+    #article-title {text-align: center;}
+    #article-title a {font-size: 22px; color: black; font-weight: 500; }
+    #article-description-part {color: rgb(154, 154, 154); font-weight: 400; font-size: 17px; text-align: justify; text-indent: 20px; line-height: 25px; padding: 4px;}
+
+    .content-image{max-width: 384px; height: auto; margin-left: auto; margin-right: auto;}
+    
+    #img-gif {margin-left: auto; margin-right: auto; text-indent:0px; justify-content: center; box-sizing: border-box; width: 300px;}
+    #img-gif img{width: 300px;}
+    
+  }
+  @media (min-width:384px) {
+    .tell-about-article p {margin-top: 0px; font-size: 16px;}
+    #title-close-articles{font-size: 24px; font-weight: 500; margin-left: auto; margin-right: auto; color: black; margin-top: 100px; margin-bottom: -20px;}
+    #article-presentation-card {width: 330px;}
+    #card-image-size{min-width: 330px; max-width: 330px;}
+  }
+  </style>
+    
+<body itemscope itemtype="http://schema.org/Article">
+ 
+    <!-- Navbar -->
+  <nav id="chief-nav">
+    <li id="logo"><a  href="{% url 'index_list_url' %}"><img src="{% static 'images/logomini.png' %}"  alt="logo"></a></li>
+    <!-- id="mobile-nav" - для javascripta для взаимодействия с иконкой открыть - закрыть -->
+    <div class="nav-menu" id="visible-menu">
+      <!-- <li><i id="close-button" ></i></li> -->
+      <li><a href="{% url 'author_url' %}" data-target="">Об авторе</a></li>
+      <li><a href="{% url 'seo_list_url' %}" data-target="">Seo&Маркетинг</a></li>
+      <li><a href="{% url 'zakazat_url' %}"><img class="spaceship" src="{% static 'images/icons/spaceship.svg' %}" alt="order">Услуги</a></li>
+    </div>
+    <i class="menu-icone" id="mobile-icone"></i>
+  </nav>
+  <!-- end Navbar -->
+
+  <!-- Начало Заставки и фото профиля -->
+  <div class="under-nav-block">
+    <img class="author-photo" src="{% static 'images/my_photo.jpg' %}" alt="автор статьи">
+    <p class="author-name"><span itemprop="author">D.L.</span><br /><small style="color: #9A9A9A;">Автор статьи</small></p>
+  </div>
+  <!-- Конец заставки и фото профиля -->
+  <div>
+    {% block content%}
+    
+    {% endblock content %}
+  </div>
+    
+  
+ 
+  <footer style="margin-bottom: -70px;">
+    <div class="footer-nav">
+      <li><a href="{% url 'author_url' %}">Об авторе</a></li>
+      <li><a href="{% url 'contact_me_url' %}">Контакты</a></li>
+      <li><a href="{% url 'zakazat_url' %}"><i></i>Заказать продвижение</a></li>
+    </div>
+   <span class="copyright"> © Django, made with <b><i ></i></b> by me </span>
+  </footer>
+
+<!-- Plugins -->
+<script src="{% static 'code.js' %}"></script>
+
+<!-- Yandex.Metrika counter Основной счетчик Метрики просмотра страниц-->
+<!-- <script type="text/javascript" >
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(80177671, "init", {
+       clickmap:true,
+       trackLinks:true,
+       accurateTrackBounce:true,
+       webvisor:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/80177671" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
+<!-- /Yandex.Metrika counter -->
+
+<!-- ссылки на соц.сети от яндекс -->
+<script src="https://yastatic.net/share2/share.js" async></script>
+<!-- Global site tag (gtag.js) - Google Ads: 344751684 -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-344751684"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-344751684');
+  gtag('config', 'G-3DVTTS7EMJ');
+</script> -->
+
+</body>
+</html>

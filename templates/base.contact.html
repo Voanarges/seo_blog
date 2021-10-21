@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KZDZK9X');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8" />
+  <!-- <link rel="apple-touch-icon" sizes="76x76" href="{% static 'images/logomini.png' %}">
+  <link rel="icon" type="image/jpeg" href="{% static 'images/my_photo.jpg' %}"> -->
+  <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    {% block title %}{% endblock title %}
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <style>
+  @media (min-width:768px){
+  #chief-nav {
+  display: flex; flex-direction: row; justify-content: space-between;
+  width: 100%; height: 50px;
+  position: relative;
+  align-items: center; 
+  -webkit-box-shadow: -1px 7px 6px 6px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: -1px 7px 6px 6px rgba(34, 60, 80, 0.2);
+  box-shadow: -1px 3px 6px 6px rgba(34, 60, 80, 0.2); margin: 0px; padding: 0px;}
+  nav li {list-style-type: none;
+  }
+  .nav-menu a {font-size: 1em; font-weight: 600; font-family: 'Montserrat', sans-serif; color: black;}
+  .nav-menu li:nth-child(3) a {color:white;text-align:center; letter-spacing: 1px;}
+  .nav-menu li:nth-child(3) {border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; background:#f5593d; opacity: 7; width: 10em; align-items: center; padding: 5px; }
+  .nav-menu a[data-target]:hover {opacity: 0.7; text-shadow: -9px 8px 1px #7f7f7f;}
+  .spaceship {display: inline-block; box-sizing: border-box; width: 1em; height: 1em;vertical-align: baseline; margin-left: 20px; margin-right: 5px;}
+  .nav-menu {width: 33%; position: absolute; left: 65%; display: flex; flex-direction: row; justify-content: space-between; align-content: center; align-items: center;}
+  #logo {margin-left: 13%; position: absolute;}
+  #logo img{width: 160px; height: 22px;};
+
+  footer {display: flex; flex-direction: row; justify-content: space-between; width: 100%; height: 60px; position: relative; background-color: #f3f2ee; margin-top: 150px;}
+  .footer-nav { position: absolute; top: 35%; left: 15%; display: flex; flex-direction: row; justify-content: space-between; width: 30%;}
+  .copyright {position: absolute; top: 35%; margin-left: 75%;}
+  .footer-nav a {font-size: 12px; font-weight: 500; font-family: 'Montserrat', sans-serif; color: black;}
+  .copyright {font-size: 12px; font-weight: 500; font-family: 'Montserrat', sans-serif; color: black;}
+  }
+  </style>
+ 
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZDZK9X"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->  
+  <!-- Navbar -->
+  <nav id="chief-nav">
+    <li id="logo"><a  href="{% url 'index_list_url' %}"><img src="{% static 'images/logomini.png' %}"  alt="logo"></a></li>
+    <!-- id="mobile-nav" - для javascripta для взаимодействия с иконкой открыть - закрыть -->
+    <div class="nav-menu" id="visible-menu">
+      <!-- <li><i id="close-button" ></i></li> -->
+      <li><a href="{% url 'author_url' %}" data-target="">Об авторе</a></li>
+      <li><a href="{% url 'seo_list_url' %}" data-target="">Seo&Маркетинг</a></li>
+      <li><a href="{% url 'zakazat_url' %}"><img class="spaceship" src="{% static 'images/icons/spaceship.svg' %}" alt="order">Услуги</a></li>
+      
+    </div>
+    <i class="menu-icone" id="mobile-icone"></i>
+  </nav>
+  <!-- end Navbar -->
+  <div >
+    {% block content%}
+
+    {% endblock content %}
+
+  </div>
+
+ <!-- contact us -->
+ 
+
+
+  
+  <footer style="margin-bottom: -70px;">
+    <div class="footer-nav">
+      <li><a href="{% url 'author_url' %}">Об авторе</a></li>
+      <li><a href="{% url 'seo_list_url' %}">Seo&Маркетинг</a></li>
+      <li><a href="{% url 'zakazat_url' %}"><i></i>Заказать продвижение</a></li>
+    </div>
+  <span class="copyright"> © Django, made with <b><i ></i></b> by me </span>
+</footer>
+
+<script src="{% static 'code.js' %}"></script>
+<!-- Yandex.Metrika counter Основной счетчик Метрики просмотра страниц-->
+<!-- <script type="text/javascript" >
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(80177671, "init", {
+       clickmap:true,
+       trackLinks:true,
+       accurateTrackBounce:true,
+       webvisor:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/80177671" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
+<!-- /Yandex.Metrika counter -->
+<!-- Global site tag (gtag.js) - Google Ads: 344751684 -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-344751684"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-344751684');
+  gtag('config', 'G-3DVTTS7EMJ');
+</script> -->
+
+</body>
+
+</html>
